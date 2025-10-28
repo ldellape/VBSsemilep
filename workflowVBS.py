@@ -37,17 +37,13 @@ class VBS_WV_Processor(BaseProcessorABC):
         print(f" lumi: {lumi} [pb^-1]")
         self.out_log()
         
-        if self._isMC and "2023" in self._year:
-            self.events["Jet"] = jet_correction_correctionlib(self.events, "Jet", "AK4PFPuppi", "2023_Summer23", 'Summer23Prompt23_V2_MC') 
-            self.events["FatJet"] = jet_correction_correctionlib(self.events, "FatJet", "AK8PFPuppi" , "2023_Summer23", 'Summer23Prompt23_V2_MC')
-            self.events["nEvents"] = nEvents_total
+       # if self._isMC and "2023" in self._year:
+       #     self.events["Jet"] = jet_correction_correctionlib(self.events, "Jet", "AK4PFPuppi", "2023_Summer23", 'Summer23Prompt23_V2_MC') 
+       #     self.events["FatJet"] = jet_correction_correctionlib(self.events, "FatJet", "AK8PFPuppi" , "2023_Summer23", 'Summer23Prompt23_V2_MC')
+       #     self.events["nEvents"] = nEvents_total
                     
         self.events["MuonGood"] = lepton_selection(self.events, "Muon", self.params)
-        print(f"muon: {self.events.Muon.pt}")
-        print(f"muon: {self.events.MuonGood.pt}")
         self.events["ElectronGood"] = lepton_selection(self.events, "Electron", self.params)
-        print(f"  ele : {self.events.Electron.pt}")
-        print(f"electron: {self.events.ElectronGood.pt}")
         self.events["LeptonGood"] = ak.concatenate((self.events.MuonGood, self.events.ElectronGood), axis=1)
         
         self.events["CleanFatJet"], self.CleanFatJetMask = jet_selection(
@@ -152,6 +148,7 @@ class VBS_WV_Processor(BaseProcessorABC):
 
         # Count jets per event
         njets_remaining = ak.num(clean_jets_no_vbs)
+        print(f" n cleanjet : {njets_remaining}")
 
         mask_eq2 = njets_remaining == 2
         mask_gt2 = njets_remaining > 2
@@ -198,7 +195,6 @@ class VBS_WV_Processor(BaseProcessorABC):
         for i, val in zip(result_gt2_idx, result_gt2):
             if val.mass is not None:
                 full_result[i] = val
-
         self.events["V_dijet_candidate"] = ak.Array(full_result)
         
         
