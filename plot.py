@@ -6,6 +6,8 @@ import ROOT
 from sample import samples
 path = "/eos/user/l/ldellape/VBS/parquet"
 norm_luminosity=False
+target_lumi = 140
+norm_unity = True
 polarized=True
 
 
@@ -14,9 +16,9 @@ tag="WW"
 
 
 #category="baseline"
-category="signal_AK8"
-#category="signal_AK4"
-#category="CR_TTbar"
+#category="signal_AK8"
+category="signal_AK4"
+#category="side"
 #category="CR_L_Wjets"
 #category="CR_R_Wjets"
 
@@ -50,6 +52,10 @@ def sum_lumi(tag):
         log_path = "log_ZZLL_mg5_madspin.txt"
     elif tag == "ZZ_TT":
         log_path = "log_ZZTT_mg5_madspin.txt"
+    elif tag == "ZZZ":
+        log_path = "log_ZZZ_TuneCP5_13p6TeV_amcatnlo-pythia8_2023_preBPix.txt"
+    elif tag == "WZZ":
+        log_path = "log_WZZ_TuneCP5_13p6TeV_amcatnlo-pythia8_2023_preBPix.txt"
     else: 
         return 0.0
     total_lumi = 0.0
@@ -73,10 +79,7 @@ datasets = [load_awkward_parquet(p) for p in parquet_patterns]
 
 
 lumis = [sum_lumi(label) for label in labels]
-if tag=="WW":
-    target_lumi = sum_lumi("ssWW_TT")
-elif tag=="ZZ":
-    target_lumi = sum_lumi("ZZ_TT")
+
 lumis = np.array(lumis, dtype=float)
 print(lumis)
 scaling_factors = target_lumi / lumis
@@ -86,8 +89,8 @@ for label, lumi, scale in zip(labels, lumis, scaling_factors):
 c = ROOT.TCanvas("c", "Comparison", 800, 600)
 ROOT.gStyle.SetOptStat(0)
 
-field_name = ["lumi", "CleanFatJet_pt", "CleanFatJet_eta", "CleanFatJet_msoftdrop", "CleanFatJet_mass", "events_zepp_lep", "CleanSubJet_pair_zg", 
-              "CleanFatJet_tau21", "events_nCleanJets", "events_nFatJet", "events_nCleanFatJets", "events_nBJetGood", "ElectronGood_pt", "MuonGood_pt", "V_dijet_candidate_mass", "V_dijet_candidate_pt",
+field_name = ["lumi", "CleanFatJet_pt", "CleanJet_pt", "CleanFatJet_eta", "CleanFatJet_msoftdrop", "CleanFatJet_mass", "events_zepp_lep", "CleanSubJet_pair_zg", 
+              "CleanFatJet_tau21", "events_nCleanJets", "events_nElectronGood", "events_nMuonGood", "events_nFatJet", "events_nCleanFatJets", "events_nBJetGood", "ElectronGood_pt", "MuonGood_pt", "V_dijet_candidate_mass", "V_dijet_candidate_pt",
               "VBS_dijet_system_pt", "VBS_dijet_system_mass", "VBS_dijet_system_deltaEta", "events_MT_ele_miss", "events_MT_mu_miss", "events_MT_lep_miss"]
 
 number_events = []
@@ -148,15 +151,20 @@ for var in field_name:
         if norm_luminosity:
             h.Scale(scaling_factors[i])
 
-        # --- merge if label already exists ---
         if label in hists:
             hists[label].Add(h)
         else:
             h.SetLineWidth(2)
             hists[label] = h
+        if norm_unity:
+            sum_content = sum(h.GetBinContent(i) for i in range(1, h.GetNbinsX()+1))
+            h.Scale(1./sum_content)
+        print(var)
+       
 
     if not hists:
         continue
+    
 
     # --- Overlay plot ---
     c_overlay = ROOT.TCanvas(f"c_{var}_overlay", f"Overlay: {var}", 800, 600)
@@ -171,7 +179,19 @@ for var in field_name:
             h.GetXaxis().SetTitle(var)
             h.GetYaxis().SetTitle("Entries")
             h.SetTitle(f"{var}   {category}")
-        legend_overlay.AddEntry(h, label, "l")
+        if var== "VBS_dijet_system_mass":
+            h.GetXaxis().SetTitle("M_{jj} [vbs]")
+        elif var == "VBS_dijet_system_deltaEta":
+            h.GetXaxis().SetTitle("|#Delta #eta| [vbs]")
+            c_overlay.SetLogy()
+        elif var == "events_zepp_lep":
+            h.GetXaxis().SetTitle("zepp")
+            c_overlay.SetLogy()
+
+        elif var == "MuonGood_eta":
+            h.GetXaxis().SetTitle("lepton #eta")
+            c_overlay.SetLogy()
+        legend_overlay.AddEntry(h, label, "f")
 
     legend_overlay.Draw()
     os.makedirs(f"./plots/{tag}/{category}", exist_ok=True)

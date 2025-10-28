@@ -1,11 +1,17 @@
 myenv
 ./outpu
 ./output
+zg_plots.cpp
 jets_calibrator_JES_JER_Syst.pkl.gz
 __pycache__
 ./out
 *.txt
+*.root
+count_events.py
 out_2
 out_3
+polarization_plots
+WW
+ZZ
 ./plots
 *.parquet
