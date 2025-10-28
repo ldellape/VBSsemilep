@@ -90,8 +90,8 @@ cfg = Configurator(
         "SingleLepton_AK8_sideL_Wjets" : [get_nObj_eq(1, coll="LeptonGood"), get_nObj_eq(1, coll="CleanFatJet"), Wjet_sideL_boosted],
         "SingleLepton_AK8_sideR_Wjets" : [get_nObj_eq(1, coll="LeptonGood"), get_nObj_eq(1, coll="CleanFatJet"), Wjet_sideR_boosted],
 
-        "SingleLepton_AK4_sideL_Wjets" : [get_nObj_eq(1, coll="LeptonGood"), get_nObj_min(0, coll="CleanFatJet"), Wjet_sideL_resolved],
-        "SingleLepton_AK4_sideR_Wjets" : [get_nObj_eq(1, coll="LeptonGood"), get_nObj_min(0, coll="CleanFatJet"), Wjet_sideR_resolved],
+        "SingleLepton_AK4_sideL_Wjets" : [get_nObj_eq(1, coll="LeptonGood"), get_nObj_eq(0, coll="CleanFatJet"), Wjet_sideL_resolved],
+        "SingleLepton_AK4_sideR_Wjets" : [get_nObj_eq(1, coll="LeptonGood"), get_nObj_eq(0, coll="CleanFatJet"), Wjet_sideR_resolved],
     },    
     weights_classes = common_weights,
     weights = {
