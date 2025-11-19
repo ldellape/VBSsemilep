@@ -1,8 +1,70 @@
 import awkward as ak
 import math
 from pocket_coffea.lib.cut_definition import Cut
-from pocket_coffea.lib.cut_functions import get_nObj_min, get_HLTsel, get_nPVgood, goldenJson, eventFlags, get_nElectron, get_nMuon, get_nObj_eq
+from pocket_coffea.lib.cut_functions import get_nObj_min, get_HLTsel, get_nPVgood, goldenJson, eventFlags, get_nElectron, get_nMuon, get_nObj_eq, apply_golden_json
 from pocket_coffea.lib.objects import get_dilepton
+
+
+#############################################################
+# cut functions for fakes                                   #
+#############################################################
+def met_for_fakes_loose(events, params, year, sample, **kwargs):
+    mask = (
+        (events.MET.pt < params["met"]) & 
+        (events.MT_lep_miss < params["mt"])
+    )
+    return ak.where(ak.is_none(mask), False, mask)
+FakeLoose = Cut(
+    name="FakeLoose",
+    params={
+        "met" : 30,
+        "mt" : 1000000000000,
+        },
+    function=met_for_fakes_loose,
+)
+def jet_for_fakes_loose(events, params, year, sample, **kwargs):
+    single_jet = events.nJetForFakes_loose == 1
+    mask = single_jet
+    return ak.where(ak.is_none(mask), False, mask)
+JetForFakes_loose = Cut(
+    name="JetForFakes_loose",
+    params={},
+    function=jet_for_fakes_loose,
+)
+def jet_for_fakes_tight(events, params, year, sample, **kwargs):
+    single_jet = events.nJetForFakes_tight == 1
+    mask = single_jet
+    print(mask)
+    return ak.where(ak.is_none(mask), False, mask)
+JetForFakes_tight = Cut(
+    name="JetForFakes_tight",
+    params={},
+    function=jet_for_fakes_tight,
+)
+def met_for_fakes_tight(events, params, year, sample, **kwargs):
+    single_lepton = events.nLeptonGood == 1
+    mask = (
+        single_lepton &
+        (events.MET.pt < params["met"]) & 
+        (events.MT_lep_miss < params["mt"])
+    )
+    return ak.where(ak.is_none(mask), False, mask)
+FakeTight = Cut(
+    name="FakeLoose",
+    params={
+        "met" : 20,
+        "mt" : 20,
+        },
+    function=met_for_fakes_tight,
+)
+#############################################################
+#############################################################
+
+
+
+
+
+
 
 
 
@@ -121,6 +183,7 @@ semileptonic_preselW = Cut(
     },
     function = semileptonic,
 ) 
+
 semileptonic_preselZ = Cut(
     name="semileptonic_preselZ", 
     params = {
@@ -434,6 +497,8 @@ check_flavour_OF =Cut(
 
 
 
+
+
 def cut_function(events, params, year, sample, **kwargs):
     masks = []
     for i, c in enumerate(params["coll"]):
@@ -525,14 +590,6 @@ def single_good_muon(events, params, year, sample, **kwargs):
         ak.num(events.MuonGood) >= 2
     )  
     return ak.where(ak.is_none(mask), False, mask)
-
-
-
-
-
-
-
-
 
 
 
