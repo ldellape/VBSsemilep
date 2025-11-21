@@ -41,24 +41,12 @@ cfg = Configurator(
                 #   f"{localdir}/datasets/DATA/Muon1_Run2023C_v12.json",
                #    f"{localdir}/datasets/DATA/EGamma1.json",
                 f"{localdir}/datasets/JetMET0.json",
-                f"{localdir}/datasets/JetMET1.json",
+               f"{localdir}/datasets/JetMET1.json",
                    ],
         "filter" : {
             "samples" : [
-               "Muon1",
-               "EGamma1",
-               "ssWWLL",
                "JetMET0", 
                "JetMET1",
-               "ssWWTT",
-              # "ssWWTL",
-              # "ssWW_unpolarized",
-                "TTtoLNu2Q_HT-500_NJet-9_Hdamp-158_TuneCP5_13p6TeV_powheg-pythia8", 
-                "TTtoLNu2Q_HT-500_NJet-9_TuneCP5_13p6TeV_powheg-pythia8",
-                "WtoLNu-2Jets_PTLNu-100to200_2J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8", 
-                "TbarWplustoLNu2Q_TuneCP5Down_13p6TeV_powheg-pythia8", 
-                "WZZ_TuneCP5_13p6TeV_amcatnlo-pythia8", 
-                "ZZZ_TuneCP5_13p6TeV_amcatnlo-pythia8",
             ],
             "year" : ["2023_preBPix", "2023"],
         }
@@ -144,7 +132,7 @@ cfg = Configurator(
         },
     },
     workflow_options = {
-        "dump_columns_as_arrays_per_chunk": "root://eosuser.cern.ch//eos/user/l/ldellape/VBS/parquet_forfake_METonly/"
+        "dump_columns_as_arrays_per_chunk": "root://eosuser.cern.ch//eos/user/l/ldellape/VBS/parquet_forfake_nocuts/"
     },
     columns = {
         "common" : {
@@ -156,6 +144,7 @@ cfg = Configurator(
                            ColOut("JetForFakes_loose",["pt", "eta", "phi"] , flatten=False),
                            ColOut("JetForFakes_tight", ["pt", "eta", "phi"], flatten=False),
                            ColOut("MET", ["pt", "phi"], flatten=False),
+                           ColOut("events", ["MT_lep_miss"], flatten=False),
                            ],
             "bycategory" : {},
             },            

@@ -8,7 +8,7 @@ from pocket_coffea.lib.deltaR_matching import metric_eta, metric_phi
 import vector
 
 from pocket_coffea.lib.hist_manager import Axis
-from correction_lib_jet import jet_correction_correctionlib
+#from correction_lib_jet import jet_correction_correctionlib
 from pocket_coffea.lib.objects import (
     jet_correction,
     lepton_selection,
@@ -27,24 +27,61 @@ class VBS_WV_Processor(BaseProcessorABC):
         
     def apply_object_preselection(self, variation):
         nEvents_total = self.nEvents_initial
-        xsection = self._xsec
-        lumi = nEvents_total/float(xsection)        
         print("*****************************************************************************************")
         print(f" processing file from {self._dataset}")
         print(f'{self.events.metadata["filename"]}')
         print(f" number of events: {self.nEvents_initial}")
-        print(f" xsection: {self._xsec}")
-        print(f" lumi: {lumi} [pb^-1]")
-        self.out_log()
+     
+
+        if self._isMC:
+            self.out_log()
         
        # if self._isMC and "2023" in self._year:
        #     self.events["Jet"] = jet_correction_correctionlib(self.events, "Jet", "AK4PFPuppi", "2023_Summer23", 'Summer23Prompt23_V2_MC') 
        #     self.events["FatJet"] = jet_correction_correctionlib(self.events, "FatJet", "AK8PFPuppi" , "2023_Summer23", 'Summer23Prompt23_V2_MC')
        #     self.events["nEvents"] = nEvents_total
                     
+                    
         self.events["MuonGood"] = lepton_selection(self.events, "Muon", self.params)
         self.events["ElectronGood"] = lepton_selection(self.events, "Electron", self.params)
         self.events["LeptonGood"] = ak.concatenate((self.events.MuonGood, self.events.ElectronGood), axis=1)
+        
+        ############################################
+        # for fake estimation
+        mu_loose = self.events.Muon[
+            (self.events.Muon.looseId) &
+            (self.events.Muon.pt > self.params.object_preselection.Muon.pt)
+        ]
+
+        el_loose = self.events.Electron[
+            (self.events.Electron.pt > self.params.object_preselection.Electron.pt)
+        ]
+        self.events["MuonLoose"] = mu_loose
+        self.events["ElectronLoose"] = el_loose
+        self.events["JetForFakes"] = self.events.Jet[
+            self.events.Jet.pt > self.params.object_preselection.Jet.pt
+        ]
+        jet_fakes = self.events["JetForFakes"]
+        deltaR_jetsForFakes_ele_loose = jet_fakes.metric_table(self.events["ElectronLoose"])
+        deltaR_jetsForFakes_muon_loose = jet_fakes.metric_table(self.events["MuonLoose"])
+        deltaR_jetsForFakes_lep_tight = jet_fakes.metric_table(self.events["LeptonGood"])
+        deltaR_jetsForFakes_muon = jet_fakes.metric_table(self.events["Muon"]) 
+        mask_ele_clean = ak.all(deltaR_jetsForFakes_ele_loose  > 1.0, axis=2)
+        mask_mu_clean  = ak.all(deltaR_jetsForFakes_muon_loose > 1.0, axis=2)
+        mask_jet_forfakes_all = ak.all(deltaR_jetsForFakes_muon > 1.0, axis=2)
+        print(f" mask1 : {mask_ele_clean}")
+        print(f" mask2: {mask_mu_clean}")
+        mask_jet_forfakes_loose = mask_ele_clean & mask_mu_clean
+        mask_jet_forfakes_tight = ak.all(deltaR_jetsForFakes_lep_tight > 1.0, axis=-1)
+        print(f" mask3: {mask_jet_forfakes_tight}")
+        self.events["JetForFakes_loose"] = jet_fakes[mask_jet_forfakes_loose]
+        self.events["JetForFakes_tight"] = jet_fakes[mask_jet_forfakes_tight]
+        self.events["JetForFakes_all"] = jet_fakes[mask_jet_forfakes_all]
+        print(ak.num(self.events.JetForFakes_loose))
+        
+        
+        
+
         
         self.events["CleanFatJet"], self.CleanFatJetMask = jet_selection(
             self.events, "FatJet", self.params, self._year,  leptons_collection="LeptonGood"
@@ -224,11 +261,16 @@ class VBS_WV_Processor(BaseProcessorABC):
         self.events["nMuonGood"] = ak.num(self.events.MuonGood)
         self.events["nElectronGood"] = ak.num(self.events.ElectronGood)
         self.events["nLeptonGood"] = ak.num(self.events.LeptonGood)
+        self.events["nMuonLoose"] = ak.num(self.events.MuonLoose)
         self.events["nCleanFatJets"] = ak.num(self.events.CleanFatJet)
         self.events["nCleanJets"] = ak.num(self.events.CleanJet)
         self.events["nBJetGood"] = ak.num(self.events.BJetGood)
         self.events["nJet"] = ak.num(self.events.Jet)
         self.events["nFatJet"] = ak.num(self.events.FatJet)
+        self.events["nJetForFakes_loose"] = ak.num(self.events.JetForFakes_loose)
+        self.events["nMuonLoose"] = ak.num(self.events.MuonLoose)
+        self.events["nElectronLoose"] = ak.num(self.events.ElectronLoose)
+        self.events["nJetForFakes_tight"] = ak.num(self.events.JetForFakes_tight)
 
     # fix for 2022 and 20023 (nanov12) 
     # https://twiki.cern.ch/twiki/bin/viewauth/CMS/JetID13p6TeV#nanoAOD_Flags
@@ -304,3 +346,4 @@ class VBS_WV_Processor(BaseProcessorABC):
             )
     
 
+    
