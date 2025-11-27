@@ -1,0 +1,2 @@
+sched-url: tcp://localhost:23031
+voms-proxy: /opt/workspace/persistent-storage/proxy
