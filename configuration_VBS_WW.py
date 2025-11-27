@@ -31,34 +31,33 @@ cfg = Configurator(
     datasets = {
         "tag" : "VBS_ssWW",
         "jsons" : [
-                   f"{localdir}/datasets/VBS_mc_132X_Summer23wmLHEGS.json",
+               #    f"{localdir}/datasets/VBS_mc_132X_Summer23wmLHEGS.json",
                    
                    # W->lv, 2 jets
-                   f"{localdir}/datasets/WJets/WtoLNu-2Jets_PTLNu-40to100_1J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8.json",
-                   f"{localdir}/datasets/WJets/WtoLNu-2Jets_PTLNu-100to200_1J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8.json",
-                   f"{localdir}/datasets/WJets/WtoLNu-2Jets_PTLNu-200to400_1J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8.json",
-                   f"{localdir}/datasets/WJets/WtoLNu-2Jets_PTLNu-400to600_1J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8.json",
-                   f"{localdir}/datasets/WJets/WtoLNu-2Jets_PTLNu-600_1J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8.json",
-                   f"{localdir}/datasets/WJets/WtoLNu-2Jets_PTLNu-40to100_2J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8.json",
-                   f"{localdir}/datasets/WJets/WtoLNu-2Jets_PTLNu-100to200_2J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8.json",
-                   f"{localdir}/datasets/WJets/WtoLNu-2Jets_PTLNu-200to400_2J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8.json",
-                   f"{localdir}/datasets/WJets/WtoLNu-2Jets_PTLNu-400to600_2J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8.json",
-                   f"{localdir}/datasets/WJets/WtoLNu-2Jets_PTLNu-600_2J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8.json",
+       #            f"{localdir}/datasets/WJets/WtoLNu-2Jets_PTLNu-40to100_1J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8_redirector.json",
+        #           f"{localdir}/datasets/WJets/WtoLNu-2Jets_PTLNu-100to200_1J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8_redirector.json",
+         #          f"{localdir}/datasets/WJets/WtoLNu-2Jets_PTLNu-200to400_1J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8_redirector.json",
+          #         f"{localdir}/datasets/WJets/WtoLNu-2Jets_PTLNu-400to600_1J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8_redirector.json",
+           #        f"{localdir}/datasets/WJets/WtoLNu-2Jets_PTLNu-600_1J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8_redirector.json",
+         #          f"{localdir}/datasets/WJets/WtoLNu-2Jets_PTLNu-40to100_2J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8_redirector.json",
+          #         f"{localdir}/datasets/WJets/WtoLNu-2Jets_PTLNu-100to200_2J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8_redirector.json",
+           #        f"{localdir}/datasets/WJets/WtoLNu-2Jets_PTLNu-200to400_2J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8_redirector.json",
+            #       f"{localdir}/datasets/WJets/WtoLNu-2Jets_PTLNu-400to600_2J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8_redirector.json",
+             #      f"{localdir}/datasets/WJets/WtoLNu-2Jets_PTLNu-600_2J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8_redirector.json",
                    
                    # ttbar 
-                  f"{localdir}/datasets/TTbar/TTtoLNu2Q_HT-500_NJet-9_Hdamp-158_TuneCP5_13p6TeV_powheg-pythia8.json",
-                  f"{localdir}/datasets/TTbar/TTtoLNu2Q_HT-500_NJet-9_Hdamp-418_TuneCP5_13p6TeV_powheg-pythia8.json",
-                  f"{localdir}/datasets/TTbar/TTtoLNu2Q_HT-500_NJet-9_TuneCP5_13p6TeV_powheg-pythia8.json",
+                 f"{localdir}/datasets/TTbar/TTtoLNu2Q_HT-500_NJet-9_Hdamp-158_TuneCP5_13p6TeV_powheg-pythia8_redirector.json",
+                 f"{localdir}/datasets/TTbar/TTtoLNu2Q_HT-500_NJet-9_Hdamp-418_TuneCP5_13p6TeV_powheg-pythia8_redirector.json",
+                 f"{localdir}/datasets/TTbar/TTtoLNu2Q_HT-500_NJet-9_TuneCP5_13p6TeV_powheg-pythia8_redirector.json",
 
-                   
-                   f"{localdir}/datasets/TbarWplus/TbarWplustoLNu2Q_TuneCP5Down_13p6TeV_powheg-pythia8.json",
-                   f"{localdir}/datasets/VVV/WZZ_TuneCP5_13p6TeV_amcatnlo-pythia8.json",
-                   f"{localdir}/datasets/VVV/ZZZ_TuneCP5_13p6TeV_amcatnlo-pythia8.json",
-                   f"{localdir}/datasets/DATA/Muon1_Run2023C_v12.json",
-                #    f"{localdir}/datasets/JetMET0.json",
-                #    f"{localdir}/datasets/JetMET1.json",
-                    f"{localdir}/datasets/DATA/Muon1.json",
-                   f"{localdir}/datasets/DATA/EGamma1.json",
+                  f"{localdir}/datasets/TbarWplus/TbarWplustoLNu2Q_TuneCP5Down_13p6TeV_powheg-pythia8_redirector.json",
+#                  f"{localdir}/datasets/WZZ_TuneCP5_13p6TeV_amcatnlo-pythia8_redirector.json",
+            #       f"{localdir}/datasets/VVV/ZZZ_TuneCP5_13p6TeV_amcatnlo-pythia8.json",
+              #    f"{localdir}/datasets/DATA/Muon1_Run2023C_v12.json",
+        #            f"{localdir}/datasets/JetMET0.json",
+              #      f"{localdir}/datasets/JetMET1.json",
+                # f"{localdir}/datasets/DATA/Muon1.json",
+               #    f"{localdir}/datasets/DATA/EGamma1.json",
                    ],
         "filter" : {
             "samples" : [
@@ -67,12 +66,15 @@ cfg = Configurator(
                "ssWWLL",
                "JetMET0",
                "JetMET1",
-               "ssWWTT",
+              # "ssWWTT",
               # "ssWWTL",
               # "ssWW_unpolarized",
                 "TTtoLNu2Q_HT-500_NJet-9_Hdamp-158_TuneCP5_13p6TeV_powheg-pythia8", 
                 "TTtoLNu2Q_HT-500_NJet-9_TuneCP5_13p6TeV_powheg-pythia8",
+                "WtoLNu-2Jets_0J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8",
                 "WtoLNu-2Jets_PTLNu-100to200_2J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8", 
+                "WtoLNu-2Jets_PTLNu-100to200_2J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8",
+                "WtoLNu-2Jets_PTLNu-100to200_2J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8",
                 "TbarWplustoLNu2Q_TuneCP5Down_13p6TeV_powheg-pythia8", 
                 "WZZ_TuneCP5_13p6TeV_amcatnlo-pythia8", 
                 "ZZZ_TuneCP5_13p6TeV_amcatnlo-pythia8",
@@ -83,7 +85,7 @@ cfg = Configurator(
     workflow=VBS_WV_Processor,
     skim = [
             get_nPVgood(1), 
-            goldenJson,
+          #  goldenJson,
        #     get_HLTsel_custom(skim_dict["Wlep_V"]["triggers_forfakes"]),
             get_nObj_min_or(
                 [skim_dict["Wlep_V"]["Muon"]["nMin"],skim_dict["Wlep_V"]["Electron"]["nMin"]], 
@@ -116,11 +118,11 @@ cfg = Configurator(
 
 
         # ttbar/tbarWplus
-        #"SingleEle_AK8_bjets_ttbar" : [get_nElectron(1, coll="ElectronGood"), get_nObj_eq(1 , coll="CleanFatJet"), get_nObj_min(1, coll="BJetGood")],
-        #"SingleEle_AK4_bjets_ttbar" : [get_nElectron(1, coll="ElectronGood"), get_nObj_eq(0 , coll="CleanFatJet"), get_nObj_min(1, coll="BJetGood")],
-        #"SingleMuon_AK8_bjets_ttbar" : [get_nMuon(1, coll="MuonGood"), get_nObj_eq(1 , coll="CleanFatJet"), get_nObj_min(1, coll="BJetGood")],
-        #"SingleMuon_AK4_bjets_ttbar" : [get_nMuon(1, coll="MuonGood"), get_nObj_eq(0, coll="CleanFatJet"), get_nObj_min(1, coll="BJetGood")],
-        #"SingleMuon_bjets_ttbar_inclusive" : [get_nMuon(1, coll="MuonGood"), get_nObj_min(1, coll="BJetGood")], 
+        "SingleEle_AK8_bjets_ttbar" : [get_nElectron(1, coll="ElectronGood"), get_nObj_eq(1 , coll="CleanFatJet"), get_nObj_min(1, coll="BJetGood")],
+        "SingleEle_AK4_bjets_ttbar" : [get_nElectron(1, coll="ElectronGood"), get_nObj_eq(0 , coll="CleanFatJet"), get_nObj_min(1, coll="BJetGood")],
+        "SingleMuon_AK8_bjets_ttbar" : [get_nMuon(1, coll="MuonGood"), get_nObj_eq(1 , coll="CleanFatJet"), get_nObj_min(1, coll="BJetGood")],
+        "SingleMuon_AK4_bjets_ttbar" : [get_nMuon(1, coll="MuonGood"), get_nObj_eq(0, coll="CleanFatJet"), get_nObj_min(1, coll="BJetGood")],
+        "SingleMuon_bjets_ttbar_inclusive" : [get_nMuon(1, coll="MuonGood"), get_nObj_min(1, coll="BJetGood")], 
         "SingleLepton_AK8_bjets_ttbar" : [get_nObj_eq(1, coll="LeptonGood"), get_nObj_eq(1, coll="CleanFatJet"), get_nObj_min(1, coll="BJetGood")],
         "SingleLepton_AK4_bjets_ttbar" : [get_nObj_eq(1, coll="LeptonGood"), get_nObj_eq(0, coll="CleanFatJet"), get_nObj_min(1, coll="BJetGood")],
         "SingleLepton_bjets_ttbar_inclusive" : [get_nObj_eq(1, coll="LeptonGood"), get_nObj_min(1, coll="BJetGood")],
@@ -161,21 +163,22 @@ cfg = Configurator(
         },
     },
     workflow_options = {
-        "dump_columns_as_arrays_per_chunk": "root://eosuser.cern.ch//eos/user/l/ldellape/VBS/parquet_forfake/"
+            "dump_columns_as_arrays_per_chunk": "root://eosuser.cern.ch//eos/user/l/ldellape/VBS/run_2023/"
     },
-    columns = {
-        "common" : {
-            "inclusive" : [
-                           ColOut("MuonLoose", ["pt", "eta", "phi"], flatten=False),
-                           ColOut("ElectronLoose", ["pt", "eta", "phi"], flatten=False),
-                           ColOut("MuonGood", ["pt", "eta", "phi"], flatten=False),
-                           ColOut("ElectronGood", ["pt", "eta", "phi"], flatten=False),
-                           ColOut("JetForFakes_loose",["pt", "eta", "phi"] , flatten=False),
-                           ColOut("JetForFakes_tight", ["pt", "eta", "phi"], flatten=False),
-                           ],
-            "bycategory" : {},
-            },            
-    },   
+    #columns = {
+     #   "common" : {
+     #       "inclusive" : [
+     #                      ColOut("MuonLoose", ["pt", "eta", "phi"], flatten=False),
+     #                      ColOut("ElectronLoose", ["pt", "eta", "phi"], flatten=False),
+     #                      ColOut("MuonGood", ["pt", "eta", "phi"], flatten=False),
+     #                      ColOut("ElectronGood", ["pt", "eta", "phi"], flatten=False),
+     #                      ColOut("JetForFakes_loose",["pt", "eta", "phi"] , flatten=False),
+     #                      ColOut("JetForFakes_tight", ["pt", "eta", "phi"], flatten=False),
+     #                      ],
+     #       "bycategory" : {},
+     #       },            
+    #},
+    columns = {},
     variables = {
         "ElectronGood_pt"  : HistConf([Axis(coll="ElectronGood", field="pt",  bins=20, start=0, stop=500, label="Electron pT")]),
         "ElectronGood_eta" : HistConf([Axis(coll="ElectronGood", field="eta", bins=20, start=-5, stop=5, label="Electron η")]),
