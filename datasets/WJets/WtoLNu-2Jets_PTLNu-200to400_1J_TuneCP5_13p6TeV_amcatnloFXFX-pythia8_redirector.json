@@ -129,7 +129,7 @@
             "sample": "WtoLNu-2Jets_PTLNu-200to400_1J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8",
             "year": "2023_preBPix",
             "isMC": "True",
-            "xsec": "1.0",
+            "xsec": "25.6",
             "nevents": "16714517",
             "size": "29973105173"
         },

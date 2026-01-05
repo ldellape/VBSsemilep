@@ -5,6 +5,7 @@
             "sample": "JetMET1",
             "year": "2023_preBPix",
             "isMC": "False",
+            "nano_version": 12,
             "primaryDataset": "JetMET1",
             "era": "Cv1",
             "nevents": "193478557",

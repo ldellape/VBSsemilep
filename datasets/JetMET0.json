@@ -8,6 +8,7 @@
             "primaryDataset": "JetMET0",
             "era": "Cv1",
             "nevents": "193550492",
+            "nano_version": 12, 
             "size": "262226881508"
         },
         "files": [

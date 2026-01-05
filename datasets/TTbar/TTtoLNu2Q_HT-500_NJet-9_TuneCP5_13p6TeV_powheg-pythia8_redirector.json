@@ -89,7 +89,7 @@
             "sample": "TTtoLNu2Q_HT-500_NJet-9_TuneCP5_13p6TeV_powheg-pythia8",
             "year": "2023_preBPix",
             "isMC": "True",
-            "xsec": "1.0",
+            "xsec": "5.066",
             "nevents": "4378186",
             "size": "16393195876"
         },
