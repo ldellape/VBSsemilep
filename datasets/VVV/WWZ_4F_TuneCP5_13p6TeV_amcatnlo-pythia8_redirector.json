@@ -5,7 +5,7 @@
             "sample": "WWZ_4F_TuneCP5_13p6TeV_amcatnlo-pythia8",
             "year": "2023_preBPix",
             "isMC": "True",
-            "xsec": "1.0",
+            "xsec": "0.1851",
             "nevents": "3600000",
             "size": "8002479232"
         },

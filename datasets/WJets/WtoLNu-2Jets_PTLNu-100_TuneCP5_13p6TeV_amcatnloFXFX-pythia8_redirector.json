@@ -808,7 +808,7 @@
             "sample": "WtoLNu-2Jets_PTLNu-100_TuneCP5_13p6TeV_amcatnloFXFX-pythia8",
             "year": "2023_preBPix",
             "isMC": "True",
-            "xsec": "1.0",
+            "xsec": "893.3",
             "nevents": "165034982",
             "size": "286979541385"
         },

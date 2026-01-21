@@ -27,7 +27,7 @@
             "sample": "WZZ_TuneCP5_13p6TeV_amcatnlo-pythia8",
             "year": "2023_preBPix",
             "isMC": "True",
-            "xsec": "1.0",
+            "xsec": "0.06206",
             "nevents": "3591000",
             "size": "8106314575"
         },

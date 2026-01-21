@@ -35,7 +35,7 @@
             "sample": "TTZ-ZtoQQ-1Jets_TuneCP5_13p6TeV_amcatnloFXFX-pythia8",
             "year": "2023_preBPix",
             "isMC": "True",
-            "xsec": "1.0",
+            "xsec": "0.6603",
             "nevents": "803622",
             "size": "2522835571"
         },

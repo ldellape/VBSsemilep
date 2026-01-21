@@ -5,7 +5,7 @@
             "sample": "TTtoLNu2Q_HT-500_NJet-9_Hdamp-158_TuneCP5_13p6TeV_powheg-pythia8",
             "year": "2023_postBPix",
             "isMC": "True",
-            "xsec": "1.0",
+            "xsec": "4.654",
             "nevents": "1010179",
             "size": "3910200921"
         },
@@ -96,7 +96,7 @@
             "sample": "TTtoLNu2Q_HT-500_NJet-9_Hdamp-158_TuneCP5_13p6TeV_powheg-pythia8",
             "year": "2023_preBPix",
             "isMC": "True",
-            "xsec": "1.0",
+            "xsec": "4.654",
             "nevents": "1946830",
             "size": "7461473010"
         },

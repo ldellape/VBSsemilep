@@ -5,7 +5,7 @@
             "sample": "WtoLNu-2Jets_PTLNu-600_TuneCP5_13p6TeV_amcatnloFXFX-pythia8",
             "year": "2023_postBPix",
             "isMC": "True",
-            "xsec": "1.0",
+            "xsec": "0.6376",
             "nevents": "13832641",
             "size": "34216470404"
         },
@@ -112,7 +112,7 @@
             "sample": "WtoLNu-2Jets_PTLNu-600_TuneCP5_13p6TeV_amcatnloFXFX-pythia8",
             "year": "2023_preBPix",
             "isMC": "True",
-            "xsec": "1.0",
+            "xsec": "0.6376",
             "nevents": "20637381",
             "size": "51111602184"
         },

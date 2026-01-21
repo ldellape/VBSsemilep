@@ -20,7 +20,7 @@
             "sample": "WWW_4F_TuneCP5_13p6TeV_amcatnlo-madspin-pythia8",
             "year": "2023_preBPix",
             "isMC": "True",
-            "xsec": "1.0",
+            "xsec": "0.2328",
             "nevents": "936000",
             "size": "2035269331"
         },
