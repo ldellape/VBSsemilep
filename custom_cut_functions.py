@@ -10,7 +10,7 @@ from pocket_coffea.lib.objects import get_dilepton
 #############################################################
 def met_for_fakes_loose(events, params, year, sample, **kwargs):
     mask = (
-        (events.MET.pt < params["met"]) & 
+        (events.PuppiMET.pt < params["met"]) & 
         (events.MT_lep_miss < params["mt"])
     )
     return ak.where(ak.is_none(mask), False, mask)
@@ -63,11 +63,6 @@ FakeTight = Cut(
 
 
 
-
-
-
-
-
 #############################################################
 # single good lepton (electron or muon)                     #
 #############################################################
@@ -91,7 +86,7 @@ SingleLepton = Cut(
 #############################################################
 def VBS_topology(events, params, year, sample, **kwargs):
     mask = (
-        (events.VBS_dijet_system.mass > params["mass"] )
+        (events.VBS_dijet_system.mass > params["mass"])
         & 
         (events.VBS_dijet_system.deltaEta > params["deltaEta"])
         &
@@ -100,11 +95,11 @@ def VBS_topology(events, params, year, sample, **kwargs):
         (
             (
                 (events.nCleanFatJets == 1) &
-                (events.nCleanJets >= params["nJet_with_FatJet"])
+                (events.nCleanJet >= params["nJet_with_FatJet"])
             )
             |
             (
-                (events.nCleanJets >= params["nJet"]) &
+                (events.nCleanJet >= params["nJet"]) &
                 (events.nCleanFatJets == 0)
             )
         )
@@ -141,12 +136,12 @@ def semileptonic(events, params, year, sample, **kwargs):
         mask = (
                 ( single_electron
                   & (ak.firsts(events.LeptonGood.pt) > params["pt_leading_electron"])
-                  & (events.MET.pt > params["met_electron"])
+                  & (events.PuppiMET.pt > params["met_electron"]) 
                 )
                 | 
                 (  single_muon
-                   & (ak.firsts(events.LeptonGood.pt) > params["pt_leading_muon"])
-                   & (events.MET.pt > params["met_muon"])
+                   & (ak.firsts(events.MuonGood.pt) > params["pt_leading_muon"])
+                   & (events.PuppiMET.pt > params["met_muon"])
                 )
         )
     elif params["Z"] is True:
@@ -180,9 +175,43 @@ semileptonic_preselW = Cut(
         "nJet_with_FatJet" : 2,
         "met_electron" : 30,
         "met_muon" : 30,
+        "max_mt":185,
     },
     function = semileptonic,
 ) 
+semileptonic_preselW_2 = Cut(
+    name="semileptonic_preselW", 
+    params = {
+        "W" : True,
+        "pt_leading_electron" : 30,
+        "pt_leading_muon" : 35,
+        "eta_max_lep" : 2.5, 
+        "nJet" : 4, 
+        "nFatJets" : 1,
+        "nJet_with_FatJet" : 2,
+        "met_electron" : 30,
+        "met_muon" : 35,
+        "max_mt":185,
+    },
+    function = semileptonic,
+) 
+semileptonic_preselW_3 = Cut(
+    name="semileptonic_preselW", 
+    params = {
+        "W" : True,
+        "pt_leading_electron" : 0,
+        "pt_leading_muon" : 0,
+        "eta_max_lep" : 2.5, 
+        "nJet" : 4, 
+        "nFatJets" : 1,
+        "nJet_with_FatJet" : 2,
+        "met_electron" : 30,
+        "met_muon" : 0,
+        "max_mt":185,
+    },
+    function = semileptonic,
+) 
+
 
 semileptonic_preselZ = Cut(
     name="semileptonic_preselZ", 
@@ -219,8 +248,6 @@ semileptonic_preselDY = Cut(
 
 
 
-
-
 #############################################################
 # V jet mass from AK8 or 2AK4 (pair wuth the mass closer to W/Z mass)
 #############################################################
@@ -228,14 +255,18 @@ def Vjet_mass_AK8(events, params, year, sample, **kwargs):
     fj_mask = (
         (events.CleanFatJet.msoftdrop > params["mass_min"]) & 
         (events.CleanFatJet.msoftdrop < params["mass_max"]) & 
-        (events.CleanFatJet.tau21 < params["tau21"])
+        (events.CleanFatJet.pt > params["pt_min"])
     )
     mask = ak.any(fj_mask, axis=1)
     return ak.where(ak.is_none(mask), False, mask)
 def Vjet_mass_AK4(events, params, year, sample, **kwargs):
+    if "V_dijet_candidate" not in events.fields:
+        return ak.zeros_like(events.event, dtype=bool)
     fj_mask = (
+        (events.nCleanFatJets == 0) &
         (events.V_dijet_candidate.mass > params["mass_min"]) &
-        (events.V_dijet_candidate.mass < params["mass_max"]) 
+        (events.V_dijet_candidate.mass < params["mass_max"]) &
+        (events.V_dijet_candidate.pt < params["pt_max"])
     )
     return ak.where(ak.is_none(fj_mask), False, fj_mask)
 
@@ -257,7 +288,6 @@ Vjet_massZ_resolved = Cut(
         "mass_min": 70,
         "mass_max": 110,
         "nJet_min" : 4,
-        "tau21":0.45,
     },
     function=Vjet_mass_AK8,
 )
@@ -265,8 +295,9 @@ Vjet_massW_resolved = Cut(
     name="Vjet_massW",
     params={
         "VV": True,
-        "mass_min": 60,
-        "mass_max": 100,
+        "mass_min": 65,
+        "mass_max": 105,
+        "pt_max" : 200,
     },
     function=Vjet_mass_AK4,
 )
@@ -274,9 +305,9 @@ Vjet_massW_boosted = Cut(
     name="Vjet_massW",
     params={
         "VV": True,
-        "mass_min": 60,
-        "mass_max": 100,
-        "tau21" : 0.45,
+        "mass_min": 70,
+        "mass_max": 115,
+        "pt_min" : 200,
     },
     function=Vjet_mass_AK8,
 )
@@ -300,8 +331,6 @@ Bjets_presel = Cut(
 )
 #############################################################
 #############################################################
-
-
 
 
 
@@ -370,8 +399,6 @@ Wjet_sideR_boosted = Cut(
 
 
 
-
-
 #############################################################
 # transverse mass requirements form W->lv                   #
 #############################################################
@@ -384,8 +411,13 @@ def Wtransverse_mass(events, params, year, sample, **kwargs):
 Wtransverse_mass_presel = Cut(
     name="Wtransverse_mass_presel",
     params={
-        "transverse_max" : 180,
+        "transverse_max" : 185,
     },
+    function=Wtransverse_mass,
+)
+Wtransverse_forFakes = Cut(
+    name="Wtransverse_forFakes",
+    params={"transverse_max" : 30},
     function=Wtransverse_mass,
 )
 #############################################################

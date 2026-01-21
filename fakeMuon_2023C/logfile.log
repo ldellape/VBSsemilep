@@ -1,0 +1,1276 @@
+[INFO    ] State start
+[INFO    ]   Scheduler at: tcp://188.185.43.223:8786
+[INFO    ]   dashboard at:  http://188.185.43.223:8787/status
+[INFO    ] Registering Worker plugin shuffle
+[INFO    ] Adaptive scaling started: minimum=1 maximum=160
+[INFO    ] Receive client connection: Client-c66c73cd-f5f8-11f0-aeea-fa163ed2a367
+[INFO    ] Starting established connection to tcp://188.185.43.223:55210
+[INFO    ] Register worker <WorkerState 'tcp://188.185.211.21:10001', name: CernCluster-0, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://188.185.211.21:10001
+[INFO    ] Starting established connection to tcp://188.185.211.21:35114
+[INFO    ] Working on datasets: ['Muon1_2023_EraC']
+[INFO    ] Total number of events: 54698315
+[INFO    ] Event loop was unresponsive in Scheduler for 3.21s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+[INFO    ] Event loop was unresponsive in Scheduler for 15.31s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+[INFO    ] Retiring workers ['CernCluster-41', 'CernCluster-5', 'CernCluster-17', 'CernCluster-31', 'CernCluster-9', 'CernCluster-2', 'CernCluster-21', 'CernCluster-8', 'CernCluster-23', 'CernCluster-30', 'CernCluster-10', 'CernCluster-27', 'CernCluster-3', 'CernCluster-1', 'CernCluster-32', 'CernCluster-34', 'CernCluster-38', 'CernCluster-36', 'CernCluster-11', 'CernCluster-18']
+[INFO    ] Retire worker names ('CernCluster-41', 'CernCluster-5', 'CernCluster-17', 'CernCluster-31', 'CernCluster-9', 'CernCluster-2', 'CernCluster-21', 'CernCluster-8', 'CernCluster-23', 'CernCluster-30', 'CernCluster-10', 'CernCluster-27', 'CernCluster-3', 'CernCluster-1', 'CernCluster-32', 'CernCluster-34', 'CernCluster-38', 'CernCluster-36', 'CernCluster-11', 'CernCluster-18')
+[INFO    ] Retire worker addresses ('CernCluster-41', 'CernCluster-5', 'CernCluster-17', 'CernCluster-31', 'CernCluster-9', 'CernCluster-2', 'CernCluster-21', 'CernCluster-8', 'CernCluster-23', 'CernCluster-30', 'CernCluster-10', 'CernCluster-27', 'CernCluster-3', 'CernCluster-1', 'CernCluster-32', 'CernCluster-34', 'CernCluster-38', 'CernCluster-36', 'CernCluster-11', 'CernCluster-18')
+[INFO    ] Retiring workers ['CernCluster-54']
+[INFO    ] Retire worker names ('CernCluster-54',)
+[INFO    ] Retire worker addresses ('CernCluster-54',)
+[INFO    ] Retiring workers ['CernCluster-51']
+[INFO    ] Retire worker names ('CernCluster-51',)
+[INFO    ] Retire worker addresses ('CernCluster-51',)
+[INFO    ] Retiring workers ['CernCluster-48', 'CernCluster-22', 'CernCluster-50', 'CernCluster-33', 'CernCluster-4', 'CernCluster-53', 'CernCluster-52']
+[INFO    ] Retire worker names ('CernCluster-48', 'CernCluster-22', 'CernCluster-50', 'CernCluster-33', 'CernCluster-4', 'CernCluster-53', 'CernCluster-52')
+[INFO    ] Retire worker addresses ('CernCluster-48', 'CernCluster-22', 'CernCluster-50', 'CernCluster-33', 'CernCluster-4', 'CernCluster-53', 'CernCluster-52')
+[INFO    ] Retiring workers ['CernCluster-19', 'CernCluster-26']
+[INFO    ] Retire worker names ('CernCluster-19', 'CernCluster-26')
+[INFO    ] Retire worker addresses ('CernCluster-19', 'CernCluster-26')
+[INFO    ] Retiring workers ['CernCluster-39', 'CernCluster-6', 'CernCluster-43']
+[INFO    ] Retire worker names ('CernCluster-39', 'CernCluster-6', 'CernCluster-43')
+[INFO    ] Retire worker addresses ('CernCluster-39', 'CernCluster-6', 'CernCluster-43')
+[INFO    ] Retiring workers ['CernCluster-44']
+[INFO    ] Retire worker names ('CernCluster-44',)
+[INFO    ] Retire worker addresses ('CernCluster-44',)
+[INFO    ] Retiring workers ['CernCluster-14']
+[INFO    ] Retire worker names ('CernCluster-14',)
+[INFO    ] Retire worker addresses ('CernCluster-14',)
+[INFO    ] Retiring workers ['CernCluster-57', 'CernCluster-59', 'CernCluster-61', 'CernCluster-62', 'CernCluster-56', 'CernCluster-46', 'CernCluster-63']
+[INFO    ] Retire worker names ('CernCluster-57', 'CernCluster-59', 'CernCluster-61', 'CernCluster-62', 'CernCluster-56', 'CernCluster-46', 'CernCluster-63')
+[INFO    ] Retire worker addresses ('CernCluster-57', 'CernCluster-59', 'CernCluster-61', 'CernCluster-62', 'CernCluster-46', 'CernCluster-56', 'CernCluster-63')
+[INFO    ] Retiring workers ['CernCluster-65', 'CernCluster-67', 'CernCluster-63', 'CernCluster-20', 'CernCluster-45', 'CernCluster-15']
+[INFO    ] Retire worker names ('CernCluster-65', 'CernCluster-67', 'CernCluster-63', 'CernCluster-20', 'CernCluster-45', 'CernCluster-15')
+[INFO    ] Retire worker addresses ('CernCluster-65', 'CernCluster-67', 'CernCluster-63', 'CernCluster-20', 'CernCluster-45', 'CernCluster-15')
+[INFO    ] Retiring workers ['CernCluster-35', 'CernCluster-68']
+[INFO    ] Retire worker names ('CernCluster-35', 'CernCluster-68')
+[INFO    ] Retire worker addresses ('CernCluster-35', 'CernCluster-68')
+[INFO    ] Retiring workers ['CernCluster-42', 'CernCluster-12', 'CernCluster-49']
+[INFO    ] Retire worker names ('CernCluster-42', 'CernCluster-12', 'CernCluster-49')
+[INFO    ] Retire worker addresses ('CernCluster-42', 'CernCluster-12', 'CernCluster-49')
+[INFO    ] Retiring workers ['CernCluster-25', 'CernCluster-7']
+[INFO    ] Retire worker names ('CernCluster-25', 'CernCluster-7')
+[INFO    ] Retire worker addresses ('CernCluster-25', 'CernCluster-7')
+[INFO    ] Retiring workers ['CernCluster-75']
+[INFO    ] Retire worker names ('CernCluster-75',)
+[INFO    ] Retire worker addresses ('CernCluster-75',)
+[INFO    ] Retiring workers ['CernCluster-71', 'CernCluster-75', 'CernCluster-73', 'CernCluster-70', 'CernCluster-72']
+[INFO    ] Retire worker names ('CernCluster-71', 'CernCluster-75', 'CernCluster-73', 'CernCluster-70', 'CernCluster-72')
+[INFO    ] Retire worker addresses ('CernCluster-71', 'CernCluster-75', 'CernCluster-73', 'CernCluster-70', 'CernCluster-72')
+[INFO    ] Retiring workers ['CernCluster-77', 'CernCluster-69', 'CernCluster-78', 'CernCluster-68']
+[INFO    ] Retire worker names ('CernCluster-77', 'CernCluster-69', 'CernCluster-78', 'CernCluster-68')
+[INFO    ] Retire worker addresses ('CernCluster-77', 'CernCluster-69', 'CernCluster-78', 'CernCluster-68')
+[INFO    ] Retiring workers ['CernCluster-28']
+[INFO    ] Retire worker names ('CernCluster-28',)
+[INFO    ] Retire worker addresses ('CernCluster-28',)
+[INFO    ] Retiring workers ['CernCluster-40']
+[INFO    ] Retire worker names ('CernCluster-40',)
+[INFO    ] Retire worker addresses ('CernCluster-40',)
+[INFO    ] Retiring workers ['CernCluster-58']
+[INFO    ] Retire worker names ('CernCluster-58',)
+[INFO    ] Retire worker addresses ('CernCluster-58',)
+[INFO    ] Retiring workers ['CernCluster-78', 'CernCluster-66', 'CernCluster-37']
+[INFO    ] Retire worker names ('CernCluster-78', 'CernCluster-66', 'CernCluster-37')
+[INFO    ] Retire worker addresses ('CernCluster-78', 'CernCluster-66', 'CernCluster-37')
+[INFO    ] Retiring workers ['CernCluster-64']
+[INFO    ] Retire worker names ('CernCluster-64',)
+[INFO    ] Retire worker addresses ('CernCluster-64',)
+[INFO    ] Retiring workers ['CernCluster-83', 'CernCluster-80', 'CernCluster-84']
+[INFO    ] Retire worker names ('CernCluster-83', 'CernCluster-80', 'CernCluster-84')
+[INFO    ] Retire worker addresses ('CernCluster-80', 'CernCluster-83', 'CernCluster-84')
+[INFO    ] Retiring workers ['CernCluster-79']
+[INFO    ] Retire worker names ('CernCluster-79',)
+[INFO    ] Retire worker addresses ('CernCluster-79',)
+[INFO    ] Retiring workers ['CernCluster-82']
+[INFO    ] Retire worker names ('CernCluster-82',)
+[INFO    ] Retire worker addresses ('CernCluster-82',)
+[INFO    ] Retiring workers ['CernCluster-86', 'CernCluster-81', 'CernCluster-85']
+[INFO    ] Retire worker names ('CernCluster-86', 'CernCluster-81', 'CernCluster-85')
+[INFO    ] Retire worker addresses ('CernCluster-86', 'CernCluster-81', 'CernCluster-85')
+[INFO    ] Retiring workers ['CernCluster-16', 'CernCluster-84']
+[INFO    ] Retire worker names ('CernCluster-16', 'CernCluster-84')
+[INFO    ] Retire worker addresses ('CernCluster-16', 'CernCluster-84')
+[INFO    ] Retiring workers ['CernCluster-87', 'CernCluster-86']
+[INFO    ] Retire worker names ('CernCluster-87', 'CernCluster-86')
+[INFO    ] Retire worker addresses ('CernCluster-87', 'CernCluster-86')
+[INFO    ] Retiring workers ['CernCluster-87', 'CernCluster-24']
+[INFO    ] Retire worker names ('CernCluster-87', 'CernCluster-24')
+[INFO    ] Retire worker addresses ('CernCluster-24', 'CernCluster-87')
+[INFO    ] Retiring workers ['CernCluster-74']
+[INFO    ] Retire worker names ('CernCluster-74',)
+[INFO    ] Retire worker addresses ('CernCluster-74',)
+[INFO    ] Retiring workers ['CernCluster-55']
+[INFO    ] Retire worker names ('CernCluster-55',)
+[INFO    ] Retire worker addresses ('CernCluster-55',)
+[INFO    ] Retiring workers ['CernCluster-47']
+[INFO    ] Retire worker names ('CernCluster-47',)
+[INFO    ] Retire worker addresses ('CernCluster-47',)
+[INFO    ] Retiring workers ['CernCluster-60']
+[INFO    ] Retire worker names ('CernCluster-60',)
+[INFO    ] Retire worker addresses ('CernCluster-60',)
+[INFO    ] Retiring workers ['CernCluster-76']
+[INFO    ] Retire worker names ('CernCluster-76',)
+[INFO    ] Retire worker addresses ('CernCluster-76',)
+[INFO    ] Retiring workers ['CernCluster-29']
+[INFO    ] Retire worker names ('CernCluster-29',)
+[INFO    ] Retire worker addresses ('CernCluster-29',)
+[INFO    ] Retiring workers ['CernCluster-87']
+[INFO    ] Retire worker names ('CernCluster-87',)
+[INFO    ] Retire worker addresses ('CernCluster-87',)
+[INFO    ] Retiring workers ['CernCluster-13']
+[INFO    ] Retire worker names ('CernCluster-13',)
+[INFO    ] Retire worker addresses ('CernCluster-13',)
+[INFO    ] Event loop was unresponsive in Scheduler for 12.71s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+[INFO    ] Event loop was unresponsive in Scheduler for 4.01s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+[INFO    ] Event loop was unresponsive in Scheduler for 37.82s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+[INFO    ] Register worker <WorkerState 'tcp://188.185.214.8:10001', name: CernCluster-104, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://188.185.214.8:10001
+[INFO    ] Starting established connection to tcp://188.185.214.8:44558
+[INFO    ] Register worker <WorkerState 'tcp://188.185.210.24:10001', name: CernCluster-114, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://188.185.210.24:10001
+[INFO    ] Starting established connection to tcp://188.185.210.24:44432
+[INFO    ] Register worker <WorkerState 'tcp://188.185.213.220:10002', name: CernCluster-102, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://188.185.213.220:10002
+[INFO    ] Starting established connection to tcp://188.185.213.220:50068
+[INFO    ] Register worker <WorkerState 'tcp://188.185.214.31:10001', name: CernCluster-121, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://188.185.214.31:10001
+[INFO    ] Starting established connection to tcp://188.185.214.31:37938
+[INFO    ] Register worker <WorkerState 'tcp://188.185.214.22:10002', name: CernCluster-105, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://188.185.214.22:10002
+[INFO    ] Starting established connection to tcp://188.185.214.22:33436
+[INFO    ] Register worker <WorkerState 'tcp://188.185.213.231:10002', name: CernCluster-87, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://188.185.213.231:10002
+[INFO    ] Starting established connection to tcp://188.185.213.231:44664
+[INFO    ] Register worker <WorkerState 'tcp://188.185.213.176:10003', name: CernCluster-120, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://188.185.213.176:10003
+[INFO    ] Starting established connection to tcp://188.185.213.176:55856
+[INFO    ] Register worker <WorkerState 'tcp://188.185.213.180:10000', name: CernCluster-118, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://188.185.213.180:10000
+[INFO    ] Starting established connection to tcp://188.185.213.180:40844
+[INFO    ] Register worker <WorkerState 'tcp://188.185.214.82:10000', name: CernCluster-123, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://188.185.214.82:10000
+[INFO    ] Starting established connection to tcp://188.185.214.82:45548
+[INFO    ] Register worker <WorkerState 'tcp://128.142.161.146:10003', name: CernCluster-113, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://128.142.161.146:10003
+[INFO    ] Starting established connection to tcp://128.142.161.146:39476
+[INFO    ] Register worker <WorkerState 'tcp://188.185.214.81:10001', name: CernCluster-93, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://188.185.214.81:10001
+[INFO    ] Starting established connection to tcp://188.185.214.81:60628
+[INFO    ] Register worker <WorkerState 'tcp://128.142.161.117:10001', name: CernCluster-110, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://128.142.161.117:10001
+[INFO    ] Starting established connection to tcp://128.142.161.117:54904
+[INFO    ] Register worker <WorkerState 'tcp://188.185.214.45:10001', name: CernCluster-90, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://188.185.214.45:10001
+[INFO    ] Starting established connection to tcp://188.185.214.45:33640
+[INFO    ] Register worker <WorkerState 'tcp://188.185.207.7:10014', name: CernCluster-103, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://188.185.207.7:10014
+[INFO    ] Starting established connection to tcp://188.185.207.7:45406
+[INFO    ] Register worker <WorkerState 'tcp://188.185.212.107:10002', name: CernCluster-107, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://188.185.212.107:10002
+[INFO    ] Starting established connection to tcp://188.185.212.107:57496
+[INFO    ] Register worker <WorkerState 'tcp://188.185.211.218:10000', name: CernCluster-97, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://188.185.211.218:10000
+[INFO    ] Starting established connection to tcp://188.185.211.218:34484
+[INFO    ] Register worker <WorkerState 'tcp://188.185.211.69:10001', name: CernCluster-88, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://188.185.211.69:10001
+[INFO    ] Starting established connection to tcp://188.185.211.69:54628
+[INFO    ] Register worker <WorkerState 'tcp://188.185.212.174:10000', name: CernCluster-98, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://188.185.212.174:10000
+[INFO    ] Starting established connection to tcp://188.185.212.174:46452
+[INFO    ] Register worker <WorkerState 'tcp://188.185.212.194:10000', name: CernCluster-112, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://188.185.212.194:10000
+[INFO    ] Starting established connection to tcp://188.185.212.194:55394
+[INFO    ] Register worker <WorkerState 'tcp://188.185.212.98:10002', name: CernCluster-108, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://188.185.212.98:10002
+[INFO    ] Starting established connection to tcp://188.185.212.98:58320
+[INFO    ] Register worker <WorkerState 'tcp://188.185.213.16:10002', name: CernCluster-99, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://188.185.213.16:10002
+[INFO    ] Starting established connection to tcp://188.185.213.16:51136
+[INFO    ] Register worker <WorkerState 'tcp://188.185.205.182:10003', name: CernCluster-100, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://188.185.205.182:10003
+[INFO    ] Starting established connection to tcp://188.185.205.182:57144
+[INFO    ] Register worker <WorkerState 'tcp://188.185.210.214:10000', name: CernCluster-106, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://188.185.210.214:10000
+[INFO    ] Starting established connection to tcp://188.185.210.214:50442
+[INFO    ] Register worker <WorkerState 'tcp://188.185.215.22:10001', name: CernCluster-122, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://188.185.215.22:10001
+[INFO    ] Starting established connection to tcp://188.185.215.22:39818
+[INFO    ] Register worker <WorkerState 'tcp://188.185.213.62:10000', name: CernCluster-89, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://188.185.213.62:10000
+[INFO    ] Starting established connection to tcp://188.185.213.62:34816
+[INFO    ] Register worker <WorkerState 'tcp://188.185.213.179:10000', name: CernCluster-109, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://188.185.213.179:10000
+[INFO    ] Starting established connection to tcp://188.185.213.179:41786
+[INFO    ] Register worker <WorkerState 'tcp://188.185.204.239:10002', name: CernCluster-128, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://188.185.204.239:10002
+[INFO    ] Starting established connection to tcp://188.185.204.239:46712
+[INFO    ] Register worker <WorkerState 'tcp://128.142.192.142:10000', name: CernCluster-130, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://128.142.192.142:10000
+[INFO    ] Starting established connection to tcp://128.142.192.142:55738
+[INFO    ] Register worker <WorkerState 'tcp://188.185.214.62:10002', name: CernCluster-125, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://188.185.214.62:10002
+[INFO    ] Starting established connection to tcp://188.185.214.62:57064
+[INFO    ] Register worker <WorkerState 'tcp://188.185.213.160:10000', name: CernCluster-133, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://188.185.213.160:10000
+[INFO    ] Starting established connection to tcp://188.185.213.160:41198
+[INFO    ] Register worker <WorkerState 'tcp://188.185.214.217:10000', name: CernCluster-94, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://188.185.214.217:10000
+[INFO    ] Starting established connection to tcp://188.185.214.217:40180
+[INFO    ] Register worker <WorkerState 'tcp://188.185.192.160:10001', name: CernCluster-116, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://188.185.192.160:10001
+[INFO    ] Starting established connection to tcp://188.185.192.160:53444
+[INFO    ] Register worker <WorkerState 'tcp://188.185.214.104:10001', name: CernCluster-134, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://188.185.214.104:10001
+[INFO    ] Starting established connection to tcp://188.185.214.104:47910
+[INFO    ] Register worker <WorkerState 'tcp://128.142.161.145:10000', name: CernCluster-136, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://128.142.161.145:10000
+[INFO    ] Starting established connection to tcp://128.142.161.145:42882
+[INFO    ] Register worker <WorkerState 'tcp://128.142.161.89:10000', name: CernCluster-126, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://128.142.161.89:10000
+[INFO    ] Starting established connection to tcp://128.142.161.89:35250
+[INFO    ] Register worker <WorkerState 'tcp://188.185.205.168:10001', name: CernCluster-96, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://188.185.205.168:10001
+[INFO    ] Starting established connection to tcp://188.185.205.168:36754
+[INFO    ] Register worker <WorkerState 'tcp://188.185.215.183:10009', name: CernCluster-137, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://188.185.215.183:10009
+[INFO    ] Starting established connection to tcp://188.185.215.183:50960
+[INFO    ] Register worker <WorkerState 'tcp://188.185.209.84:10000', name: CernCluster-135, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://188.185.209.84:10000
+[INFO    ] Starting established connection to tcp://188.185.209.84:46042
+[INFO    ] Register worker <WorkerState 'tcp://188.185.193.67:10000', name: CernCluster-115, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://188.185.193.67:10000
+[INFO    ] Starting established connection to tcp://188.185.193.67:55398
+[INFO    ] Register worker <WorkerState 'tcp://188.185.196.64:10001', name: CernCluster-139, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://188.185.196.64:10001
+[INFO    ] Starting established connection to tcp://188.185.196.64:55062
+[INFO    ] Register worker <WorkerState 'tcp://128.142.209.41:10002', name: CernCluster-148, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://128.142.209.41:10002
+[INFO    ] Starting established connection to tcp://128.142.209.41:59270
+[INFO    ] Register worker <WorkerState 'tcp://188.185.215.11:10001', name: CernCluster-141, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://188.185.215.11:10001
+[INFO    ] Starting established connection to tcp://188.185.215.11:46064
+[INFO    ] Register worker <WorkerState 'tcp://188.185.210.174:10000', name: CernCluster-140, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://188.185.210.174:10000
+[INFO    ] Starting established connection to tcp://188.185.210.174:45574
+[INFO    ] Register worker <WorkerState 'tcp://188.185.215.36:10000', name: CernCluster-144, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://188.185.215.36:10000
+[INFO    ] Starting established connection to tcp://188.185.215.36:34324
+[INFO    ] Register worker <WorkerState 'tcp://128.142.161.144:10000', name: CernCluster-151, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://128.142.161.144:10000
+[INFO    ] Starting established connection to tcp://128.142.161.144:34476
+[INFO    ] Register worker <WorkerState 'tcp://188.185.210.222:10001', name: CernCluster-145, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://188.185.210.222:10001
+[INFO    ] Starting established connection to tcp://188.185.210.222:43368
+[INFO    ] Register worker <WorkerState 'tcp://188.185.214.13:10002', name: CernCluster-150, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://188.185.214.13:10002
+[INFO    ] Starting established connection to tcp://188.185.214.13:39112
+[INFO    ] Register worker <WorkerState 'tcp://188.185.212.225:10000', name: CernCluster-143, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://188.185.212.225:10000
+[INFO    ] Starting established connection to tcp://188.185.212.225:44832
+[INFO    ] Register worker <WorkerState 'tcp://188.185.214.83:10002', name: CernCluster-234, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://188.185.214.83:10002
+[INFO    ] Starting established connection to tcp://188.185.214.83:58218
+[INFO    ] Register worker <WorkerState 'tcp://188.185.196.93:10001', name: CernCluster-189, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://188.185.196.93:10001
+[INFO    ] Starting established connection to tcp://188.185.196.93:51700
+[INFO    ] Register worker <WorkerState 'tcp://188.185.213.212:10001', name: CernCluster-194, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://188.185.213.212:10001
+[INFO    ] Starting established connection to tcp://188.185.213.212:38230
+[INFO    ] Register worker <WorkerState 'tcp://128.142.161.96:10001', name: CernCluster-158, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://128.142.161.96:10001
+[INFO    ] Starting established connection to tcp://128.142.161.96:52408
+[INFO    ] Register worker <WorkerState 'tcp://128.142.161.81:10001', name: CernCluster-168, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://128.142.161.81:10001
+[INFO    ] Starting established connection to tcp://128.142.161.81:44424
+[INFO    ] Register worker <WorkerState 'tcp://128.142.161.98:10000', name: CernCluster-154, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://128.142.161.98:10000
+[INFO    ] Starting established connection to tcp://128.142.161.98:51510
+[INFO    ] Register worker <WorkerState 'tcp://128.142.161.93:10000', name: CernCluster-153, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://128.142.161.93:10000
+[INFO    ] Starting established connection to tcp://128.142.161.93:56734
+[INFO    ] Register worker <WorkerState 'tcp://128.142.161.79:10000', name: CernCluster-193, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://128.142.161.79:10000
+[INFO    ] Starting established connection to tcp://128.142.161.79:39682
+[INFO    ] Register worker <WorkerState 'tcp://188.185.214.48:10001', name: CernCluster-206, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://188.185.214.48:10001
+[INFO    ] Starting established connection to tcp://188.185.214.48:50252
+[INFO    ] Register worker <WorkerState 'tcp://188.185.209.75:10002', name: CernCluster-147, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://188.185.209.75:10002
+[INFO    ] Starting established connection to tcp://188.185.209.75:45356
+[INFO    ] Register worker <WorkerState 'tcp://128.142.161.113:10000', name: CernCluster-213, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://128.142.161.113:10000
+[INFO    ] Starting established connection to tcp://128.142.161.113:49846
+[INFO    ] Register worker <WorkerState 'tcp://188.185.215.199:10000', name: CernCluster-229, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://188.185.215.199:10000
+[INFO    ] Starting established connection to tcp://188.185.215.199:35270
+[INFO    ] Register worker <WorkerState 'tcp://188.185.208.197:10001', name: CernCluster-169, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://188.185.208.197:10001
+[INFO    ] Starting established connection to tcp://188.185.208.197:56776
+[INFO    ] Register worker <WorkerState 'tcp://188.185.214.54:10000', name: CernCluster-92, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://188.185.214.54:10000
+[INFO    ] Starting established connection to tcp://188.185.214.54:52792
+[INFO    ] Register worker <WorkerState 'tcp://128.142.161.89:10001', name: CernCluster-230, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://128.142.161.89:10001
+[INFO    ] Starting established connection to tcp://128.142.161.89:38456
+[INFO    ] Register worker <WorkerState 'tcp://128.142.161.117:10002', name: CernCluster-205, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://128.142.161.117:10002
+[INFO    ] Starting established connection to tcp://128.142.161.117:52626
+[INFO    ] Register worker <WorkerState 'tcp://128.142.161.145:10001', name: CernCluster-166, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://128.142.161.145:10001
+[INFO    ] Starting established connection to tcp://128.142.161.145:56170
+[INFO    ] Register worker <WorkerState 'tcp://188.185.209.190:10000', name: CernCluster-178, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://188.185.209.190:10000
+[INFO    ] Starting established connection to tcp://188.185.209.190:34896
+[INFO    ] Register worker <WorkerState 'tcp://188.185.196.64:10002', name: CernCluster-176, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://188.185.196.64:10002
+[INFO    ] Starting established connection to tcp://188.185.196.64:53430
+[INFO    ] Register worker <WorkerState 'tcp://188.185.206.216:10001', name: CernCluster-132, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://188.185.206.216:10001
+[INFO    ] Starting established connection to tcp://188.185.206.216:58690
+[INFO    ] Register worker <WorkerState 'tcp://188.185.215.62:10000', name: CernCluster-111, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://188.185.215.62:10000
+[INFO    ] Starting established connection to tcp://188.185.215.62:60886
+[INFO    ] Register worker <WorkerState 'tcp://188.185.206.35:10000', name: CernCluster-197, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://188.185.206.35:10000
+[INFO    ] Starting established connection to tcp://188.185.206.35:35884
+[INFO    ] Register worker <WorkerState 'tcp://128.142.161.73:10000', name: CernCluster-237, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://128.142.161.73:10000
+[INFO    ] Starting established connection to tcp://128.142.161.73:49452
+[INFO    ] Register worker <WorkerState 'tcp://188.185.208.145:10000', name: CernCluster-239, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://188.185.208.145:10000
+[INFO    ] Starting established connection to tcp://188.185.208.145:45150
+[INFO    ] Register worker <WorkerState 'tcp://188.185.206.146:10003', name: CernCluster-186, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://188.185.206.146:10003
+[INFO    ] Starting established connection to tcp://188.185.206.146:41524
+[INFO    ] Register worker <WorkerState 'tcp://128.142.161.144:10001', name: CernCluster-174, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://128.142.161.144:10001
+[INFO    ] Starting established connection to tcp://128.142.161.144:34494
+[INFO    ] Register worker <WorkerState 'tcp://128.142.161.96:10002', name: CernCluster-221, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://128.142.161.96:10002
+[INFO    ] Starting established connection to tcp://128.142.161.96:43138
+[INFO    ] Register worker <WorkerState 'tcp://188.185.213.212:10002', name: CernCluster-172, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://188.185.213.212:10002
+[INFO    ] Starting established connection to tcp://188.185.213.212:38248
+[INFO    ] Register worker <WorkerState 'tcp://128.142.161.81:10002', name: CernCluster-211, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://128.142.161.81:10002
+[INFO    ] Starting established connection to tcp://128.142.161.81:54694
+[INFO    ] Register worker <WorkerState 'tcp://128.142.161.93:10001', name: CernCluster-181, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://128.142.161.93:10001
+[INFO    ] Starting established connection to tcp://128.142.161.93:40970
+[INFO    ] Register worker <WorkerState 'tcp://188.185.214.83:10003', name: CernCluster-220, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://188.185.214.83:10003
+[INFO    ] Starting established connection to tcp://188.185.214.83:58894
+[INFO    ] Register worker <WorkerState 'tcp://128.142.161.98:10001', name: CernCluster-185, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://128.142.161.98:10001
+[INFO    ] Starting established connection to tcp://128.142.161.98:33030
+[INFO    ] Register worker <WorkerState 'tcp://188.185.196.93:10002', name: CernCluster-164, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://188.185.196.93:10002
+[INFO    ] Starting established connection to tcp://188.185.196.93:47906
+[INFO    ] Register worker <WorkerState 'tcp://128.142.161.79:10002', name: CernCluster-177, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://128.142.161.79:10002
+[INFO    ] Starting established connection to tcp://128.142.161.79:57632
+[INFO    ] Register worker <WorkerState 'tcp://128.142.161.73:10002', name: CernCluster-235, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://128.142.161.73:10002
+[INFO    ] Starting established connection to tcp://128.142.161.73:33112
+[INFO    ] Register worker <WorkerState 'tcp://188.185.209.75:10003', name: CernCluster-165, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://188.185.209.75:10003
+[INFO    ] Starting established connection to tcp://188.185.209.75:38266
+[INFO    ] Register worker <WorkerState 'tcp://128.142.161.113:10001', name: CernCluster-223, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://128.142.161.113:10001
+[INFO    ] Starting established connection to tcp://128.142.161.113:47602
+[INFO    ] Register worker <WorkerState 'tcp://188.185.211.78:10000', name: CernCluster-101, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://188.185.211.78:10000
+[INFO    ] Starting established connection to tcp://188.185.211.78:57448
+[INFO    ] Register worker <WorkerState 'tcp://188.185.215.199:10001', name: CernCluster-157, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://188.185.215.199:10001
+[INFO    ] Starting established connection to tcp://188.185.215.199:60920
+[INFO    ] Register worker <WorkerState 'tcp://188.185.208.145:10001', name: CernCluster-161, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://188.185.208.145:10001
+[INFO    ] Starting established connection to tcp://188.185.208.145:59490
+[INFO    ] Register worker <WorkerState 'tcp://128.142.161.98:10002', name: CernCluster-236, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://128.142.161.98:10002
+[INFO    ] Starting established connection to tcp://128.142.161.98:33058
+[INFO    ] Register worker <WorkerState 'tcp://128.142.161.96:10003', name: CernCluster-182, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://128.142.161.96:10003
+[INFO    ] Starting established connection to tcp://128.142.161.96:43166
+[INFO    ] Register worker <WorkerState 'tcp://188.185.206.35:10001', name: CernCluster-214, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://188.185.206.35:10001
+[INFO    ] Starting established connection to tcp://188.185.206.35:33452
+[INFO    ] Register worker <WorkerState 'tcp://128.142.161.79:10003', name: CernCluster-232, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://128.142.161.79:10003
+[INFO    ] Starting established connection to tcp://128.142.161.79:57664
+[INFO    ] Register worker <WorkerState 'tcp://128.142.161.73:10003', name: CernCluster-179, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://128.142.161.73:10003
+[INFO    ] Starting established connection to tcp://128.142.161.73:33134
+[INFO    ] Register worker <WorkerState 'tcp://188.185.208.23:10000', name: CernCluster-175, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://188.185.208.23:10000
+[INFO    ] Starting established connection to tcp://188.185.208.23:40202
+[INFO    ] Register worker <WorkerState 'tcp://188.185.208.145:10002', name: CernCluster-233, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://188.185.208.145:10002
+[INFO    ] Starting established connection to tcp://188.185.208.145:59520
+[INFO    ] Register worker <WorkerState 'tcp://188.185.208.193:10002', name: CernCluster-228, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://188.185.208.193:10002
+[INFO    ] Starting established connection to tcp://188.185.208.193:36476
+[INFO    ] Register worker <WorkerState 'tcp://188.185.196.93:10003', name: CernCluster-159, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://188.185.196.93:10003
+[INFO    ] Starting established connection to tcp://188.185.196.93:41968
+[INFO    ] Register worker <WorkerState 'tcp://188.185.215.199:10002', name: CernCluster-224, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://188.185.215.199:10002
+[INFO    ] Starting established connection to tcp://188.185.215.199:38822
+[INFO    ] Register worker <WorkerState 'tcp://128.142.161.98:10003', name: CernCluster-212, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://128.142.161.98:10003
+[INFO    ] Starting established connection to tcp://128.142.161.98:53492
+[INFO    ] Register worker <WorkerState 'tcp://128.142.161.113:10002', name: CernCluster-217, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://128.142.161.113:10002
+[INFO    ] Starting established connection to tcp://128.142.161.113:45258
+[INFO    ] Register worker <WorkerState 'tcp://188.185.206.35:10002', name: CernCluster-160, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://188.185.206.35:10002
+[INFO    ] Starting established connection to tcp://188.185.206.35:35268
+[INFO    ] Register worker <WorkerState 'tcp://188.185.208.193:10003', name: CernCluster-195, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://188.185.208.193:10003
+[INFO    ] Starting established connection to tcp://188.185.208.193:36502
+[INFO    ] Register worker <WorkerState 'tcp://128.142.161.79:10004', name: CernCluster-245, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://128.142.161.79:10004
+[INFO    ] Starting established connection to tcp://128.142.161.79:43200
+[INFO    ] Register worker <WorkerState 'tcp://128.142.161.73:10004', name: CernCluster-215, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://128.142.161.73:10004
+[INFO    ] Starting established connection to tcp://128.142.161.73:33168
+[INFO    ] Register worker <WorkerState 'tcp://188.185.208.23:10001', name: CernCluster-187, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://188.185.208.23:10001
+[INFO    ] Starting established connection to tcp://188.185.208.23:40230
+[INFO    ] Register worker <WorkerState 'tcp://188.185.208.145:10003', name: CernCluster-227, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://188.185.208.145:10003
+[INFO    ] Starting established connection to tcp://188.185.208.145:48634
+[INFO    ] Register worker <WorkerState 'tcp://188.185.215.199:10003', name: CernCluster-198, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://188.185.215.199:10003
+[INFO    ] Starting established connection to tcp://188.185.215.199:38856
+[INFO    ] Register worker <WorkerState 'tcp://188.185.208.23:10002', name: CernCluster-192, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://188.185.208.23:10002
+[INFO    ] Starting established connection to tcp://188.185.208.23:35686
+[INFO    ] Register worker <WorkerState 'tcp://128.142.161.113:10003', name: CernCluster-199, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://128.142.161.113:10003
+[INFO    ] Starting established connection to tcp://128.142.161.113:45290
+[INFO    ] Register worker <WorkerState 'tcp://188.185.208.145:10004', name: CernCluster-200, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://188.185.208.145:10004
+[INFO    ] Starting established connection to tcp://188.185.208.145:48656
+[INFO    ] Register worker <WorkerState 'tcp://128.142.161.107:10001', name: CernCluster-171, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://128.142.161.107:10001
+[INFO    ] Starting established connection to tcp://128.142.161.107:55118
+[INFO    ] Register worker <WorkerState 'tcp://188.185.215.199:10004', name: CernCluster-226, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://188.185.215.199:10004
+[INFO    ] Starting established connection to tcp://188.185.215.199:48924
+[INFO    ] Register worker <WorkerState 'tcp://188.185.208.23:10003', name: CernCluster-209, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://188.185.208.23:10003
+[INFO    ] Starting established connection to tcp://188.185.208.23:35722
+[INFO    ] Register worker <WorkerState 'tcp://128.142.161.113:10004', name: CernCluster-183, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://128.142.161.113:10004
+[INFO    ] Starting established connection to tcp://128.142.161.113:55206
+[INFO    ] Register worker <WorkerState 'tcp://128.142.161.140:10000', name: CernCluster-225, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://128.142.161.140:10000
+[INFO    ] Starting established connection to tcp://128.142.161.140:43898
+[INFO    ] Register worker <WorkerState 'tcp://188.185.206.35:10003', name: CernCluster-196, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://188.185.206.35:10003
+[INFO    ] Starting established connection to tcp://188.185.206.35:35290
+[INFO    ] Register worker <WorkerState 'tcp://188.185.208.193:10004', name: CernCluster-188, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://188.185.208.193:10004
+[INFO    ] Starting established connection to tcp://188.185.208.193:49314
+[INFO    ] Register worker <WorkerState 'tcp://188.185.215.199:10005', name: CernCluster-170, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://188.185.215.199:10005
+[INFO    ] Starting established connection to tcp://188.185.215.199:48956
+[INFO    ] Register worker <WorkerState 'tcp://188.185.208.145:10005', name: CernCluster-162, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://188.185.208.145:10005
+[INFO    ] Starting established connection to tcp://188.185.208.145:48688
+[INFO    ] Register worker <WorkerState 'tcp://188.185.206.35:10004', name: CernCluster-152, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://188.185.206.35:10004
+[INFO    ] Starting established connection to tcp://188.185.206.35:40378
+[INFO    ] Register worker <WorkerState 'tcp://128.142.161.107:10002', name: CernCluster-207, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://128.142.161.107:10002
+[INFO    ] Starting established connection to tcp://128.142.161.107:45180
+[INFO    ] Register worker <WorkerState 'tcp://128.142.161.140:10001', name: CernCluster-238, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://128.142.161.140:10001
+[INFO    ] Starting established connection to tcp://128.142.161.140:37250
+[INFO    ] Register worker <WorkerState 'tcp://188.185.201.33:10001', name: CernCluster-156, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://188.185.201.33:10001
+[INFO    ] Starting established connection to tcp://188.185.201.33:50656
+[INFO    ] Register worker <WorkerState 'tcp://188.185.201.33:10002', name: CernCluster-155, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://188.185.201.33:10002
+[INFO    ] Starting established connection to tcp://188.185.201.33:50648
+[INFO    ] Register worker <WorkerState 'tcp://188.185.201.33:10000', name: CernCluster-243, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://188.185.201.33:10000
+[INFO    ] Starting established connection to tcp://188.185.201.33:50632
+[INFO    ] Register worker <WorkerState 'tcp://128.142.161.140:10002', name: CernCluster-241, status: init, memory: 0, processing: 0>
+[INFO    ] Starting worker compute stream, tcp://128.142.161.140:10002
+[INFO    ] Starting established connection to tcp://128.142.161.140:37274
+[INFO    ] Retiring workers ['CernCluster-240']
+[INFO    ] Retire worker names ('CernCluster-240',)
+[INFO    ] Retire worker addresses ('CernCluster-240',)
+[INFO    ] Retiring workers ['CernCluster-142', 'CernCluster-210', 'CernCluster-119', 'CernCluster-202', 'CernCluster-184', 'CernCluster-244']
+[INFO    ] Retire worker names ('CernCluster-142', 'CernCluster-210', 'CernCluster-119', 'CernCluster-202', 'CernCluster-184', 'CernCluster-244')
+[INFO    ] Retire worker addresses ('CernCluster-142', 'CernCluster-210', 'CernCluster-119', 'CernCluster-202', 'CernCluster-184', 'CernCluster-244')
+[INFO    ] Retiring workers ['CernCluster-117', 'CernCluster-127', 'CernCluster-180', 'CernCluster-146', 'CernCluster-219', 'CernCluster-167']
+[INFO    ] Retire worker names ('CernCluster-117', 'CernCluster-127', 'CernCluster-180', 'CernCluster-146', 'CernCluster-219', 'CernCluster-167')
+[INFO    ] Retire worker addresses ('CernCluster-117', 'CernCluster-127', 'CernCluster-180', 'CernCluster-146', 'CernCluster-219', 'CernCluster-167')
+[INFO    ] Retiring workers ['CernCluster-163', 'CernCluster-95', 'CernCluster-129', 'CernCluster-203', 'CernCluster-149']
+[INFO    ] Retire worker names ('CernCluster-163', 'CernCluster-95', 'CernCluster-129', 'CernCluster-203', 'CernCluster-149')
+[INFO    ] Retire worker addresses ('CernCluster-163', 'CernCluster-95', 'CernCluster-129', 'CernCluster-203', 'CernCluster-149')
+[INFO    ] Retiring workers ['CernCluster-201', 'CernCluster-204', 'CernCluster-91', 'CernCluster-231']
+[INFO    ] Retire worker names ('CernCluster-201', 'CernCluster-204', 'CernCluster-91', 'CernCluster-231')
+[INFO    ] Retire worker addresses ('CernCluster-201', 'CernCluster-91', 'CernCluster-231', 'CernCluster-204')
+[INFO    ] Retiring workers ['CernCluster-173', 'CernCluster-138', 'CernCluster-216', 'CernCluster-208']
+[INFO    ] Retire worker names ('CernCluster-173', 'CernCluster-138', 'CernCluster-216', 'CernCluster-208')
+[INFO    ] Retire worker addresses ('CernCluster-173', 'CernCluster-138', 'CernCluster-216', 'CernCluster-208')
+[INFO    ] Retiring workers ['CernCluster-150', 'CernCluster-242', 'CernCluster-218', 'CernCluster-131', 'CernCluster-103', 'CernCluster-124', 'CernCluster-222', 'CernCluster-190', 'CernCluster-191']
+[INFO    ] Retire worker names ('CernCluster-150', 'CernCluster-242', 'CernCluster-218', 'CernCluster-131', 'CernCluster-103', 'CernCluster-124', 'CernCluster-222', 'CernCluster-190', 'CernCluster-191')
+[INFO    ] Retiring worker 'tcp://188.185.214.13:10002' (stimulus_id='retire-workers-1768911364.8210945')
+[INFO    ] Retiring worker 'tcp://188.185.207.7:10014' (stimulus_id='retire-workers-1768911364.8210945')
+[INFO    ] Retiring worker tcp://188.185.214.13:10002; 3 keys are being moved away.
+[INFO    ] Retiring worker tcp://188.185.207.7:10014; 4 keys are being moved away.
+[INFO    ] Remove worker <WorkerState 'tcp://188.185.214.13:10002', name: CernCluster-150, status: closing_gracefully, memory: 3, processing: 0> (stimulus_id='retire-workers-1768911364.8210945')
+[INFO    ] Retired worker 'tcp://188.185.214.13:10002' (stimulus_id='retire-workers-1768911364.8210945')
+[INFO    ] Remove worker <WorkerState 'tcp://188.185.207.7:10014', name: CernCluster-103, status: closing_gracefully, memory: 4, processing: 0> (stimulus_id='retire-workers-1768911364.8210945')
+[INFO    ] Retired worker 'tcp://188.185.207.7:10014' (stimulus_id='retire-workers-1768911364.8210945')
+[INFO    ] Received 'close-stream' from tcp://188.185.214.13:39112; closing.
+[INFO    ] Retire worker addresses ('CernCluster-150', 'CernCluster-242', 'CernCluster-218', 'CernCluster-131', 'CernCluster-103', 'CernCluster-124', 'CernCluster-222', 'CernCluster-190', 'CernCluster-191')
+[INFO    ] Received 'close-stream' from tcp://188.185.207.7:45406; closing.
+[INFO    ] Retiring workers ['CernCluster-111', 'CernCluster-209', 'CernCluster-132', 'CernCluster-141', 'CernCluster-126']
+[INFO    ] Retire worker names ('CernCluster-111', 'CernCluster-209', 'CernCluster-132', 'CernCluster-141', 'CernCluster-126')
+[INFO    ] Retiring worker 'tcp://188.185.208.23:10003' (stimulus_id='retire-workers-1768911366.8211515')
+[INFO    ] Retiring worker 'tcp://188.185.215.62:10000' (stimulus_id='retire-workers-1768911366.8211515')
+[INFO    ] Retiring worker 'tcp://188.185.215.11:10001' (stimulus_id='retire-workers-1768911366.8211515')
+[INFO    ] Retiring worker 'tcp://128.142.161.89:10000' (stimulus_id='retire-workers-1768911366.8211515')
+[INFO    ] Retiring worker 'tcp://188.185.206.216:10001' (stimulus_id='retire-workers-1768911366.8211515')
+[INFO    ] Retiring worker tcp://188.185.215.11:10001; 3 keys are being moved away.
+[INFO    ] Retiring worker tcp://128.142.161.89:10000; 1 keys are being moved away.
+[INFO    ] Retiring worker tcp://188.185.206.216:10001; 2 keys are being moved away.
+[INFO    ] Retiring worker tcp://188.185.208.23:10003; 2 keys are being moved away.
+[INFO    ] Retiring worker tcp://188.185.215.62:10000; 2 keys are being moved away.
+[INFO    ] Remove worker <WorkerState 'tcp://188.185.208.23:10003', name: CernCluster-209, status: closing_gracefully, memory: 2, processing: 0> (stimulus_id='retire-workers-1768911366.8211515')
+[INFO    ] Retired worker 'tcp://188.185.208.23:10003' (stimulus_id='retire-workers-1768911366.8211515')
+[INFO    ] Remove worker <WorkerState 'tcp://188.185.215.62:10000', name: CernCluster-111, status: closing_gracefully, memory: 2, processing: 0> (stimulus_id='retire-workers-1768911366.8211515')
+[INFO    ] Retired worker 'tcp://188.185.215.62:10000' (stimulus_id='retire-workers-1768911366.8211515')
+[INFO    ] Remove worker <WorkerState 'tcp://188.185.215.11:10001', name: CernCluster-141, status: closing_gracefully, memory: 3, processing: 0> (stimulus_id='retire-workers-1768911366.8211515')
+[INFO    ] Retired worker 'tcp://188.185.215.11:10001' (stimulus_id='retire-workers-1768911366.8211515')
+[INFO    ] Remove worker <WorkerState 'tcp://128.142.161.89:10000', name: CernCluster-126, status: closing_gracefully, memory: 1, processing: 0> (stimulus_id='retire-workers-1768911366.8211515')
+[INFO    ] Retired worker 'tcp://128.142.161.89:10000' (stimulus_id='retire-workers-1768911366.8211515')
+[INFO    ] Remove worker <WorkerState 'tcp://188.185.206.216:10001', name: CernCluster-132, status: closing_gracefully, memory: 2, processing: 0> (stimulus_id='retire-workers-1768911366.8211515')
+[INFO    ] Retired worker 'tcp://188.185.206.216:10001' (stimulus_id='retire-workers-1768911366.8211515')
+[INFO    ] Received 'close-stream' from tcp://128.142.161.89:35250; closing.
+[INFO    ] Received 'close-stream' from tcp://188.185.208.23:35722; closing.
+[INFO    ] Retire worker addresses ('CernCluster-209', 'CernCluster-111', 'CernCluster-132', 'CernCluster-141', 'CernCluster-126')
+[INFO    ] Received 'close-stream' from tcp://188.185.215.62:60886; closing.
+[INFO    ] Received 'close-stream' from tcp://188.185.206.216:58690; closing.
+[INFO    ] Received 'close-stream' from tcp://188.185.215.11:46064; closing.
+[INFO    ] Retiring workers ['CernCluster-228', 'CernCluster-106', 'CernCluster-113', 'CernCluster-116', 'CernCluster-89', 'CernCluster-174', 'CernCluster-198', 'CernCluster-143', 'CernCluster-199']
+[INFO    ] Retire worker names ('CernCluster-228', 'CernCluster-106', 'CernCluster-113', 'CernCluster-116', 'CernCluster-89', 'CernCluster-174', 'CernCluster-198', 'CernCluster-143', 'CernCluster-199')
+[INFO    ] Retiring worker 'tcp://188.185.213.62:10000' (stimulus_id='retire-workers-1768911368.820322')
+[INFO    ] Retiring worker 'tcp://188.185.215.199:10003' (stimulus_id='retire-workers-1768911368.820322')
+[INFO    ] Retiring worker 'tcp://188.185.208.193:10002' (stimulus_id='retire-workers-1768911368.820322')
+[INFO    ] Retiring worker 'tcp://128.142.161.113:10003' (stimulus_id='retire-workers-1768911368.820322')
+[INFO    ] Retiring worker 'tcp://128.142.161.146:10003' (stimulus_id='retire-workers-1768911368.820322')
+[INFO    ] Retiring worker 'tcp://188.185.210.214:10000' (stimulus_id='retire-workers-1768911368.820322')
+[INFO    ] Retiring worker 'tcp://188.185.192.160:10001' (stimulus_id='retire-workers-1768911368.820322')
+[INFO    ] Retiring worker 'tcp://188.185.212.225:10000' (stimulus_id='retire-workers-1768911368.820322')
+[INFO    ] Retiring worker 'tcp://128.142.161.144:10001' (stimulus_id='retire-workers-1768911368.820322')
+[INFO    ] Retiring worker tcp://128.142.161.144:10001; 2 keys are being moved away.
+[INFO    ] Retiring worker tcp://188.185.212.225:10000; 3 keys are being moved away.
+[INFO    ] Retiring worker tcp://188.185.210.214:10000; 3 keys are being moved away.
+[INFO    ] Retiring worker tcp://188.185.192.160:10001; 1 keys are being moved away.
+[INFO    ] Retiring worker tcp://188.185.215.199:10003; 2 keys are being moved away.
+[INFO    ] Retiring worker tcp://128.142.161.113:10003; 2 keys are being moved away.
+[INFO    ] Retiring worker tcp://128.142.161.146:10003; 4 keys are being moved away.
+[INFO    ] Retiring worker tcp://188.185.213.62:10000; 3 keys are being moved away.
+[INFO    ] Retiring worker tcp://188.185.208.193:10002; 2 keys are being moved away.
+[INFO    ] Remove worker <WorkerState 'tcp://188.185.213.62:10000', name: CernCluster-89, status: closing_gracefully, memory: 3, processing: 0> (stimulus_id='retire-workers-1768911368.820322')
+[INFO    ] Retired worker 'tcp://188.185.213.62:10000' (stimulus_id='retire-workers-1768911368.820322')
+[INFO    ] Remove worker <WorkerState 'tcp://188.185.215.199:10003', name: CernCluster-198, status: closing_gracefully, memory: 2, processing: 0> (stimulus_id='retire-workers-1768911368.820322')
+[INFO    ] Retired worker 'tcp://188.185.215.199:10003' (stimulus_id='retire-workers-1768911368.820322')
+[INFO    ] Remove worker <WorkerState 'tcp://128.142.161.146:10003', name: CernCluster-113, status: closing_gracefully, memory: 4, processing: 0> (stimulus_id='retire-workers-1768911368.820322')
+[INFO    ] Retired worker 'tcp://128.142.161.146:10003' (stimulus_id='retire-workers-1768911368.820322')
+[INFO    ] Received 'close-stream' from tcp://128.142.161.146:39476; closing.
+[INFO    ] Received 'close-stream' from tcp://188.185.215.199:38856; closing.
+[INFO    ] Received 'close-stream' from tcp://188.185.213.62:34816; closing.
+[INFO    ] Remove worker <WorkerState 'tcp://188.185.208.193:10002', name: CernCluster-228, status: closing_gracefully, memory: 2, processing: 0> (stimulus_id='retire-workers-1768911368.820322')
+[INFO    ] Retired worker 'tcp://188.185.208.193:10002' (stimulus_id='retire-workers-1768911368.820322')
+[INFO    ] Remove worker <WorkerState 'tcp://128.142.161.113:10003', name: CernCluster-199, status: closing_gracefully, memory: 2, processing: 0> (stimulus_id='retire-workers-1768911368.820322')
+[INFO    ] Retired worker 'tcp://128.142.161.113:10003' (stimulus_id='retire-workers-1768911368.820322')
+[INFO    ] Remove worker <WorkerState 'tcp://188.185.210.214:10000', name: CernCluster-106, status: closing_gracefully, memory: 3, processing: 0> (stimulus_id='retire-workers-1768911368.820322')
+[INFO    ] Retired worker 'tcp://188.185.210.214:10000' (stimulus_id='retire-workers-1768911368.820322')
+[INFO    ] Remove worker <WorkerState 'tcp://188.185.192.160:10001', name: CernCluster-116, status: closing_gracefully, memory: 1, processing: 0> (stimulus_id='retire-workers-1768911368.820322')
+[INFO    ] Retired worker 'tcp://188.185.192.160:10001' (stimulus_id='retire-workers-1768911368.820322')
+[INFO    ] Remove worker <WorkerState 'tcp://128.142.161.144:10001', name: CernCluster-174, status: closing_gracefully, memory: 2, processing: 0> (stimulus_id='retire-workers-1768911368.820322')
+[INFO    ] Retired worker 'tcp://128.142.161.144:10001' (stimulus_id='retire-workers-1768911368.820322')
+[INFO    ] Received 'close-stream' from tcp://128.142.161.113:45290; closing.
+[INFO    ] Received 'close-stream' from tcp://188.185.208.193:36476; closing.
+[INFO    ] Remove worker <WorkerState 'tcp://188.185.212.225:10000', name: CernCluster-143, status: closing_gracefully, memory: 3, processing: 0> (stimulus_id='retire-workers-1768911368.820322')
+[INFO    ] Retired worker 'tcp://188.185.212.225:10000' (stimulus_id='retire-workers-1768911368.820322')
+[INFO    ] Received 'close-stream' from tcp://128.142.161.144:34494; closing.
+[INFO    ] Received 'close-stream' from tcp://188.185.192.160:53444; closing.
+[INFO    ] Received 'close-stream' from tcp://188.185.210.214:50442; closing.
+[INFO    ] Retire worker addresses ('CernCluster-106', 'CernCluster-113', 'CernCluster-143', 'CernCluster-116', 'CernCluster-89', 'CernCluster-174', 'CernCluster-198', 'CernCluster-228', 'CernCluster-199')
+[INFO    ] Received 'close-stream' from tcp://188.185.212.225:44832; closing.
+[INFO    ] Retiring workers ['CernCluster-96', 'CernCluster-179', 'CernCluster-238', 'CernCluster-109', 'CernCluster-221', 'CernCluster-125']
+[INFO    ] Retire worker names ('CernCluster-96', 'CernCluster-179', 'CernCluster-238', 'CernCluster-109', 'CernCluster-221', 'CernCluster-125')
+[INFO    ] Retiring worker 'tcp://188.185.213.179:10000' (stimulus_id='retire-workers-1768911370.8205574')
+[INFO    ] Retiring worker 'tcp://188.185.205.168:10001' (stimulus_id='retire-workers-1768911370.8205574')
+[INFO    ] Retiring worker 'tcp://128.142.161.140:10001' (stimulus_id='retire-workers-1768911370.8205574')
+[INFO    ] Retiring worker 'tcp://188.185.214.62:10002' (stimulus_id='retire-workers-1768911370.8205574')
+[INFO    ] Retiring worker 'tcp://128.142.161.96:10002' (stimulus_id='retire-workers-1768911370.8205574')
+[INFO    ] Retiring worker 'tcp://128.142.161.73:10003' (stimulus_id='retire-workers-1768911370.8205574')
+[INFO    ] Retiring worker tcp://128.142.161.96:10002; 3 keys are being moved away.
+[INFO    ] Retiring worker tcp://188.185.214.62:10002; 1 keys are being moved away.
+[INFO    ] Retiring worker tcp://128.142.161.140:10001; 1 keys are being moved away.
+[INFO    ] Retiring worker tcp://188.185.205.168:10001; 1 keys are being moved away.
+[INFO    ] Retiring worker tcp://188.185.213.179:10000; 3 keys are being moved away.
+[INFO    ] Retiring worker tcp://128.142.161.73:10003; 2 keys are being moved away.
+[INFO    ] Remove worker <WorkerState 'tcp://188.185.213.179:10000', name: CernCluster-109, status: closing_gracefully, memory: 3, processing: 0> (stimulus_id='retire-workers-1768911370.8205574')
+[INFO    ] Retired worker 'tcp://188.185.213.179:10000' (stimulus_id='retire-workers-1768911370.8205574')
+[INFO    ] Remove worker <WorkerState 'tcp://188.185.205.168:10001', name: CernCluster-96, status: closing_gracefully, memory: 1, processing: 0> (stimulus_id='retire-workers-1768911370.8205574')
+[INFO    ] Retired worker 'tcp://188.185.205.168:10001' (stimulus_id='retire-workers-1768911370.8205574')
+[INFO    ] Remove worker <WorkerState 'tcp://128.142.161.140:10001', name: CernCluster-238, status: closing_gracefully, memory: 1, processing: 0> (stimulus_id='retire-workers-1768911370.8205574')
+[INFO    ] Retired worker 'tcp://128.142.161.140:10001' (stimulus_id='retire-workers-1768911370.8205574')
+[INFO    ] Remove worker <WorkerState 'tcp://188.185.214.62:10002', name: CernCluster-125, status: closing_gracefully, memory: 1, processing: 0> (stimulus_id='retire-workers-1768911370.8205574')
+[INFO    ] Retired worker 'tcp://188.185.214.62:10002' (stimulus_id='retire-workers-1768911370.8205574')
+[INFO    ] Remove worker <WorkerState 'tcp://128.142.161.96:10002', name: CernCluster-221, status: closing_gracefully, memory: 3, processing: 0> (stimulus_id='retire-workers-1768911370.8205574')
+[INFO    ] Retired worker 'tcp://128.142.161.96:10002' (stimulus_id='retire-workers-1768911370.8205574')
+[INFO    ] Remove worker <WorkerState 'tcp://128.142.161.73:10003', name: CernCluster-179, status: closing_gracefully, memory: 2, processing: 0> (stimulus_id='retire-workers-1768911370.8205574')
+[INFO    ] Retired worker 'tcp://128.142.161.73:10003' (stimulus_id='retire-workers-1768911370.8205574')
+[INFO    ] Retire worker addresses ('CernCluster-96', 'CernCluster-179', 'CernCluster-238', 'CernCluster-221', 'CernCluster-109', 'CernCluster-125')
+[INFO    ] Received 'close-stream' from tcp://128.142.161.73:33134; closing.
+[INFO    ] Received 'close-stream' from tcp://128.142.161.140:37250; closing.
+[INFO    ] Received 'close-stream' from tcp://188.185.213.179:41786; closing.
+[INFO    ] Received 'close-stream' from tcp://188.185.205.168:36754; closing.
+[INFO    ] Received 'close-stream' from tcp://188.185.214.62:57064; closing.
+[INFO    ] Received 'close-stream' from tcp://128.142.161.96:43138; closing.
+[INFO    ] Retiring workers ['CernCluster-101', 'CernCluster-158', 'CernCluster-241', 'CernCluster-168', 'CernCluster-217']
+[INFO    ] Retire worker names ('CernCluster-101', 'CernCluster-158', 'CernCluster-241', 'CernCluster-168', 'CernCluster-217')
+[INFO    ] Retiring worker 'tcp://188.185.211.78:10000' (stimulus_id='retire-workers-1768911371.8207943')
+[INFO    ] Retiring worker 'tcp://128.142.161.81:10001' (stimulus_id='retire-workers-1768911371.8207943')
+[INFO    ] Retiring worker 'tcp://128.142.161.140:10002' (stimulus_id='retire-workers-1768911371.8207943')
+[INFO    ] Retiring worker 'tcp://128.142.161.96:10001' (stimulus_id='retire-workers-1768911371.8207943')
+[INFO    ] Retiring worker 'tcp://128.142.161.113:10002' (stimulus_id='retire-workers-1768911371.8207943')
+[INFO    ] Retiring worker tcp://128.142.161.96:10001; 3 keys are being moved away.
+[INFO    ] Retiring worker tcp://128.142.161.113:10002; 2 keys are being moved away.
+[INFO    ] Retiring worker tcp://128.142.161.140:10002; 51 keys are being moved away.
+[INFO    ] Retiring worker tcp://128.142.161.81:10001; 3 keys are being moved away.
+[INFO    ] Retiring worker tcp://188.185.211.78:10000; 2 keys are being moved away.
+[INFO    ] Remove worker <WorkerState 'tcp://128.142.161.81:10001', name: CernCluster-168, status: closing_gracefully, memory: 3, processing: 0> (stimulus_id='retire-workers-1768911371.8207943')
+[INFO    ] Retired worker 'tcp://128.142.161.81:10001' (stimulus_id='retire-workers-1768911371.8207943')
+[INFO    ] Remove worker <WorkerState 'tcp://128.142.161.96:10001', name: CernCluster-158, status: closing_gracefully, memory: 3, processing: 0> (stimulus_id='retire-workers-1768911371.8207943')
+[INFO    ] Retired worker 'tcp://128.142.161.96:10001' (stimulus_id='retire-workers-1768911371.8207943')
+[INFO    ] Remove worker <WorkerState 'tcp://128.142.161.113:10002', name: CernCluster-217, status: closing_gracefully, memory: 2, processing: 0> (stimulus_id='retire-workers-1768911371.8207943')
+[INFO    ] Retired worker 'tcp://128.142.161.113:10002' (stimulus_id='retire-workers-1768911371.8207943')
+[INFO    ] Received 'close-stream' from tcp://128.142.161.81:44424; closing.
+[INFO    ] Remove worker <WorkerState 'tcp://188.185.211.78:10000', name: CernCluster-101, status: closing_gracefully, memory: 2, processing: 0> (stimulus_id='retire-workers-1768911371.8207943')
+[INFO    ] Retired worker 'tcp://188.185.211.78:10000' (stimulus_id='retire-workers-1768911371.8207943')
+[INFO    ] Received 'close-stream' from tcp://128.142.161.96:52408; closing.
+[INFO    ] Received 'close-stream' from tcp://128.142.161.113:45258; closing.
+[INFO    ] Remove worker <WorkerState 'tcp://128.142.161.140:10002', name: CernCluster-241, status: closing_gracefully, memory: 51, processing: 0> (stimulus_id='retire-workers-1768911371.8207943')
+[INFO    ] Retired worker 'tcp://128.142.161.140:10002' (stimulus_id='retire-workers-1768911371.8207943')
+[INFO    ] Received 'close-stream' from tcp://188.185.211.78:57448; closing.
+[INFO    ] Received 'close-stream' from tcp://128.142.161.140:37274; closing.
+[INFO    ] Retire worker addresses ('CernCluster-101', 'CernCluster-158', 'CernCluster-241', 'CernCluster-168', 'CernCluster-217')
+[INFO    ] Retiring workers ['CernCluster-92', 'CernCluster-94', 'CernCluster-151', 'CernCluster-233', 'CernCluster-205', 'CernCluster-139', 'CernCluster-153', 'CernCluster-193', 'CernCluster-122', 'CernCluster-144', 'CernCluster-87', 'CernCluster-172', 'CernCluster-195', 'CernCluster-0']
+[INFO    ] Retire worker names ('CernCluster-92', 'CernCluster-94', 'CernCluster-151', 'CernCluster-233', 'CernCluster-205', 'CernCluster-139', 'CernCluster-153', 'CernCluster-193', 'CernCluster-122', 'CernCluster-144', 'CernCluster-87', 'CernCluster-172', 'CernCluster-195', 'CernCluster-0')
+[INFO    ] Retiring worker 'tcp://188.185.211.21:10001' (stimulus_id='retire-workers-1768911373.8206306')
+[INFO    ] Retiring worker 'tcp://128.142.161.144:10000' (stimulus_id='retire-workers-1768911373.8206306')
+[INFO    ] Retiring worker 'tcp://128.142.161.117:10002' (stimulus_id='retire-workers-1768911373.8206306')
+[INFO    ] Retiring worker 'tcp://188.185.214.217:10000' (stimulus_id='retire-workers-1768911373.8206306')
+[INFO    ] Retiring worker 'tcp://188.185.208.145:10002' (stimulus_id='retire-workers-1768911373.8206306')
+[INFO    ] Retiring worker 'tcp://188.185.196.64:10001' (stimulus_id='retire-workers-1768911373.8206306')
+[INFO    ] Retiring worker 'tcp://188.185.213.212:10002' (stimulus_id='retire-workers-1768911373.8206306')
+[INFO    ] Retiring worker 'tcp://188.185.213.231:10002' (stimulus_id='retire-workers-1768911373.8206306')
+[INFO    ] Retiring worker 'tcp://188.185.208.193:10003' (stimulus_id='retire-workers-1768911373.8206306')
+[INFO    ] Retiring worker 'tcp://188.185.215.22:10001' (stimulus_id='retire-workers-1768911373.8206306')
+[INFO    ] Retiring worker 'tcp://188.185.214.54:10000' (stimulus_id='retire-workers-1768911373.8206306')
+[INFO    ] Retiring worker 'tcp://188.185.215.36:10000' (stimulus_id='retire-workers-1768911373.8206306')
+[INFO    ] Retiring worker 'tcp://128.142.161.79:10000' (stimulus_id='retire-workers-1768911373.8206306')
+[INFO    ] Retiring worker 'tcp://128.142.161.93:10000' (stimulus_id='retire-workers-1768911373.8206306')
+[INFO    ] Retiring worker tcp://188.185.214.217:10000; 1 keys are being moved away.
+[INFO    ] Retiring worker tcp://188.185.213.231:10002; 4 keys are being moved away.
+[INFO    ] Retiring worker tcp://188.185.215.22:10001; 3 keys are being moved away.
+[INFO    ] Retiring worker tcp://188.185.214.54:10000; 3 keys are being moved away.
+[INFO    ] Retiring worker tcp://128.142.161.144:10000; 1 keys are being moved away.
+[INFO    ] Retiring worker tcp://188.185.211.21:10001; 3 keys are being moved away.
+[INFO    ] Retiring worker tcp://188.185.215.36:10000; 1 keys are being moved away.
+[INFO    ] Retiring worker tcp://128.142.161.117:10002; 3 keys are being moved away.
+[INFO    ] Retiring worker tcp://128.142.161.93:10000; 3 keys are being moved away.
+[INFO    ] Retiring worker tcp://128.142.161.79:10000; 3 keys are being moved away.
+[INFO    ] Retiring worker tcp://188.185.208.193:10003; 2 keys are being moved away.
+[INFO    ] Retiring worker tcp://188.185.208.145:10002; 2 keys are being moved away.
+[INFO    ] Retiring worker tcp://188.185.196.64:10001; 1 keys are being moved away.
+[INFO    ] Retiring worker tcp://188.185.213.212:10002; 3 keys are being moved away.
+[INFO    ] Remove worker <WorkerState 'tcp://188.185.211.21:10001', name: CernCluster-0, status: closing_gracefully, memory: 3, processing: 0> (stimulus_id='retire-workers-1768911373.8206306')
+[INFO    ] Retired worker 'tcp://188.185.211.21:10001' (stimulus_id='retire-workers-1768911373.8206306')
+[INFO    ] Remove worker <WorkerState 'tcp://128.142.161.117:10002', name: CernCluster-205, status: closing_gracefully, memory: 3, processing: 0> (stimulus_id='retire-workers-1768911373.8206306')
+[INFO    ] Retired worker 'tcp://128.142.161.117:10002' (stimulus_id='retire-workers-1768911373.8206306')
+[INFO    ] Remove worker <WorkerState 'tcp://188.185.213.212:10002', name: CernCluster-172, status: closing_gracefully, memory: 3, processing: 0> (stimulus_id='retire-workers-1768911373.8206306')
+[INFO    ] Retired worker 'tcp://188.185.213.212:10002' (stimulus_id='retire-workers-1768911373.8206306')
+[INFO    ] Remove worker <WorkerState 'tcp://188.185.213.231:10002', name: CernCluster-87, status: closing_gracefully, memory: 4, processing: 0> (stimulus_id='retire-workers-1768911373.8206306')
+[INFO    ] Retired worker 'tcp://188.185.213.231:10002' (stimulus_id='retire-workers-1768911373.8206306')
+[INFO    ] Remove worker <WorkerState 'tcp://188.185.215.22:10001', name: CernCluster-122, status: closing_gracefully, memory: 3, processing: 0> (stimulus_id='retire-workers-1768911373.8206306')
+[INFO    ] Retired worker 'tcp://188.185.215.22:10001' (stimulus_id='retire-workers-1768911373.8206306')
+[INFO    ] Remove worker <WorkerState 'tcp://188.185.214.54:10000', name: CernCluster-92, status: closing_gracefully, memory: 3, processing: 0> (stimulus_id='retire-workers-1768911373.8206306')
+[INFO    ] Retired worker 'tcp://188.185.214.54:10000' (stimulus_id='retire-workers-1768911373.8206306')
+[INFO    ] Remove worker <WorkerState 'tcp://128.142.161.79:10000', name: CernCluster-193, status: closing_gracefully, memory: 3, processing: 0> (stimulus_id='retire-workers-1768911373.8206306')
+[INFO    ] Retired worker 'tcp://128.142.161.79:10000' (stimulus_id='retire-workers-1768911373.8206306')
+[INFO    ] Remove worker <WorkerState 'tcp://128.142.161.93:10000', name: CernCluster-153, status: closing_gracefully, memory: 3, processing: 0> (stimulus_id='retire-workers-1768911373.8206306')
+[INFO    ] Retired worker 'tcp://128.142.161.93:10000' (stimulus_id='retire-workers-1768911373.8206306')
+[INFO    ] Received 'close-stream' from tcp://128.142.161.117:52626; closing.
+[INFO    ] Remove worker <WorkerState 'tcp://128.142.161.144:10000', name: CernCluster-151, status: closing_gracefully, memory: 1, processing: 0> (stimulus_id='retire-workers-1768911373.8206306')
+[INFO    ] Retired worker 'tcp://128.142.161.144:10000' (stimulus_id='retire-workers-1768911373.8206306')
+[INFO    ] Received 'close-stream' from tcp://188.185.214.54:52792; closing.
+[INFO    ] Remove worker <WorkerState 'tcp://188.185.214.217:10000', name: CernCluster-94, status: closing_gracefully, memory: 1, processing: 0> (stimulus_id='retire-workers-1768911373.8206306')
+[INFO    ] Retired worker 'tcp://188.185.214.217:10000' (stimulus_id='retire-workers-1768911373.8206306')
+[INFO    ] Remove worker <WorkerState 'tcp://188.185.208.145:10002', name: CernCluster-233, status: closing_gracefully, memory: 2, processing: 0> (stimulus_id='retire-workers-1768911373.8206306')
+[INFO    ] Retired worker 'tcp://188.185.208.145:10002' (stimulus_id='retire-workers-1768911373.8206306')
+[INFO    ] Remove worker <WorkerState 'tcp://188.185.196.64:10001', name: CernCluster-139, status: closing_gracefully, memory: 1, processing: 0> (stimulus_id='retire-workers-1768911373.8206306')
+[INFO    ] Retired worker 'tcp://188.185.196.64:10001' (stimulus_id='retire-workers-1768911373.8206306')
+[INFO    ] Remove worker <WorkerState 'tcp://188.185.208.193:10003', name: CernCluster-195, status: closing_gracefully, memory: 2, processing: 0> (stimulus_id='retire-workers-1768911373.8206306')
+[INFO    ] Retired worker 'tcp://188.185.208.193:10003' (stimulus_id='retire-workers-1768911373.8206306')
+[INFO    ] Remove worker <WorkerState 'tcp://188.185.215.36:10000', name: CernCluster-144, status: closing_gracefully, memory: 1, processing: 0> (stimulus_id='retire-workers-1768911373.8206306')
+[INFO    ] Retired worker 'tcp://188.185.215.36:10000' (stimulus_id='retire-workers-1768911373.8206306')
+[INFO    ] Received 'close-stream' from tcp://128.142.161.79:39682; closing.
+[INFO    ] Received 'close-stream' from tcp://188.185.213.231:44664; closing.
+[INFO    ] Received 'close-stream' from tcp://128.142.161.93:56734; closing.
+[INFO    ] Received 'close-stream' from tcp://188.185.211.21:35114; closing.
+[INFO    ] Received 'close-stream' from tcp://128.142.161.144:34476; closing.
+[INFO    ] Received 'close-stream' from tcp://188.185.213.212:38248; closing.
+[INFO    ] Received 'close-stream' from tcp://188.185.215.22:39818; closing.
+[INFO    ] Retire worker addresses ('CernCluster-195', 'CernCluster-92', 'CernCluster-172', 'CernCluster-205', 'CernCluster-151', 'CernCluster-139', 'CernCluster-153', 'CernCluster-193', 'CernCluster-122', 'CernCluster-87', 'CernCluster-144', 'CernCluster-233', 'CernCluster-94', 'CernCluster-0')
+[INFO    ] Received 'close-stream' from tcp://188.185.196.64:55062; closing.
+[INFO    ] Received 'close-stream' from tcp://188.185.215.36:34324; closing.
+[INFO    ] Received 'close-stream' from tcp://188.185.214.217:40180; closing.
+[INFO    ] Received 'close-stream' from tcp://188.185.208.145:59520; closing.
+[INFO    ] Received 'close-stream' from tcp://188.185.208.193:36502; closing.
+[INFO    ] Retiring workers ['CernCluster-140', 'CernCluster-183', 'CernCluster-230', 'CernCluster-90', 'CernCluster-223', 'CernCluster-133', 'CernCluster-225', 'CernCluster-176', 'CernCluster-245']
+[INFO    ] Retire worker names ('CernCluster-140', 'CernCluster-183', 'CernCluster-230', 'CernCluster-90', 'CernCluster-223', 'CernCluster-133', 'CernCluster-225', 'CernCluster-176', 'CernCluster-245')
+[INFO    ] Retiring worker 'tcp://128.142.161.140:10000' (stimulus_id='retire-workers-1768911376.8205733')
+[INFO    ] Retiring worker 'tcp://128.142.161.79:10004' (stimulus_id='retire-workers-1768911376.8205733')
+[INFO    ] Retiring worker 'tcp://188.185.210.174:10000' (stimulus_id='retire-workers-1768911376.8205733')
+[INFO    ] Retiring worker 'tcp://128.142.161.113:10004' (stimulus_id='retire-workers-1768911376.8205733')
+[INFO    ] Retiring worker 'tcp://188.185.214.45:10001' (stimulus_id='retire-workers-1768911376.8205733')
+[INFO    ] Retiring worker 'tcp://188.185.196.64:10002' (stimulus_id='retire-workers-1768911376.8205733')
+[INFO    ] Retiring worker 'tcp://128.142.161.113:10001' (stimulus_id='retire-workers-1768911376.8205733')
+[INFO    ] Retiring worker 'tcp://188.185.213.160:10000' (stimulus_id='retire-workers-1768911376.8205733')
+[INFO    ] Retiring worker 'tcp://128.142.161.89:10001' (stimulus_id='retire-workers-1768911376.8205733')
+[INFO    ] Retiring worker tcp://128.142.161.140:10000; 2 keys are being moved away.
+[INFO    ] Retiring worker tcp://188.185.196.64:10002; 3 keys are being moved away.
+[INFO    ] Retiring worker tcp://128.142.161.79:10004; 2 keys are being moved away.
+[INFO    ] Retiring worker tcp://128.142.161.113:10001; 3 keys are being moved away.
+[INFO    ] Retiring worker tcp://188.185.210.174:10000; 1 keys are being moved away.
+[INFO    ] Retiring worker tcp://188.185.214.45:10001; 4 keys are being moved away.
+[INFO    ] Retiring worker tcp://128.142.161.113:10004; 2 keys are being moved away.
+[INFO    ] Retiring worker tcp://128.142.161.89:10001; 3 keys are being moved away.
+[INFO    ] Retiring worker tcp://188.185.213.160:10000; 2 keys are being moved away.
+[INFO    ] Remove worker <WorkerState 'tcp://128.142.161.140:10000', name: CernCluster-225, status: closing_gracefully, memory: 2, processing: 0> (stimulus_id='retire-workers-1768911376.8205733')
+[INFO    ] Retired worker 'tcp://128.142.161.140:10000' (stimulus_id='retire-workers-1768911376.8205733')
+[INFO    ] Remove worker <WorkerState 'tcp://128.142.161.79:10004', name: CernCluster-245, status: closing_gracefully, memory: 2, processing: 0> (stimulus_id='retire-workers-1768911376.8205733')
+[INFO    ] Retired worker 'tcp://128.142.161.79:10004' (stimulus_id='retire-workers-1768911376.8205733')
+[INFO    ] Remove worker <WorkerState 'tcp://188.185.210.174:10000', name: CernCluster-140, status: closing_gracefully, memory: 1, processing: 0> (stimulus_id='retire-workers-1768911376.8205733')
+[INFO    ] Retired worker 'tcp://188.185.210.174:10000' (stimulus_id='retire-workers-1768911376.8205733')
+[INFO    ] Remove worker <WorkerState 'tcp://128.142.161.113:10004', name: CernCluster-183, status: closing_gracefully, memory: 2, processing: 0> (stimulus_id='retire-workers-1768911376.8205733')
+[INFO    ] Retired worker 'tcp://128.142.161.113:10004' (stimulus_id='retire-workers-1768911376.8205733')
+[INFO    ] Remove worker <WorkerState 'tcp://188.185.214.45:10001', name: CernCluster-90, status: closing_gracefully, memory: 4, processing: 0> (stimulus_id='retire-workers-1768911376.8205733')
+[INFO    ] Retired worker 'tcp://188.185.214.45:10001' (stimulus_id='retire-workers-1768911376.8205733')
+[INFO    ] Remove worker <WorkerState 'tcp://188.185.196.64:10002', name: CernCluster-176, status: closing_gracefully, memory: 3, processing: 0> (stimulus_id='retire-workers-1768911376.8205733')
+[INFO    ] Retired worker 'tcp://188.185.196.64:10002' (stimulus_id='retire-workers-1768911376.8205733')
+[INFO    ] Remove worker <WorkerState 'tcp://128.142.161.113:10001', name: CernCluster-223, status: closing_gracefully, memory: 3, processing: 0> (stimulus_id='retire-workers-1768911376.8205733')
+[INFO    ] Retired worker 'tcp://128.142.161.113:10001' (stimulus_id='retire-workers-1768911376.8205733')
+[INFO    ] Remove worker <WorkerState 'tcp://188.185.213.160:10000', name: CernCluster-133, status: closing_gracefully, memory: 2, processing: 0> (stimulus_id='retire-workers-1768911376.8205733')
+[INFO    ] Retired worker 'tcp://188.185.213.160:10000' (stimulus_id='retire-workers-1768911376.8205733')
+[INFO    ] Remove worker <WorkerState 'tcp://128.142.161.89:10001', name: CernCluster-230, status: closing_gracefully, memory: 3, processing: 0> (stimulus_id='retire-workers-1768911376.8205733')
+[INFO    ] Retired worker 'tcp://128.142.161.89:10001' (stimulus_id='retire-workers-1768911376.8205733')
+[INFO    ] Retire worker addresses ('CernCluster-140', 'CernCluster-183', 'CernCluster-230', 'CernCluster-90', 'CernCluster-223', 'CernCluster-133', 'CernCluster-225', 'CernCluster-176', 'CernCluster-245')
+[INFO    ] Received 'close-stream' from tcp://128.142.161.140:43898; closing.
+[INFO    ] Received 'close-stream' from tcp://188.185.213.160:41198; closing.
+[INFO    ] Received 'close-stream' from tcp://188.185.214.45:33640; closing.
+[INFO    ] Received 'close-stream' from tcp://128.142.161.79:43200; closing.
+[INFO    ] Received 'close-stream' from tcp://188.185.210.174:45574; closing.
+[INFO    ] Received 'close-stream' from tcp://128.142.161.113:55206; closing.
+[INFO    ] Received 'close-stream' from tcp://128.142.161.113:47602; closing.
+[INFO    ] Received 'close-stream' from tcp://128.142.161.89:38456; closing.
+[INFO    ] Received 'close-stream' from tcp://188.185.196.64:53430; closing.
+[INFO    ] Retiring workers ['CernCluster-189', 'CernCluster-128', 'CernCluster-177', 'CernCluster-88', 'CernCluster-211', 'CernCluster-145', 'CernCluster-215']
+[INFO    ] Retire worker names ('CernCluster-189', 'CernCluster-128', 'CernCluster-177', 'CernCluster-88', 'CernCluster-211', 'CernCluster-145', 'CernCluster-215')
+[INFO    ] Retiring worker 'tcp://188.185.196.93:10001' (stimulus_id='retire-workers-1768911378.8202198')
+[INFO    ] Retiring worker 'tcp://188.185.210.222:10001' (stimulus_id='retire-workers-1768911378.8202198')
+[INFO    ] Retiring worker 'tcp://188.185.211.69:10001' (stimulus_id='retire-workers-1768911378.8202198')
+[INFO    ] Retiring worker 'tcp://188.185.204.239:10002' (stimulus_id='retire-workers-1768911378.8202198')
+[INFO    ] Retiring worker 'tcp://128.142.161.79:10002' (stimulus_id='retire-workers-1768911378.8202198')
+[INFO    ] Retiring worker 'tcp://128.142.161.73:10004' (stimulus_id='retire-workers-1768911378.8202198')
+[INFO    ] Retiring worker 'tcp://128.142.161.81:10002' (stimulus_id='retire-workers-1768911378.8202198')
+[INFO    ] Retiring worker tcp://188.185.210.222:10001; 1 keys are being moved away.
+[INFO    ] Retiring worker tcp://128.142.161.81:10002; 3 keys are being moved away.
+[INFO    ] Retiring worker tcp://188.185.196.93:10001; 3 keys are being moved away.
+[INFO    ] Retiring worker tcp://128.142.161.73:10004; 2 keys are being moved away.
+[INFO    ] Retiring worker tcp://188.185.204.239:10002; 2 keys are being moved away.
+[INFO    ] Retiring worker tcp://128.142.161.79:10002; 2 keys are being moved away.
+[INFO    ] Retiring worker tcp://188.185.211.69:10001; 4 keys are being moved away.
+[INFO    ] Remove worker <WorkerState 'tcp://188.185.210.222:10001', name: CernCluster-145, status: closing_gracefully, memory: 1, processing: 0> (stimulus_id='retire-workers-1768911378.8202198')
+[INFO    ] Retired worker 'tcp://188.185.210.222:10001' (stimulus_id='retire-workers-1768911378.8202198')
+[INFO    ] Remove worker <WorkerState 'tcp://128.142.161.81:10002', name: CernCluster-211, status: closing_gracefully, memory: 3, processing: 0> (stimulus_id='retire-workers-1768911378.8202198')
+[INFO    ] Retired worker 'tcp://128.142.161.81:10002' (stimulus_id='retire-workers-1768911378.8202198')
+[INFO    ] Received 'close-stream' from tcp://128.142.161.81:54694; closing.
+[INFO    ] Received 'close-stream' from tcp://188.185.210.222:43368; closing.
+[INFO    ] Remove worker <WorkerState 'tcp://188.185.196.93:10001', name: CernCluster-189, status: closing_gracefully, memory: 3, processing: 0> (stimulus_id='retire-workers-1768911378.8202198')
+[INFO    ] Retired worker 'tcp://188.185.196.93:10001' (stimulus_id='retire-workers-1768911378.8202198')
+[INFO    ] Remove worker <WorkerState 'tcp://188.185.211.69:10001', name: CernCluster-88, status: closing_gracefully, memory: 4, processing: 0> (stimulus_id='retire-workers-1768911378.8202198')
+[INFO    ] Retired worker 'tcp://188.185.211.69:10001' (stimulus_id='retire-workers-1768911378.8202198')
+[INFO    ] Remove worker <WorkerState 'tcp://188.185.204.239:10002', name: CernCluster-128, status: closing_gracefully, memory: 2, processing: 0> (stimulus_id='retire-workers-1768911378.8202198')
+[INFO    ] Retired worker 'tcp://188.185.204.239:10002' (stimulus_id='retire-workers-1768911378.8202198')
+[INFO    ] Remove worker <WorkerState 'tcp://128.142.161.79:10002', name: CernCluster-177, status: closing_gracefully, memory: 2, processing: 0> (stimulus_id='retire-workers-1768911378.8202198')
+[INFO    ] Retired worker 'tcp://128.142.161.79:10002' (stimulus_id='retire-workers-1768911378.8202198')
+[INFO    ] Remove worker <WorkerState 'tcp://128.142.161.73:10004', name: CernCluster-215, status: closing_gracefully, memory: 2, processing: 0> (stimulus_id='retire-workers-1768911378.8202198')
+[INFO    ] Retired worker 'tcp://128.142.161.73:10004' (stimulus_id='retire-workers-1768911378.8202198')
+[INFO    ] Retire worker addresses ('CernCluster-189', 'CernCluster-128', 'CernCluster-177', 'CernCluster-88', 'CernCluster-211', 'CernCluster-145', 'CernCluster-215')
+[INFO    ] Received 'close-stream' from tcp://128.142.161.73:33168; closing.
+[INFO    ] Received 'close-stream' from tcp://128.142.161.79:57632; closing.
+[INFO    ] Received 'close-stream' from tcp://188.185.204.239:46712; closing.
+[INFO    ] Received 'close-stream' from tcp://188.185.196.93:51700; closing.
+[INFO    ] Received 'close-stream' from tcp://188.185.211.69:54628; closing.
+[INFO    ] Retiring workers ['CernCluster-175', 'CernCluster-200', 'CernCluster-234', 'CernCluster-148', 'CernCluster-102', 'CernCluster-112', 'CernCluster-227', 'CernCluster-120', 'CernCluster-170', 'CernCluster-115']
+[INFO    ] Retire worker names ('CernCluster-175', 'CernCluster-200', 'CernCluster-234', 'CernCluster-148', 'CernCluster-102', 'CernCluster-112', 'CernCluster-227', 'CernCluster-120', 'CernCluster-170', 'CernCluster-115')
+[INFO    ] Retiring worker 'tcp://188.185.208.23:10000' (stimulus_id='retire-workers-1768911380.820508')
+[INFO    ] Retiring worker 'tcp://188.185.193.67:10000' (stimulus_id='retire-workers-1768911380.820508')
+[INFO    ] Retiring worker 'tcp://188.185.212.194:10000' (stimulus_id='retire-workers-1768911380.820508')
+[INFO    ] Retiring worker 'tcp://188.185.208.145:10004' (stimulus_id='retire-workers-1768911380.820508')
+[INFO    ] Retiring worker 'tcp://128.142.209.41:10002' (stimulus_id='retire-workers-1768911380.820508')
+[INFO    ] Retiring worker 'tcp://188.185.208.145:10003' (stimulus_id='retire-workers-1768911380.820508')
+[INFO    ] Retiring worker 'tcp://188.185.215.199:10005' (stimulus_id='retire-workers-1768911380.820508')
+[INFO    ] Retiring worker 'tcp://188.185.213.176:10003' (stimulus_id='retire-workers-1768911380.820508')
+[INFO    ] Retiring worker 'tcp://188.185.213.220:10002' (stimulus_id='retire-workers-1768911380.820508')
+[INFO    ] Retiring worker 'tcp://188.185.214.83:10002' (stimulus_id='retire-workers-1768911380.820508')
+[INFO    ] Retiring worker tcp://128.142.209.41:10002; 2 keys are being moved away.
+[INFO    ] Retiring worker tcp://188.185.208.145:10004; 2 keys are being moved away.
+[INFO    ] Retiring worker tcp://188.185.208.145:10003; 2 keys are being moved away.
+[INFO    ] Retiring worker tcp://188.185.213.220:10002; 3 keys are being moved away.
+[INFO    ] Retiring worker tcp://188.185.208.23:10000; 3 keys are being moved away.
+[INFO    ] Retiring worker tcp://188.185.193.67:10000; 1 keys are being moved away.
+[INFO    ] Retiring worker tcp://188.185.212.194:10000; 4 keys are being moved away.
+[INFO    ] Retiring worker tcp://188.185.215.199:10005; 2 keys are being moved away.
+[INFO    ] Retiring worker tcp://188.185.214.83:10002; 4 keys are being moved away.
+[INFO    ] Retiring worker tcp://188.185.213.176:10003; 3 keys are being moved away.
+[INFO    ] Remove worker <WorkerState 'tcp://188.185.208.23:10000', name: CernCluster-175, status: closing_gracefully, memory: 3, processing: 0> (stimulus_id='retire-workers-1768911380.820508')
+[INFO    ] Retired worker 'tcp://188.185.208.23:10000' (stimulus_id='retire-workers-1768911380.820508')
+[INFO    ] Remove worker <WorkerState 'tcp://188.185.193.67:10000', name: CernCluster-115, status: closing_gracefully, memory: 1, processing: 0> (stimulus_id='retire-workers-1768911380.820508')
+[INFO    ] Retired worker 'tcp://188.185.193.67:10000' (stimulus_id='retire-workers-1768911380.820508')
+[INFO    ] Remove worker <WorkerState 'tcp://188.185.212.194:10000', name: CernCluster-112, status: closing_gracefully, memory: 4, processing: 0> (stimulus_id='retire-workers-1768911380.820508')
+[INFO    ] Retired worker 'tcp://188.185.212.194:10000' (stimulus_id='retire-workers-1768911380.820508')
+[INFO    ] Remove worker <WorkerState 'tcp://188.185.208.145:10004', name: CernCluster-200, status: closing_gracefully, memory: 2, processing: 0> (stimulus_id='retire-workers-1768911380.820508')
+[INFO    ] Retired worker 'tcp://188.185.208.145:10004' (stimulus_id='retire-workers-1768911380.820508')
+[INFO    ] Remove worker <WorkerState 'tcp://128.142.209.41:10002', name: CernCluster-148, status: closing_gracefully, memory: 2, processing: 0> (stimulus_id='retire-workers-1768911380.820508')
+[INFO    ] Retired worker 'tcp://128.142.209.41:10002' (stimulus_id='retire-workers-1768911380.820508')
+[INFO    ] Remove worker <WorkerState 'tcp://188.185.208.145:10003', name: CernCluster-227, status: closing_gracefully, memory: 2, processing: 0> (stimulus_id='retire-workers-1768911380.820508')
+[INFO    ] Retired worker 'tcp://188.185.208.145:10003' (stimulus_id='retire-workers-1768911380.820508')
+[INFO    ] Remove worker <WorkerState 'tcp://188.185.215.199:10005', name: CernCluster-170, status: closing_gracefully, memory: 2, processing: 0> (stimulus_id='retire-workers-1768911380.820508')
+[INFO    ] Retired worker 'tcp://188.185.215.199:10005' (stimulus_id='retire-workers-1768911380.820508')
+[INFO    ] Remove worker <WorkerState 'tcp://188.185.213.176:10003', name: CernCluster-120, status: closing_gracefully, memory: 3, processing: 0> (stimulus_id='retire-workers-1768911380.820508')
+[INFO    ] Retired worker 'tcp://188.185.213.176:10003' (stimulus_id='retire-workers-1768911380.820508')
+[INFO    ] Remove worker <WorkerState 'tcp://188.185.213.220:10002', name: CernCluster-102, status: closing_gracefully, memory: 3, processing: 0> (stimulus_id='retire-workers-1768911380.820508')
+[INFO    ] Retired worker 'tcp://188.185.213.220:10002' (stimulus_id='retire-workers-1768911380.820508')
+[INFO    ] Remove worker <WorkerState 'tcp://188.185.214.83:10002', name: CernCluster-234, status: closing_gracefully, memory: 4, processing: 0> (stimulus_id='retire-workers-1768911380.820508')
+[INFO    ] Retired worker 'tcp://188.185.214.83:10002' (stimulus_id='retire-workers-1768911380.820508')
+[INFO    ] Received 'close-stream' from tcp://188.185.208.23:40202; closing.
+[INFO    ] Retire worker addresses ('CernCluster-175', 'CernCluster-200', 'CernCluster-234', 'CernCluster-148', 'CernCluster-102', 'CernCluster-112', 'CernCluster-227', 'CernCluster-120', 'CernCluster-170', 'CernCluster-115')
+[INFO    ] Received 'close-stream' from tcp://188.185.215.199:48956; closing.
+[INFO    ] Received 'close-stream' from tcp://188.185.208.145:48656; closing.
+[INFO    ] Received 'close-stream' from tcp://188.185.208.145:48634; closing.
+[INFO    ] Received 'close-stream' from tcp://188.185.214.83:58218; closing.
+[INFO    ] Received 'close-stream' from tcp://188.185.213.220:50068; closing.
+[INFO    ] Received 'close-stream' from tcp://128.142.209.41:59270; closing.
+[INFO    ] Received 'close-stream' from tcp://188.185.213.176:55856; closing.
+[INFO    ] Received 'close-stream' from tcp://188.185.212.194:55394; closing.
+[INFO    ] Received 'close-stream' from tcp://188.185.193.67:55398; closing.
+[INFO    ] Retiring workers ['CernCluster-187', 'CernCluster-239', 'CernCluster-161', 'CernCluster-114', 'CernCluster-171', 'CernCluster-130', 'CernCluster-207', 'CernCluster-105', 'CernCluster-108', 'CernCluster-236', 'CernCluster-182']
+[INFO    ] Retire worker names ('CernCluster-187', 'CernCluster-239', 'CernCluster-161', 'CernCluster-114', 'CernCluster-171', 'CernCluster-130', 'CernCluster-207', 'CernCluster-105', 'CernCluster-108', 'CernCluster-236', 'CernCluster-182')
+[INFO    ] Retiring worker 'tcp://188.185.208.145:10001' (stimulus_id='retire-workers-1768911382.8202631')
+[INFO    ] Retiring worker 'tcp://128.142.161.96:10003' (stimulus_id='retire-workers-1768911382.8202631')
+[INFO    ] Retiring worker 'tcp://188.185.214.22:10002' (stimulus_id='retire-workers-1768911382.8202631')
+[INFO    ] Retiring worker 'tcp://128.142.161.107:10001' (stimulus_id='retire-workers-1768911382.8202631')
+[INFO    ] Retiring worker 'tcp://188.185.208.23:10001' (stimulus_id='retire-workers-1768911382.8202631')
+[INFO    ] Retiring worker 'tcp://188.185.208.145:10000' (stimulus_id='retire-workers-1768911382.8202631')
+[INFO    ] Retiring worker 'tcp://188.185.212.98:10002' (stimulus_id='retire-workers-1768911382.8202631')
+[INFO    ] Retiring worker 'tcp://128.142.161.107:10002' (stimulus_id='retire-workers-1768911382.8202631')
+[INFO    ] Retiring worker 'tcp://188.185.210.24:10001' (stimulus_id='retire-workers-1768911382.8202631')
+[INFO    ] Retiring worker 'tcp://128.142.161.98:10002' (stimulus_id='retire-workers-1768911382.8202631')
+[INFO    ] Retiring worker 'tcp://128.142.192.142:10000' (stimulus_id='retire-workers-1768911382.8202631')
+[INFO    ] Retiring worker tcp://128.142.161.107:10002; 2 keys are being moved away.
+[INFO    ] Retiring worker tcp://188.185.208.145:10000; 3 keys are being moved away.
+[INFO    ] Retiring worker tcp://188.185.210.24:10001; 3 keys are being moved away.
+[INFO    ] Retiring worker tcp://188.185.208.23:10001; 3 keys are being moved away.
+[INFO    ] Retiring worker tcp://128.142.161.96:10003; 3 keys are being moved away.
+[INFO    ] Retiring worker tcp://128.142.161.98:10002; 3 keys are being moved away.
+[INFO    ] Retiring worker tcp://188.185.212.98:10002; 4 keys are being moved away.
+[INFO    ] Retiring worker tcp://128.142.161.107:10001; 2 keys are being moved away.
+[INFO    ] Retiring worker tcp://188.185.208.145:10001; 3 keys are being moved away.
+[INFO    ] Retiring worker tcp://128.142.192.142:10000; 2 keys are being moved away.
+[INFO    ] Retiring worker tcp://188.185.214.22:10002; 3 keys are being moved away.
+[INFO    ] Remove worker <WorkerState 'tcp://188.185.208.145:10001', name: CernCluster-161, status: closing_gracefully, memory: 3, processing: 0> (stimulus_id='retire-workers-1768911382.8202631')
+[INFO    ] Retired worker 'tcp://188.185.208.145:10001' (stimulus_id='retire-workers-1768911382.8202631')
+[INFO    ] Remove worker <WorkerState 'tcp://128.142.161.96:10003', name: CernCluster-182, status: closing_gracefully, memory: 3, processing: 0> (stimulus_id='retire-workers-1768911382.8202631')
+[INFO    ] Retired worker 'tcp://128.142.161.96:10003' (stimulus_id='retire-workers-1768911382.8202631')
+[INFO    ] Remove worker <WorkerState 'tcp://188.185.214.22:10002', name: CernCluster-105, status: closing_gracefully, memory: 3, processing: 0> (stimulus_id='retire-workers-1768911382.8202631')
+[INFO    ] Retired worker 'tcp://188.185.214.22:10002' (stimulus_id='retire-workers-1768911382.8202631')
+[INFO    ] Remove worker <WorkerState 'tcp://128.142.161.107:10001', name: CernCluster-171, status: closing_gracefully, memory: 2, processing: 0> (stimulus_id='retire-workers-1768911382.8202631')
+[INFO    ] Retired worker 'tcp://128.142.161.107:10001' (stimulus_id='retire-workers-1768911382.8202631')
+[INFO    ] Remove worker <WorkerState 'tcp://188.185.208.23:10001', name: CernCluster-187, status: closing_gracefully, memory: 3, processing: 0> (stimulus_id='retire-workers-1768911382.8202631')
+[INFO    ] Retired worker 'tcp://188.185.208.23:10001' (stimulus_id='retire-workers-1768911382.8202631')
+[INFO    ] Remove worker <WorkerState 'tcp://188.185.208.145:10000', name: CernCluster-239, status: closing_gracefully, memory: 3, processing: 0> (stimulus_id='retire-workers-1768911382.8202631')
+[INFO    ] Retired worker 'tcp://188.185.208.145:10000' (stimulus_id='retire-workers-1768911382.8202631')
+[INFO    ] Remove worker <WorkerState 'tcp://188.185.212.98:10002', name: CernCluster-108, status: closing_gracefully, memory: 4, processing: 0> (stimulus_id='retire-workers-1768911382.8202631')
+[INFO    ] Retired worker 'tcp://188.185.212.98:10002' (stimulus_id='retire-workers-1768911382.8202631')
+[INFO    ] Remove worker <WorkerState 'tcp://128.142.161.107:10002', name: CernCluster-207, status: closing_gracefully, memory: 2, processing: 0> (stimulus_id='retire-workers-1768911382.8202631')
+[INFO    ] Retired worker 'tcp://128.142.161.107:10002' (stimulus_id='retire-workers-1768911382.8202631')
+[INFO    ] Remove worker <WorkerState 'tcp://188.185.210.24:10001', name: CernCluster-114, status: closing_gracefully, memory: 3, processing: 0> (stimulus_id='retire-workers-1768911382.8202631')
+[INFO    ] Retired worker 'tcp://188.185.210.24:10001' (stimulus_id='retire-workers-1768911382.8202631')
+[INFO    ] Remove worker <WorkerState 'tcp://128.142.161.98:10002', name: CernCluster-236, status: closing_gracefully, memory: 3, processing: 0> (stimulus_id='retire-workers-1768911382.8202631')
+[INFO    ] Retired worker 'tcp://128.142.161.98:10002' (stimulus_id='retire-workers-1768911382.8202631')
+[INFO    ] Remove worker <WorkerState 'tcp://128.142.192.142:10000', name: CernCluster-130, status: closing_gracefully, memory: 2, processing: 0> (stimulus_id='retire-workers-1768911382.8202631')
+[INFO    ] Retired worker 'tcp://128.142.192.142:10000' (stimulus_id='retire-workers-1768911382.8202631')
+[INFO    ] Retire worker addresses ('CernCluster-187', 'CernCluster-239', 'CernCluster-161', 'CernCluster-114', 'CernCluster-171', 'CernCluster-130', 'CernCluster-207', 'CernCluster-105', 'CernCluster-108', 'CernCluster-236', 'CernCluster-182')
+[INFO    ] Received 'close-stream' from tcp://188.185.212.98:58320; closing.
+[INFO    ] Received 'close-stream' from tcp://128.142.161.96:43166; closing.
+[INFO    ] Received 'close-stream' from tcp://128.142.161.98:33058; closing.
+[INFO    ] Received 'close-stream' from tcp://188.185.208.145:45150; closing.
+[INFO    ] Received 'close-stream' from tcp://188.185.210.24:44432; closing.
+[INFO    ] Received 'close-stream' from tcp://128.142.161.107:45180; closing.
+[INFO    ] Received 'close-stream' from tcp://128.142.161.107:55118; closing.
+[INFO    ] Received 'close-stream' from tcp://128.142.192.142:55738; closing.
+[INFO    ] Received 'close-stream' from tcp://188.185.208.145:59490; closing.
+[INFO    ] Received 'close-stream' from tcp://188.185.214.22:33436; closing.
+[INFO    ] Received 'close-stream' from tcp://188.185.208.23:40230; closing.
+[INFO    ] Retiring workers ['CernCluster-192', 'CernCluster-224', 'CernCluster-162', 'CernCluster-160', 'CernCluster-181', 'CernCluster-93']
+[INFO    ] Retire worker names ('CernCluster-192', 'CernCluster-224', 'CernCluster-162', 'CernCluster-160', 'CernCluster-181', 'CernCluster-93')
+[INFO    ] Retiring worker 'tcp://188.185.206.35:10002' (stimulus_id='retire-workers-1768911384.8201923')
+[INFO    ] Retiring worker 'tcp://188.185.214.81:10001' (stimulus_id='retire-workers-1768911384.8201923')
+[INFO    ] Retiring worker 'tcp://188.185.208.145:10005' (stimulus_id='retire-workers-1768911384.8201923')
+[INFO    ] Retiring worker 'tcp://128.142.161.93:10001' (stimulus_id='retire-workers-1768911384.8201923')
+[INFO    ] Retiring worker 'tcp://188.185.215.199:10002' (stimulus_id='retire-workers-1768911384.8201923')
+[INFO    ] Retiring worker 'tcp://188.185.208.23:10002' (stimulus_id='retire-workers-1768911384.8201923')
+[INFO    ] Retiring worker tcp://188.185.214.81:10001; 5 keys are being moved away.
+[INFO    ] Retiring worker tcp://188.185.206.35:10002; 2 keys are being moved away.
+[INFO    ] Retiring worker tcp://188.185.208.145:10005; 2 keys are being moved away.
+[INFO    ] Retiring worker tcp://188.185.208.23:10002; 3 keys are being moved away.
+[INFO    ] Retiring worker tcp://128.142.161.93:10001; 3 keys are being moved away.
+[INFO    ] Retiring worker tcp://188.185.215.199:10002; 3 keys are being moved away.
+[INFO    ] Remove worker <WorkerState 'tcp://188.185.214.81:10001', name: CernCluster-93, status: closing_gracefully, memory: 5, processing: 0> (stimulus_id='retire-workers-1768911384.8201923')
+[INFO    ] Retired worker 'tcp://188.185.214.81:10001' (stimulus_id='retire-workers-1768911384.8201923')
+[INFO    ] Received 'close-stream' from tcp://188.185.214.81:60628; closing.
+[INFO    ] Remove worker <WorkerState 'tcp://188.185.206.35:10002', name: CernCluster-160, status: closing_gracefully, memory: 2, processing: 0> (stimulus_id='retire-workers-1768911384.8201923')
+[INFO    ] Retired worker 'tcp://188.185.206.35:10002' (stimulus_id='retire-workers-1768911384.8201923')
+[INFO    ] Remove worker <WorkerState 'tcp://188.185.208.145:10005', name: CernCluster-162, status: closing_gracefully, memory: 2, processing: 0> (stimulus_id='retire-workers-1768911384.8201923')
+[INFO    ] Retired worker 'tcp://188.185.208.145:10005' (stimulus_id='retire-workers-1768911384.8201923')
+[INFO    ] Remove worker <WorkerState 'tcp://128.142.161.93:10001', name: CernCluster-181, status: closing_gracefully, memory: 3, processing: 0> (stimulus_id='retire-workers-1768911384.8201923')
+[INFO    ] Retired worker 'tcp://128.142.161.93:10001' (stimulus_id='retire-workers-1768911384.8201923')
+[INFO    ] Remove worker <WorkerState 'tcp://188.185.215.199:10002', name: CernCluster-224, status: closing_gracefully, memory: 3, processing: 0> (stimulus_id='retire-workers-1768911384.8201923')
+[INFO    ] Retired worker 'tcp://188.185.215.199:10002' (stimulus_id='retire-workers-1768911384.8201923')
+[INFO    ] Remove worker <WorkerState 'tcp://188.185.208.23:10002', name: CernCluster-192, status: closing_gracefully, memory: 3, processing: 0> (stimulus_id='retire-workers-1768911384.8201923')
+[INFO    ] Retired worker 'tcp://188.185.208.23:10002' (stimulus_id='retire-workers-1768911384.8201923')
+[INFO    ] Retire worker addresses ('CernCluster-192', 'CernCluster-224', 'CernCluster-162', 'CernCluster-160', 'CernCluster-181', 'CernCluster-93')
+[INFO    ] Received 'close-stream' from tcp://188.185.208.23:35686; closing.
+[INFO    ] Received 'close-stream' from tcp://188.185.206.35:35268; closing.
+[INFO    ] Received 'close-stream' from tcp://128.142.161.93:40970; closing.
+[INFO    ] Received 'close-stream' from tcp://188.185.215.199:38822; closing.
+[INFO    ] Received 'close-stream' from tcp://188.185.208.145:48688; closing.
+[INFO    ] Retiring workers ['CernCluster-197', 'CernCluster-165', 'CernCluster-212', 'CernCluster-157', 'CernCluster-185']
+[INFO    ] Retire worker names ('CernCluster-197', 'CernCluster-165', 'CernCluster-212', 'CernCluster-157', 'CernCluster-185')
+[INFO    ] Retiring worker 'tcp://128.142.161.98:10001' (stimulus_id='retire-workers-1768911385.8198295')
+[INFO    ] Retiring worker 'tcp://188.185.209.75:10003' (stimulus_id='retire-workers-1768911385.8198295')
+[INFO    ] Retiring worker 'tcp://128.142.161.98:10003' (stimulus_id='retire-workers-1768911385.8198295')
+[INFO    ] Retiring worker 'tcp://188.185.206.35:10000' (stimulus_id='retire-workers-1768911385.8198295')
+[INFO    ] Retiring worker 'tcp://188.185.215.199:10001' (stimulus_id='retire-workers-1768911385.8198295')
+[INFO    ] Retiring worker tcp://188.185.206.35:10000; 3 keys are being moved away.
+[INFO    ] Retiring worker tcp://128.142.161.98:10003; 3 keys are being moved away.
+[INFO    ] Retiring worker tcp://188.185.215.199:10001; 3 keys are being moved away.
+[INFO    ] Retiring worker tcp://128.142.161.98:10001; 1 keys are being moved away.
+[INFO    ] Retiring worker tcp://188.185.209.75:10003; 1 keys are being moved away.
+[INFO    ] Remove worker <WorkerState 'tcp://188.185.206.35:10000', name: CernCluster-197, status: closing_gracefully, memory: 3, processing: 0> (stimulus_id='retire-workers-1768911385.8198295')
+[INFO    ] Retired worker 'tcp://188.185.206.35:10000' (stimulus_id='retire-workers-1768911385.8198295')
+[INFO    ] Remove worker <WorkerState 'tcp://188.185.215.199:10001', name: CernCluster-157, status: closing_gracefully, memory: 3, processing: 0> (stimulus_id='retire-workers-1768911385.8198295')
+[INFO    ] Retired worker 'tcp://188.185.215.199:10001' (stimulus_id='retire-workers-1768911385.8198295')
+[INFO    ] Received 'close-stream' from tcp://188.185.215.199:60920; closing.
+[INFO    ] Received 'close-stream' from tcp://188.185.206.35:35884; closing.
+[INFO    ] Remove worker <WorkerState 'tcp://128.142.161.98:10001', name: CernCluster-185, status: closing_gracefully, memory: 1, processing: 0> (stimulus_id='retire-workers-1768911385.8198295')
+[INFO    ] Retired worker 'tcp://128.142.161.98:10001' (stimulus_id='retire-workers-1768911385.8198295')
+[INFO    ] Remove worker <WorkerState 'tcp://188.185.209.75:10003', name: CernCluster-165, status: closing_gracefully, memory: 1, processing: 0> (stimulus_id='retire-workers-1768911385.8198295')
+[INFO    ] Retired worker 'tcp://188.185.209.75:10003' (stimulus_id='retire-workers-1768911385.8198295')
+[INFO    ] Remove worker <WorkerState 'tcp://128.142.161.98:10003', name: CernCluster-212, status: closing_gracefully, memory: 3, processing: 0> (stimulus_id='retire-workers-1768911385.8198295')
+[INFO    ] Retired worker 'tcp://128.142.161.98:10003' (stimulus_id='retire-workers-1768911385.8198295')
+[INFO    ] Retire worker addresses ('CernCluster-197', 'CernCluster-165', 'CernCluster-212', 'CernCluster-157', 'CernCluster-185')
+[INFO    ] Received 'close-stream' from tcp://188.185.209.75:38266; closing.
+[INFO    ] Received 'close-stream' from tcp://128.142.161.98:33030; closing.
+[INFO    ] Received 'close-stream' from tcp://128.142.161.98:53492; closing.
+[INFO    ] Retiring workers ['CernCluster-188', 'CernCluster-226', 'CernCluster-232', 'CernCluster-164', 'CernCluster-235', 'CernCluster-136', 'CernCluster-107']
+[INFO    ] Retire worker names ('CernCluster-188', 'CernCluster-226', 'CernCluster-232', 'CernCluster-164', 'CernCluster-235', 'CernCluster-136', 'CernCluster-107')
+[INFO    ] Retiring worker 'tcp://128.142.161.145:10000' (stimulus_id='retire-workers-1768911387.8202198')
+[INFO    ] Retiring worker 'tcp://128.142.161.73:10002' (stimulus_id='retire-workers-1768911387.8202198')
+[INFO    ] Retiring worker 'tcp://128.142.161.79:10003' (stimulus_id='retire-workers-1768911387.8202198')
+[INFO    ] Retiring worker 'tcp://188.185.215.199:10004' (stimulus_id='retire-workers-1768911387.8202198')
+[INFO    ] Retiring worker 'tcp://188.185.196.93:10002' (stimulus_id='retire-workers-1768911387.8202198')
+[INFO    ] Retiring worker 'tcp://188.185.212.107:10002' (stimulus_id='retire-workers-1768911387.8202198')
+[INFO    ] Retiring worker 'tcp://188.185.208.193:10004' (stimulus_id='retire-workers-1768911387.8202198')
+[INFO    ] Retiring worker tcp://188.185.196.93:10002; 1 keys are being moved away.
+[INFO    ] Retiring worker tcp://128.142.161.79:10003; 3 keys are being moved away.
+[INFO    ] Retiring worker tcp://188.185.212.107:10002; 4 keys are being moved away.
+[INFO    ] Retiring worker tcp://128.142.161.73:10002; 1 keys are being moved away.
+[INFO    ] Retiring worker tcp://188.185.215.199:10004; 3 keys are being moved away.
+[INFO    ] Retiring worker tcp://188.185.208.193:10004; 2 keys are being moved away.
+[INFO    ] Retiring worker tcp://128.142.161.145:10000; 2 keys are being moved away.
+[INFO    ] Remove worker <WorkerState 'tcp://128.142.161.145:10000', name: CernCluster-136, status: closing_gracefully, memory: 2, processing: 0> (stimulus_id='retire-workers-1768911387.8202198')
+[INFO    ] Retired worker 'tcp://128.142.161.145:10000' (stimulus_id='retire-workers-1768911387.8202198')
+[INFO    ] Remove worker <WorkerState 'tcp://128.142.161.73:10002', name: CernCluster-235, status: closing_gracefully, memory: 1, processing: 0> (stimulus_id='retire-workers-1768911387.8202198')
+[INFO    ] Retired worker 'tcp://128.142.161.73:10002' (stimulus_id='retire-workers-1768911387.8202198')
+[INFO    ] Remove worker <WorkerState 'tcp://128.142.161.79:10003', name: CernCluster-232, status: closing_gracefully, memory: 3, processing: 0> (stimulus_id='retire-workers-1768911387.8202198')
+[INFO    ] Retired worker 'tcp://128.142.161.79:10003' (stimulus_id='retire-workers-1768911387.8202198')
+[INFO    ] Remove worker <WorkerState 'tcp://188.185.215.199:10004', name: CernCluster-226, status: closing_gracefully, memory: 3, processing: 0> (stimulus_id='retire-workers-1768911387.8202198')
+[INFO    ] Retired worker 'tcp://188.185.215.199:10004' (stimulus_id='retire-workers-1768911387.8202198')
+[INFO    ] Remove worker <WorkerState 'tcp://188.185.196.93:10002', name: CernCluster-164, status: closing_gracefully, memory: 1, processing: 0> (stimulus_id='retire-workers-1768911387.8202198')
+[INFO    ] Retired worker 'tcp://188.185.196.93:10002' (stimulus_id='retire-workers-1768911387.8202198')
+[INFO    ] Remove worker <WorkerState 'tcp://188.185.212.107:10002', name: CernCluster-107, status: closing_gracefully, memory: 4, processing: 0> (stimulus_id='retire-workers-1768911387.8202198')
+[INFO    ] Retired worker 'tcp://188.185.212.107:10002' (stimulus_id='retire-workers-1768911387.8202198')
+[INFO    ] Remove worker <WorkerState 'tcp://188.185.208.193:10004', name: CernCluster-188, status: closing_gracefully, memory: 2, processing: 0> (stimulus_id='retire-workers-1768911387.8202198')
+[INFO    ] Retired worker 'tcp://188.185.208.193:10004' (stimulus_id='retire-workers-1768911387.8202198')
+[INFO    ] Retire worker addresses ('CernCluster-188', 'CernCluster-226', 'CernCluster-232', 'CernCluster-164', 'CernCluster-235', 'CernCluster-136', 'CernCluster-107')
+[INFO    ] Received 'close-stream' from tcp://128.142.161.73:33112; closing.
+[INFO    ] Received 'close-stream' from tcp://188.185.215.199:48924; closing.
+[INFO    ] Received 'close-stream' from tcp://188.185.208.193:49314; closing.
+[INFO    ] Received 'close-stream' from tcp://128.142.161.79:57664; closing.
+[INFO    ] Received 'close-stream' from tcp://188.185.196.93:47906; closing.
+[INFO    ] Received 'close-stream' from tcp://128.142.161.145:42882; closing.
+[INFO    ] Received 'close-stream' from tcp://188.185.212.107:57496; closing.
+[INFO    ] Retiring workers ['CernCluster-152']
+[INFO    ] Retire worker names ('CernCluster-152',)
+[INFO    ] Retiring worker 'tcp://188.185.206.35:10004' (stimulus_id='retire-workers-1768911389.8196192')
+[INFO    ] Retiring worker tcp://188.185.206.35:10004; 2 keys are being moved away.
+[INFO    ] Remove worker <WorkerState 'tcp://188.185.206.35:10004', name: CernCluster-152, status: closing_gracefully, memory: 2, processing: 0> (stimulus_id='retire-workers-1768911389.8196192')
+[INFO    ] Retired worker 'tcp://188.185.206.35:10004' (stimulus_id='retire-workers-1768911389.8196192')
+[INFO    ] Retire worker addresses ('CernCluster-152',)
+[INFO    ] Received 'close-stream' from tcp://188.185.206.35:40378; closing.
+[INFO    ] Retiring workers ['CernCluster-169', 'CernCluster-196', 'CernCluster-220']
+[INFO    ] Retire worker names ('CernCluster-169', 'CernCluster-196', 'CernCluster-220')
+[INFO    ] Retiring worker 'tcp://188.185.208.197:10001' (stimulus_id='retire-workers-1768911390.8194113')
+[INFO    ] Retiring worker 'tcp://188.185.214.83:10003' (stimulus_id='retire-workers-1768911390.8194113')
+[INFO    ] Retiring worker 'tcp://188.185.206.35:10003' (stimulus_id='retire-workers-1768911390.8194113')
+[INFO    ] Retiring worker tcp://188.185.206.35:10003; 2 keys are being moved away.
+[INFO    ] Retiring worker tcp://188.185.214.83:10003; 1 keys are being moved away.
+[INFO    ] Retiring worker tcp://188.185.208.197:10001; 3 keys are being moved away.
+[INFO    ] Remove worker <WorkerState 'tcp://188.185.208.197:10001', name: CernCluster-169, status: closing_gracefully, memory: 3, processing: 0> (stimulus_id='retire-workers-1768911390.8194113')
+[INFO    ] Retired worker 'tcp://188.185.208.197:10001' (stimulus_id='retire-workers-1768911390.8194113')
+[INFO    ] Remove worker <WorkerState 'tcp://188.185.214.83:10003', name: CernCluster-220, status: closing_gracefully, memory: 1, processing: 0> (stimulus_id='retire-workers-1768911390.8194113')
+[INFO    ] Retired worker 'tcp://188.185.214.83:10003' (stimulus_id='retire-workers-1768911390.8194113')
+[INFO    ] Remove worker <WorkerState 'tcp://188.185.206.35:10003', name: CernCluster-196, status: closing_gracefully, memory: 2, processing: 0> (stimulus_id='retire-workers-1768911390.8194113')
+[INFO    ] Retired worker 'tcp://188.185.206.35:10003' (stimulus_id='retire-workers-1768911390.8194113')
+[INFO    ] Retire worker addresses ('CernCluster-169', 'CernCluster-196', 'CernCluster-220')
+[INFO    ] Received 'close-stream' from tcp://188.185.214.83:58894; closing.
+[INFO    ] Received 'close-stream' from tcp://188.185.208.197:56776; closing.
+[INFO    ] Received 'close-stream' from tcp://188.185.206.35:35290; closing.
+[INFO    ] Retiring workers ['CernCluster-156', 'CernCluster-243']
+[INFO    ] Retire worker names ('CernCluster-156', 'CernCluster-243')
+[INFO    ] Retiring worker 'tcp://188.185.201.33:10001' (stimulus_id='retire-workers-1768911391.8195097')
+[INFO    ] Retiring worker 'tcp://188.185.201.33:10000' (stimulus_id='retire-workers-1768911391.8195097')
+[INFO    ] Retiring worker tcp://188.185.201.33:10001; 46 keys are being moved away.
+[INFO    ] Retiring worker tcp://188.185.201.33:10000; 150 keys are being moved away.
+[INFO    ] Remove worker <WorkerState 'tcp://188.185.201.33:10001', name: CernCluster-156, status: closing_gracefully, memory: 46, processing: 0> (stimulus_id='retire-workers-1768911391.8195097')
+[INFO    ] Retired worker 'tcp://188.185.201.33:10001' (stimulus_id='retire-workers-1768911391.8195097')
+[INFO    ] Received 'close-stream' from tcp://188.185.201.33:50656; closing.
+[INFO    ] Remove worker <WorkerState 'tcp://188.185.201.33:10000', name: CernCluster-243, status: closing_gracefully, memory: 150, processing: 0> (stimulus_id='retire-workers-1768911391.8195097')
+[INFO    ] Retired worker 'tcp://188.185.201.33:10000' (stimulus_id='retire-workers-1768911391.8195097')
+[INFO    ] Retire worker addresses ('CernCluster-156', 'CernCluster-243')
+[INFO    ] Received 'close-stream' from tcp://188.185.201.33:50632; closing.
+[INFO    ] Retiring workers ['CernCluster-155']
+[INFO    ] Retire worker names ('CernCluster-155',)
+[INFO    ] Retiring worker 'tcp://188.185.201.33:10002' (stimulus_id='retire-workers-1768911393.8206258')
+[INFO    ] Retiring worker tcp://188.185.201.33:10002; 235 keys are being moved away.
+[INFO    ] Remove worker <WorkerState 'tcp://188.185.201.33:10002', name: CernCluster-155, status: closing_gracefully, memory: 235, processing: 0> (stimulus_id='retire-workers-1768911393.8206258')
+[INFO    ] Retired worker 'tcp://188.185.201.33:10002' (stimulus_id='retire-workers-1768911393.8206258')
+[INFO    ] Retire worker addresses ('CernCluster-155',)
+[INFO    ] Received 'close-stream' from tcp://188.185.201.33:50648; closing.
+[INFO    ] Retiring workers ['CernCluster-99']
+[INFO    ] Retire worker names ('CernCluster-99',)
+[INFO    ] Retiring worker 'tcp://188.185.213.16:10002' (stimulus_id='retire-workers-1768911401.819623')
+[INFO    ] Retiring worker tcp://188.185.213.16:10002; 3 keys are being moved away.
+[INFO    ] Remove worker <WorkerState 'tcp://188.185.213.16:10002', name: CernCluster-99, status: closing_gracefully, memory: 3, processing: 0> (stimulus_id='retire-workers-1768911401.819623')
+[INFO    ] Retired worker 'tcp://188.185.213.16:10002' (stimulus_id='retire-workers-1768911401.819623')
+[INFO    ] Retire worker addresses ('CernCluster-99',)
+[INFO    ] Received 'close-stream' from tcp://188.185.213.16:51136; closing.
+[INFO    ] Retiring workers ['CernCluster-237']
+[INFO    ] Retire worker names ('CernCluster-237',)
+[INFO    ] Retiring worker 'tcp://128.142.161.73:10000' (stimulus_id='retire-workers-1768911425.8203502')
+[INFO    ] Retiring worker tcp://128.142.161.73:10000; 209 keys are being moved away.
+[INFO    ] Remove worker <WorkerState 'tcp://128.142.161.73:10000', name: CernCluster-237, status: closing_gracefully, memory: 209, processing: 0> (stimulus_id='retire-workers-1768911425.8203502')
+[INFO    ] Retired worker 'tcp://128.142.161.73:10000' (stimulus_id='retire-workers-1768911425.8203502')
+[INFO    ] Retire worker addresses ('CernCluster-237',)
+[INFO    ] Received 'close-stream' from tcp://128.142.161.73:49452; closing.
+[INFO    ] Retiring workers ['CernCluster-121']
+[INFO    ] Retire worker names ('CernCluster-121',)
+[INFO    ] Retiring worker 'tcp://188.185.214.31:10001' (stimulus_id='retire-workers-1768911426.8193324')
+[INFO    ] Retiring worker tcp://188.185.214.31:10001; no unique keys need to be moved away.
+[INFO    ] Remove worker <WorkerState 'tcp://188.185.214.31:10001', name: CernCluster-121, status: closing_gracefully, memory: 0, processing: 0> (stimulus_id='retire-workers-1768911426.8193324')
+[INFO    ] Retired worker 'tcp://188.185.214.31:10001' (stimulus_id='retire-workers-1768911426.8193324')
+[INFO    ] Retire worker addresses ('CernCluster-121',)
+[INFO    ] Received 'close-stream' from tcp://188.185.214.31:37938; closing.
+[INFO    ] Retiring workers ['CernCluster-178']
+[INFO    ] Retire worker names ('CernCluster-178',)
+[INFO    ] Retiring worker 'tcp://188.185.209.190:10000' (stimulus_id='retire-workers-1768911436.8198218')
+[INFO    ] Retiring worker tcp://188.185.209.190:10000; 1 keys are being moved away.
+[INFO    ] Remove worker <WorkerState 'tcp://188.185.209.190:10000', name: CernCluster-178, status: closing_gracefully, memory: 1, processing: 0> (stimulus_id='retire-workers-1768911436.8198218')
+[INFO    ] Retired worker 'tcp://188.185.209.190:10000' (stimulus_id='retire-workers-1768911436.8198218')
+[INFO    ] Retire worker addresses ('CernCluster-178',)
+[INFO    ] Received 'close-stream' from tcp://188.185.209.190:34896; closing.
+[INFO    ] Retiring workers ['CernCluster-194']
+[INFO    ] Retire worker names ('CernCluster-194',)
+[INFO    ] Retiring worker 'tcp://188.185.213.212:10001' (stimulus_id='retire-workers-1768911444.820427')
+[INFO    ] Retiring worker tcp://188.185.213.212:10001; 1 keys are being moved away.
+[INFO    ] Remove worker <WorkerState 'tcp://188.185.213.212:10001', name: CernCluster-194, status: closing_gracefully, memory: 1, processing: 0> (stimulus_id='retire-workers-1768911444.820427')
+[INFO    ] Retired worker 'tcp://188.185.213.212:10001' (stimulus_id='retire-workers-1768911444.820427')
+[INFO    ] Retire worker addresses ('CernCluster-194',)
+[INFO    ] Received 'close-stream' from tcp://188.185.213.212:38230; closing.
+[INFO    ] Retiring workers ['CernCluster-159']
+[INFO    ] Retire worker names ('CernCluster-159',)
+[INFO    ] Retiring worker 'tcp://188.185.196.93:10003' (stimulus_id='retire-workers-1768911450.8195152')
+[INFO    ] Retiring worker tcp://188.185.196.93:10003; 2 keys are being moved away.
+[INFO    ] Remove worker <WorkerState 'tcp://188.185.196.93:10003', name: CernCluster-159, status: closing_gracefully, memory: 2, processing: 0> (stimulus_id='retire-workers-1768911450.8195152')
+[INFO    ] Retired worker 'tcp://188.185.196.93:10003' (stimulus_id='retire-workers-1768911450.8195152')
+[INFO    ] Retire worker addresses ('CernCluster-159',)
+[INFO    ] Received 'close-stream' from tcp://188.185.196.93:41968; closing.
+[INFO    ] Retiring workers ['CernCluster-118']
+[INFO    ] Retire worker names ('CernCluster-118',)
+[INFO    ] Retiring worker 'tcp://188.185.213.180:10000' (stimulus_id='retire-workers-1768911454.8198338')
+[INFO    ] Retiring worker tcp://188.185.213.180:10000; 3 keys are being moved away.
+[INFO    ] Remove worker <WorkerState 'tcp://188.185.213.180:10000', name: CernCluster-118, status: closing_gracefully, memory: 3, processing: 0> (stimulus_id='retire-workers-1768911454.8198338')
+[INFO    ] Retired worker 'tcp://188.185.213.180:10000' (stimulus_id='retire-workers-1768911454.8198338')
+[INFO    ] Retire worker addresses ('CernCluster-118',)
+[INFO    ] Received 'close-stream' from tcp://188.185.213.180:40844; closing.
+[INFO    ] Retiring workers ['CernCluster-137', 'CernCluster-104']
+[INFO    ] Retire worker names ('CernCluster-137', 'CernCluster-104')
+[INFO    ] Retiring worker 'tcp://188.185.214.8:10001' (stimulus_id='retire-workers-1768911476.8197346')
+[INFO    ] Retiring worker 'tcp://188.185.215.183:10009' (stimulus_id='retire-workers-1768911476.8197346')
+[INFO    ] Retiring worker tcp://188.185.215.183:10009; 147 keys are being moved away.
+[INFO    ] Retiring worker tcp://188.185.214.8:10001; 2 keys are being moved away.
+[INFO    ] Remove worker <WorkerState 'tcp://188.185.214.8:10001', name: CernCluster-104, status: closing_gracefully, memory: 2, processing: 0> (stimulus_id='retire-workers-1768911476.8197346')
+[INFO    ] Retired worker 'tcp://188.185.214.8:10001' (stimulus_id='retire-workers-1768911476.8197346')
+[INFO    ] Received 'close-stream' from tcp://188.185.214.8:44558; closing.
+[INFO    ] Remove worker <WorkerState 'tcp://188.185.215.183:10009', name: CernCluster-137, status: closing_gracefully, memory: 147, processing: 0> (stimulus_id='retire-workers-1768911476.8197346')
+[INFO    ] Retired worker 'tcp://188.185.215.183:10009' (stimulus_id='retire-workers-1768911476.8197346')
+[INFO    ] Retire worker addresses ('CernCluster-137', 'CernCluster-104')
+[INFO    ] Received 'close-stream' from tcp://188.185.215.183:50960; closing.
+[INFO    ] Retiring workers ['CernCluster-110', 'CernCluster-98']
+[INFO    ] Retire worker names ('CernCluster-110', 'CernCluster-98')
+[INFO    ] Retiring worker 'tcp://128.142.161.117:10001' (stimulus_id='retire-workers-1768911477.8202848')
+[INFO    ] Retiring worker 'tcp://188.185.212.174:10000' (stimulus_id='retire-workers-1768911477.8202848')
+[INFO    ] Retiring worker tcp://128.142.161.117:10001; 4 keys are being moved away.
+[INFO    ] Retiring worker tcp://188.185.212.174:10000; 1 keys are being moved away.
+[INFO    ] Remove worker <WorkerState 'tcp://128.142.161.117:10001', name: CernCluster-110, status: closing_gracefully, memory: 4, processing: 0> (stimulus_id='retire-workers-1768911477.8202848')
+[INFO    ] Retired worker 'tcp://128.142.161.117:10001' (stimulus_id='retire-workers-1768911477.8202848')
+[INFO    ] Remove worker <WorkerState 'tcp://188.185.212.174:10000', name: CernCluster-98, status: closing_gracefully, memory: 1, processing: 0> (stimulus_id='retire-workers-1768911477.8202848')
+[INFO    ] Retired worker 'tcp://188.185.212.174:10000' (stimulus_id='retire-workers-1768911477.8202848')
+[INFO    ] Retire worker addresses ('CernCluster-110', 'CernCluster-98')
+[INFO    ] Received 'close-stream' from tcp://128.142.161.117:54904; closing.
+[INFO    ] Received 'close-stream' from tcp://188.185.212.174:46452; closing.
+[INFO    ] Retiring workers ['CernCluster-214']
+[INFO    ] Retire worker names ('CernCluster-214',)
+[INFO    ] Retiring worker 'tcp://188.185.206.35:10001' (stimulus_id='retire-workers-1768911478.8198848')
+[INFO    ] Retiring worker tcp://188.185.206.35:10001; 2 keys are being moved away.
+[INFO    ] Remove worker <WorkerState 'tcp://188.185.206.35:10001', name: CernCluster-214, status: closing_gracefully, memory: 2, processing: 0> (stimulus_id='retire-workers-1768911478.8198848')
+[INFO    ] Retired worker 'tcp://188.185.206.35:10001' (stimulus_id='retire-workers-1768911478.8198848')
+[INFO    ] Retire worker addresses ('CernCluster-214',)
+[INFO    ] Received 'close-stream' from tcp://188.185.206.35:33452; closing.
+[INFO    ] Retiring workers ['CernCluster-97']
+[INFO    ] Retire worker names ('CernCluster-97',)
+[INFO    ] Retiring worker 'tcp://188.185.211.218:10000' (stimulus_id='retire-workers-1768911484.8199518')
+[INFO    ] Retiring worker tcp://188.185.211.218:10000; 1 keys are being moved away.
+[INFO    ] Remove worker <WorkerState 'tcp://188.185.211.218:10000', name: CernCluster-97, status: closing_gracefully, memory: 1, processing: 0> (stimulus_id='retire-workers-1768911484.8199518')
+[INFO    ] Retired worker 'tcp://188.185.211.218:10000' (stimulus_id='retire-workers-1768911484.8199518')
+[INFO    ] Retire worker addresses ('CernCluster-97',)
+[INFO    ] Received 'close-stream' from tcp://188.185.211.218:34484; closing.
+[INFO    ] Retiring workers ['CernCluster-186']
+[INFO    ] Retire worker names ('CernCluster-186',)
+[INFO    ] Retiring worker 'tcp://188.185.206.146:10003' (stimulus_id='retire-workers-1768911487.8203762')
+[INFO    ] Retiring worker tcp://188.185.206.146:10003; 3 keys are being moved away.
+[INFO    ] Remove worker <WorkerState 'tcp://188.185.206.146:10003', name: CernCluster-186, status: closing_gracefully, memory: 3, processing: 0> (stimulus_id='retire-workers-1768911487.8203762')
+[INFO    ] Retired worker 'tcp://188.185.206.146:10003' (stimulus_id='retire-workers-1768911487.8203762')
+[INFO    ] Retire worker addresses ('CernCluster-186',)
+[INFO    ] Received 'close-stream' from tcp://188.185.206.146:41524; closing.
+[INFO    ] Retiring workers ['CernCluster-229']
+[INFO    ] Retire worker names ('CernCluster-229',)
+[INFO    ] Retiring worker 'tcp://188.185.215.199:10000' (stimulus_id='retire-workers-1768911489.819981')
+[INFO    ] Retiring worker tcp://188.185.215.199:10000; 3 keys are being moved away.
+[INFO    ] Remove worker <WorkerState 'tcp://188.185.215.199:10000', name: CernCluster-229, status: closing_gracefully, memory: 3, processing: 0> (stimulus_id='retire-workers-1768911489.819981')
+[INFO    ] Retired worker 'tcp://188.185.215.199:10000' (stimulus_id='retire-workers-1768911489.819981')
+[INFO    ] Retire worker addresses ('CernCluster-229',)
+[INFO    ] Received 'close-stream' from tcp://188.185.215.199:35270; closing.
+[INFO    ] Retiring workers ['CernCluster-134']
+[INFO    ] Retire worker names ('CernCluster-134',)
+[INFO    ] Retiring worker 'tcp://188.185.214.104:10001' (stimulus_id='retire-workers-1768911491.8213673')
+[INFO    ] Retiring worker tcp://188.185.214.104:10001; 1 keys are being moved away.
+[INFO    ] Remove worker <WorkerState 'tcp://188.185.214.104:10001', name: CernCluster-134, status: closing_gracefully, memory: 1, processing: 0> (stimulus_id='retire-workers-1768911491.8213673')
+[INFO    ] Retired worker 'tcp://188.185.214.104:10001' (stimulus_id='retire-workers-1768911491.8213673')
+[INFO    ] Retire worker addresses ('CernCluster-134',)
+[INFO    ] Received 'close-stream' from tcp://188.185.214.104:47910; closing.
+[INFO    ] Retiring workers ['CernCluster-166']
+[INFO    ] Retire worker names ('CernCluster-166',)
+[INFO    ] Retiring worker 'tcp://128.142.161.145:10001' (stimulus_id='retire-workers-1768911494.8198216')
+[INFO    ] Retiring worker tcp://128.142.161.145:10001; 1 keys are being moved away.
+[INFO    ] Remove worker <WorkerState 'tcp://128.142.161.145:10001', name: CernCluster-166, status: closing_gracefully, memory: 1, processing: 0> (stimulus_id='retire-workers-1768911494.8198216')
+[INFO    ] Retired worker 'tcp://128.142.161.145:10001' (stimulus_id='retire-workers-1768911494.8198216')
+[INFO    ] Retire worker addresses ('CernCluster-166',)
+[INFO    ] Received 'close-stream' from tcp://128.142.161.145:56170; closing.
+[INFO    ] Retiring workers ['CernCluster-213']
+[INFO    ] Retire worker names ('CernCluster-213',)
+[INFO    ] Retiring worker 'tcp://128.142.161.113:10000' (stimulus_id='retire-workers-1768911501.8196485')
+[INFO    ] Retiring worker tcp://128.142.161.113:10000; 3 keys are being moved away.
+[INFO    ] Remove worker <WorkerState 'tcp://128.142.161.113:10000', name: CernCluster-213, status: closing_gracefully, memory: 3, processing: 0> (stimulus_id='retire-workers-1768911501.8196485')
+[INFO    ] Retired worker 'tcp://128.142.161.113:10000' (stimulus_id='retire-workers-1768911501.8196485')
+[INFO    ] Retire worker addresses ('CernCluster-213',)
+[INFO    ] Received 'close-stream' from tcp://128.142.161.113:49846; closing.
+[INFO    ] Retiring workers ['CernCluster-154']
+[INFO    ] Retire worker names ('CernCluster-154',)
+[INFO    ] Retiring worker 'tcp://128.142.161.98:10000' (stimulus_id='retire-workers-1768911510.8196812')
+[INFO    ] Retiring worker tcp://128.142.161.98:10000; 1 keys are being moved away.
+[INFO    ] Remove worker <WorkerState 'tcp://128.142.161.98:10000', name: CernCluster-154, status: closing_gracefully, memory: 1, processing: 0> (stimulus_id='retire-workers-1768911510.8196812')
+[INFO    ] Retired worker 'tcp://128.142.161.98:10000' (stimulus_id='retire-workers-1768911510.8196812')
+[INFO    ] Retire worker addresses ('CernCluster-154',)
+[INFO    ] Received 'close-stream' from tcp://128.142.161.98:51510; closing.
+[INFO    ] Retiring workers ['CernCluster-123']
+[INFO    ] Retire worker names ('CernCluster-123',)
+[INFO    ] Retiring worker 'tcp://188.185.214.82:10000' (stimulus_id='retire-workers-1768911514.8197434')
+[INFO    ] Retiring worker tcp://188.185.214.82:10000; 1 keys are being moved away.
+[INFO    ] Remove worker <WorkerState 'tcp://188.185.214.82:10000', name: CernCluster-123, status: closing_gracefully, memory: 1, processing: 0> (stimulus_id='retire-workers-1768911514.8197434')
+[INFO    ] Retired worker 'tcp://188.185.214.82:10000' (stimulus_id='retire-workers-1768911514.8197434')
+[INFO    ] Retire worker addresses ('CernCluster-123',)
+[INFO    ] Received 'close-stream' from tcp://188.185.214.82:45548; closing.
+[INFO    ] Retiring workers ['CernCluster-206']
+[INFO    ] Retire worker names ('CernCluster-206',)
+[INFO    ] Retiring worker 'tcp://188.185.214.48:10001' (stimulus_id='retire-workers-1768911517.819463')
+[INFO    ] Retiring worker tcp://188.185.214.48:10001; 1 keys are being moved away.
+[INFO    ] Remove worker <WorkerState 'tcp://188.185.214.48:10001', name: CernCluster-206, status: closing_gracefully, memory: 1, processing: 0> (stimulus_id='retire-workers-1768911517.819463')
+[INFO    ] Retired worker 'tcp://188.185.214.48:10001' (stimulus_id='retire-workers-1768911517.819463')
+[INFO    ] Retire worker addresses ('CernCluster-206',)
+[INFO    ] Received 'close-stream' from tcp://188.185.214.48:50252; closing.
+[INFO    ] Retiring workers ['CernCluster-147']
+[INFO    ] Retire worker names ('CernCluster-147',)
+[INFO    ] Retiring worker 'tcp://188.185.209.75:10002' (stimulus_id='retire-workers-1768911525.8197582')
+[INFO    ] Retiring worker tcp://188.185.209.75:10002; 1 keys are being moved away.
+[INFO    ] Remove worker <WorkerState 'tcp://188.185.209.75:10002', name: CernCluster-147, status: closing_gracefully, memory: 1, processing: 0> (stimulus_id='retire-workers-1768911525.8197582')
+[INFO    ] Retired worker 'tcp://188.185.209.75:10002' (stimulus_id='retire-workers-1768911525.8197582')
+[INFO    ] Retire worker addresses ('CernCluster-147',)
+[INFO    ] Received 'close-stream' from tcp://188.185.209.75:45356; closing.
+[INFO    ] Retiring workers ['CernCluster-100']
+[INFO    ] Retire worker names ('CernCluster-100',)
+[INFO    ] Retiring worker 'tcp://188.185.205.182:10003' (stimulus_id='retire-workers-1768911532.819629')
+[INFO    ] Retiring worker tcp://188.185.205.182:10003; 37 keys are being moved away.
+[INFO    ] Remove worker <WorkerState 'tcp://188.185.205.182:10003', name: CernCluster-100, status: closing_gracefully, memory: 37, processing: 0> (stimulus_id='retire-workers-1768911532.819629')
+[INFO    ] Retired worker 'tcp://188.185.205.182:10003' (stimulus_id='retire-workers-1768911532.819629')
+[INFO    ] Retire worker addresses ('CernCluster-100',)
+[INFO    ] Received 'close-stream' from tcp://188.185.205.182:57144; closing.
+[INFO    ] Remove client Client-c66c73cd-f5f8-11f0-aeea-fa163ed2a367
+[INFO    ] Received 'close-stream' from tcp://188.185.43.223:55210; closing.
+[INFO    ] Remove client Client-c66c73cd-f5f8-11f0-aeea-fa163ed2a367
+[INFO    ] Close client connection: Client-c66c73cd-f5f8-11f0-aeea-fa163ed2a367
+[INFO    ] Adaptive scaling stopped: minimum=1 maximum=160
+[INFO    ] Retire worker addresses ('CernCluster-135',)
+[INFO    ] Closing scheduler. Reason: unknown
+[INFO    ] Scheduler closing all comms
+[INFO    ] Connection to tcp://188.185.209.84:46042 has been closed.
+[INFO    ] Remove worker <WorkerState 'tcp://188.185.209.84:10000', name: CernCluster-135, status: running, memory: 0, processing: 0> (stimulus_id='handle-worker-cleanup-1768911544.6136694')
+[INFO    ] Lost all workers

@@ -1,4 +1,5 @@
 from custom_cut_functions import *
+from custom_weights import *
 from pocket_coffea.utils.configurator import Configurator
 from pocket_coffea.lib.cut_definition import Cut
 from pocket_coffea.lib.cut_functions import get_nObj_min, get_HLTsel, get_HLTsel_custom, get_nPVgood, goldenJson, eventFlags, get_nElectron, get_nMuon, get_nObj_eq, count_objects_eq, apply_golden_json
@@ -12,8 +13,10 @@ import cloudpickle
 from pocket_coffea.lib.columns_manager import ColOut
 import os
 import custom_cut_functions 
+import custom_weights
 cloudpickle.register_pickle_by_value(workflowVBS)
 cloudpickle.register_pickle_by_value(custom_cut_functions)
+cloudpickle.register_pickle_by_value(custom_weights)
 localdir = os.path.dirname(os.path.abspath(__file__))
 from pocket_coffea.parameters import defaults
 default_parameters = defaults.get_default_parameters()
@@ -52,12 +55,12 @@ cfg = Configurator(
                    f"{localdir}/datasets/TTbar/TTtoLNu2Q_HT-500_NJet-9_TuneCP5_13p6TeV_powheg-pythia8_redirector.json",
 
                    
-                    f"{localdir}/datasets/TbarWplus/TbarWplustoLNu2Q_TuneCP5Down_13p6TeV_powheg-pythia8_redirector.json",
-                    f"{localdir}/datasets/VVV/WZZ_TuneCP5_13p6TeV_amcatnlo-pythia8.json",
-                    f"{localdir}/datasets/VVV/ZZZ_TuneCP5_13p6TeV_amcatnlo-pythia8.json",
-                    f"{localdir}/datasets/JetMET0.json",
+                   f"{localdir}/datasets/TbarWplus/TbarWplustoLNu2Q_TuneCP5Down_13p6TeV_powheg-pythia8_redirector.json",
+                   f"{localdir}/datasets/VVV/WZZ_TuneCP5_13p6TeV_amcatnlo-pythia8.json",
+                   f"{localdir}/datasets/VVV/ZZZ_TuneCP5_13p6TeV_amcatnlo-pythia8.json",
+                  f"{localdir}/datasets/JetMET0.json",
                     f"{localdir}/datasets/JetMET1.json",
-                    f"{localdir}/datasets/DATA/Muon1_Run2023C_v12_redirector.json",
+                 #   f"{localdir}/datasets/DATA/Muon1_Run2023C_v12_redirector.json",
                     f"{localdir}/datasets/DATA/Muon1_Run2023C_2_v12_redirector.json",
                     f"{localdir}/datasets/TTZ/TTZ-ZtoQQ-1Jets_TuneCP5_13p6TeV_amcatnloFXFX-pythia8_redirector.json",
                     f"{localdir}/datasets/VVV/WWW_4F_TuneCP5_13p6TeV_amcatnlo-madspin-pythia8_redirector.json",
@@ -73,35 +76,36 @@ cfg = Configurator(
             #    "WtoLNu-2Jets_PTLNu-400to600_1J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8",
             #    "WtoLNu-2Jets_PTLNu-40to100_2J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8",
             #    "WtoLNu-2Jets_PTLNu-100to200_1J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8",
-            #    "WtoLNu-2Jets_PTLNu-200to400_1J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8",
+            #
+            # "WtoLNu-2Jets_PTLNu-200to400_1J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8",
             #    "WtoLNu-2Jets_PTLNu-400to600_2J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8", 
             #    "WtoLNu-2Jets_PTLNu-600_2J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8",   
-            #    "TTZ-ZtoQQ-1Jets_TuneCP5_13p6TeV_amcatnloFXFX-pythia8",
-            #    "TTtoLNu2Q_HT-500_NJet-9_Hdamp-158_TuneCP5_13p6TeV_powheg-pythia8",
-            #    "TTtoLNu2Q_HT-500_NJet-9_Hdamp-418_TuneCP5_13p6TeV_powheg-pythia8",
-            #    "TTtoLNu2Q_HT-500_NJet-9_TuneCP5_13p6TeV_powheg-pythia8",
+           #     "TTZ-ZtoQQ-1Jets_TuneCP5_13p6TeV_amcatnloFXFX-pythia8",
+           #    "TTtoLNu2Q_HT-500_NJet-9_Hdamp-158_TuneCP5_13p6TeV_powheg-pythia8",
+           #    "TTtoLNu2Q_HT-500_NJet-9_Hdamp-418_TuneCP5_13p6TeV_powheg-pythia8",
+           #    "TTtoLNu2Q_HT-500_NJet-9_TuneCP5_13p6TeV_powheg-pythia8",
 
-#              "Muon1",
-                "Muon1_forFake"
+              #♠"Muon1",
+           #     "Muon1_forFake"
               # "EGamma1",
              #  "ssWWLL",
-             #   "ssWWTT",
-             #   "ssWWLL",
-             #   "ssWWTL",
-              # "JetMET0",
-              # "JetMET1",
-             #  "ssWWTT",
-             #  "ssWWTL",
-              # "ssWW_unpolarized",
-             #   "TTtoLNu2Q_HT-500_NJet-9_Hdamp-158_TuneCP5_13p6TeV_powheg-pythia8", 
+            #   "ssWWTT",
+            #   "ssWWLL",
+            #   "ssWWTL",
+            # "JetMET0",
+            # "JetMET1",
+            #  "ssWWTT",
+            #  "ssWWTL",
+            # "ssWW_unpolarized",
+            #   "TTtoLNu2Q_HT-500_NJet-9_Hdamp-158_TuneCP5_13p6TeV_powheg-pythia8", 
               
              # "WtoLNu-2Jets_PTLNu-100to200_2J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8", 
-           #   "TbarWplustoLNu2Q_TuneCP5Down_13p6TeV_powheg-pythia8", 
+              "TbarWplustoLNu2Q_TuneCP5Down_13p6TeV_powheg-pythia8", 
               
-             #   "WZZ_TuneCP5_13p6TeV_amcatnlo-pythia8", 
-             #   "ZZZ_TuneCP5_13p6TeV_amcatnlo-pythia8",
-             #   "WWW_4F_TuneCP5_13p6TeV_amcatnlo-madspin-pythia8",
-             #   "WWZ_4F_TuneCP5_13p6TeV_amcatnlo-pythia8"
+          #      "WZZ_TuneCP5_13p6TeV_amcatnlo-pythia8", 
+          #      "ZZZ_TuneCP5_13p6TeV_amcatnlo-pythia8",
+          #      "WWW_4F_TuneCP5_13p6TeV_amcatnlo-madspin-pythia8",
+          #      "WWZ_4F_TuneCP5_13p6TeV_amcatnlo-pythia8"
              
             ],
             "year" : ["2023_preBPix", "2023"],
@@ -124,7 +128,6 @@ cfg = Configurator(
     preselections=[SingleLepton, VBS_jets_presel, semileptonic_preselW],
     categories= {
         "baseline" : [passthrough],
-        
         #"SingleEle_AK8" : [get_nElectron(1, coll="ElectronGood"), get_nObj_eq(1, coll="CleanFatJet"), get_nObj_min(2, coll="CleanJet"), get_nObj_eq(0, coll="BJetGood"), Vjet_massW_boosted],
         #"SingleEle_AK4" : [get_nElectron(1, coll="ElectronGood"),  get_nObj_eq(0, coll="CleanFatJet"), get_nObj_min(4, coll="CleanJet"), get_nObj_eq(0, coll="BJetGood"), Vjet_massW_resolved],
         #"SingleMuon_AK8" : [get_nMuon(1, coll="MuonGood"), get_nObj_eq(1, coll="CleanFatJet"),  get_nObj_eq(0, coll="BJetGood"), Vjet_massW_boosted],
@@ -150,8 +153,8 @@ cfg = Configurator(
         #"SingleMuon_AK8_bjets_ttbar" : [get_nMuon(1, coll="MuonGood"), get_nObj_eq(1 , coll="CleanFatJet"), get_nObj_min(1, coll="BJetGood")],
         #"SingleMuon_AK4_bjets_ttbar" : [get_nMuon(1, coll="MuonGood"), get_nObj_eq(0, coll="CleanFatJet"), get_nObj_min(1, coll="BJetGood")],
         #"SingleMuon_bjets_ttbar_inclusive" : [get_nMuon(1, coll="MuonGood"), get_nObj_min(1, coll="BJetGood")], 
-        "SingleLepton_AK8_bjets_ttbar" : [get_nObj_eq(1, coll="LeptonGood"), get_nObj_eq(1, coll="CleanFatJet"), get_nObj_min(1, coll="BJetGood"), Vjet_massW_boosted],
-        "SingleLepton_AK4_bjets_ttbar" : [get_nObj_eq(1, coll="LeptonGood"), get_nObj_eq(0, coll="CleanFatJet"), get_nObj_min(1, coll="BJetGood"), Vjet_massW_resolved],
+        "SingleLepton_AK8_bjets_ttbar" : [get_nObj_eq(1, coll="LeptonGood"), get_nObj_eq(1, coll="CleanFatJet"), get_nObj_min(2, coll="CleanJet"), Vjet_massW_boosted, get_nObj_min(1, coll="BJetGood")],
+        "SingleLepton_AK4_bjets_ttbar" : [get_nObj_eq(1, coll="LeptonGood"), get_nObj_eq(0, coll="CleanFatJet"), get_nObj_min(4, coll="CleanJet"), Vjet_massW_resolved, get_nObj_min(1, coll="BJetGood")],
         
        # "SingleLepton_AK8_sideBand" : [get_nObj_eq(1, coll="LeptonGood"), get_nObj_eq(1, coll="CleanFatJet"), get_nObj_eq(0, coll="BJetGood"), Wjet_side_boosted],
        # "SingleLepton_AK4_sideBand" : [get_nObj_eq(1, coll="LeptonGood"), get_nObj_eq(0, coll="CleanFatJet"), get_nObj_eq(0, coll="BJetGood"), Wjet_side_resolved],
@@ -168,12 +171,9 @@ cfg = Configurator(
         #"SingleLepton_AK4_sideL_Wjets" : [get_nObj_eq(1, coll="LeptonGood"), get_nObj_min(0, coll="CleanFatJet"), Wjet_sideL_resolved],
         #"SingleLepton_AK4_sideR_Wjets" : [get_nObj_eq(1, coll="LeptonGood"), get_nObj_min(0, coll="CleanFatJet"), Wjet_sideR_resolved],
     },    
-    weights_classes = common_weights + [fakes_mu_weight, SF_pt_top],
+    weights_classes = common_weights + [SF_pt_top],
     weights = {
-        "common": {
-            "inclusive": ["genWeight","lumi","XS", "pileup", 
-                          "sf_mu_id", "sf_mu_iso" , "fakesMU"
-                          ],
+        "common": { "inclusive": ["genWeight","lumi","XS", "pileup","sf_mu_id", "sf_mu_iso", "sf_top_pt"],
             "bycategory" : {
             }
         },
@@ -210,8 +210,6 @@ cfg = Configurator(
         "CleanFatJet_msoftdrop" : HistConf([Axis(coll="CleanFatJet", field="msoftdrop", bins=30, start=0, stop=300, label="SoftDrop Mass")]),
         "CleanFatJet_mass"      : HistConf([Axis(coll="CleanFatJet", field="mass", bins=30, start=0, stop=300, label="FatJet Mass")]),
         "MET_pt"      : HistConf([Axis(coll="MET", field="pt", bins=30, start=0, stop=300, label="MET  pt")]),
-        "V_dijet_candidate_mass"      : HistConf([Axis(coll="V_dijet_candidate", field="mass", bins=30, start=0, stop=300, label="V dijet candidate Mass")]),
-        "V_dijet_candidate_pt"  : HistConf([Axis(coll="V_dijet_candidate", field="deltaEta", bins=30, start=0, stop=10, label="V dijet candidate deltaEta")]),
         "CleanJet_pt"  : HistConf([Axis(coll="CleanJet", field="pt", bins=30, start=0, stop=500, label="CleanJet pT")]),
         "CleanJet_eta" : HistConf([Axis(coll="CleanJet", field="eta", bins=30, start=-5, stop=5, label="CleanJet η")]),
         "CleanJet_phi" : HistConf([Axis(coll="CleanJet", field="phi", bins=30, start=-3.2, stop=3.2, label="CleanJet φ")]),

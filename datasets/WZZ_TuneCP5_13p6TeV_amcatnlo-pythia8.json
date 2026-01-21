@@ -1,4 +1,26 @@
 {
+    "WZZ_TuneCP5_13p6TeV_amcatnlo-pythia8_2023_postBPix": {
+        "metadata": {
+            "das_names": "['/WZZ_TuneCP5_13p6TeV_amcatnlo-pythia8/Run3Summer23BPixNanoAODv12-130X_mcRun3_2023_realistic_postBPix_v2-v2/NANOAODSIM']",
+            "sample": "WZZ_TuneCP5_13p6TeV_amcatnlo-pythia8",
+            "year": "2023_postBPix",
+            "isMC": "True",
+            "xsec": "1.0",
+            "nevents": "1788000",
+            "size": "4008251029"
+        },
+        "files": [
+            "root://cceos.ihep.ac.cn:1094//eos/ihep/cms/store/mc/Run3Summer23BPixNanoAODv12/WZZ_TuneCP5_13p6TeV_amcatnlo-pythia8/NANOAODSIM/130X_mcRun3_2023_realistic_postBPix_v2-v2/2540000/29147c94-4344-4155-9216-4de71fe023a2.root",
+            "root://cceos.ihep.ac.cn:1094//eos/ihep/cms/store/mc/Run3Summer23BPixNanoAODv12/WZZ_TuneCP5_13p6TeV_amcatnlo-pythia8/NANOAODSIM/130X_mcRun3_2023_realistic_postBPix_v2-v2/2540000/48eabc9f-dc69-4ec4-bf33-c7f9d67087b6.root",
+            "root://cceos.ihep.ac.cn:1094//eos/ihep/cms/store/mc/Run3Summer23BPixNanoAODv12/WZZ_TuneCP5_13p6TeV_amcatnlo-pythia8/NANOAODSIM/130X_mcRun3_2023_realistic_postBPix_v2-v2/2540000/614cfa50-97f0-4c2d-9c82-aa209652f89e.root",
+            "root://cceos.ihep.ac.cn:1094//eos/ihep/cms/store/mc/Run3Summer23BPixNanoAODv12/WZZ_TuneCP5_13p6TeV_amcatnlo-pythia8/NANOAODSIM/130X_mcRun3_2023_realistic_postBPix_v2-v2/2540000/90c6732f-a4f5-4a2b-aa4a-def26c066104.root",
+            "root://cceos.ihep.ac.cn:1094//eos/ihep/cms/store/mc/Run3Summer23BPixNanoAODv12/WZZ_TuneCP5_13p6TeV_amcatnlo-pythia8/NANOAODSIM/130X_mcRun3_2023_realistic_postBPix_v2-v2/2540000/98385129-acd8-4458-a4d3-9f8e13e8ae67.root",
+            "root://cceos.ihep.ac.cn:1094//eos/ihep/cms/store/mc/Run3Summer23BPixNanoAODv12/WZZ_TuneCP5_13p6TeV_amcatnlo-pythia8/NANOAODSIM/130X_mcRun3_2023_realistic_postBPix_v2-v2/2540000/c0d91f45-8af6-474b-815f-c99a53fb3744.root",
+            "root://cceos.ihep.ac.cn:1094//eos/ihep/cms/store/mc/Run3Summer23BPixNanoAODv12/WZZ_TuneCP5_13p6TeV_amcatnlo-pythia8/NANOAODSIM/130X_mcRun3_2023_realistic_postBPix_v2-v2/2540000/d2fe54d3-de85-4dc8-bf5a-3dde86f6a00e.root",
+            "root://cceos.ihep.ac.cn:1094//eos/ihep/cms/store/mc/Run3Summer23BPixNanoAODv12/WZZ_TuneCP5_13p6TeV_amcatnlo-pythia8/NANOAODSIM/130X_mcRun3_2023_realistic_postBPix_v2-v2/2540000/e5f68a87-f084-4afe-a3e1-dec5a3776d5f.root",
+            "root://cceos.ihep.ac.cn:1094//eos/ihep/cms/store/mc/Run3Summer23BPixNanoAODv12/WZZ_TuneCP5_13p6TeV_amcatnlo-pythia8/NANOAODSIM/130X_mcRun3_2023_realistic_postBPix_v2-v2/2540000/e65463df-dec9-4968-81ea-a0a2f6fdf51d.root"
+        ]
+    },
     "WZZ_TuneCP5_13p6TeV_amcatnlo-pythia8_2023_preBPix": {
         "metadata": {
             "das_names": "['/WZZ_TuneCP5_13p6TeV_amcatnlo-pythia8/Run3Summer23NanoAODv12-130X_mcRun3_2023_realistic_v14-v2/NANOAODSIM']",

@@ -1,0 +1,32 @@
+plotting_style:
+    samples_groups:
+        ttbar:
+            - TTtoLNu2Q_HT-500_NJet-9_Hdamp-158_TuneCP5_13p6TeV_powheg-pythia8
+            - TTtoLNu2Q_HT-500_NJet-9_Hdamp-418_TuneCP5_13p6TeV_powheg-pythia8
+            - TTtoLNu2Q_HT-500_NJet-9_TuneCP5_13p6TeV_powheg-pythia8
+        tW+ttZ:
+            - TbarWplustoLNu2Q_TuneCP5Down_13p6TeV_powheg-pythia8
+            - TbarWplustoLNu2Q_TuneCP5_13p6TeV_powheg-pythia8
+            - TWminustoLNu2Q_TuneCP5_13p6TeV_powheg-pythia8
+            - TTZ-ZtoQQ-1Jets_TuneCP5_13p6TeV_amcatnloFXFX-pythia8
+        Wjets:
+            - WtoLNu-2Jets_PTLNu-40to100_1J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8
+            - WtoLNu-2Jets_PTLNu-100to200_1J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8
+            - WtoLNu-2Jets_PTLNu-200to400_1J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8
+            - WtoLNu-2Jets_PTLNu-400to600_1J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8
+            - WtoLNu-2Jets_PTLNu-40to100_2J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8
+            - WtoLNu-2Jets_PTLNu-100to200_1J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8
+            - WtoLNu-2Jets_PTLNu-200to400_1J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8
+            - WtoLNu-2Jets_PTLNu-400to600_2J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8
+            - WtoLNu-2Jets_PTLNu-600_2J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8
+        VVV:                      
+            - WZZ_TuneCP5_13p6TeV_amcatnlo-pythia8
+            - ZZZ_TuneCP5_13p6TeV_amcatnlo-pythia8
+            - WWW_4F_TuneCP5_13p6TeV_amcatnlo-madspin-pythia8
+            - WWZ_4F_TuneCP5_13p6TeV_amcatnlo-pythia8 
+
+
+
+    print_info:
+        category: True
+        year: True

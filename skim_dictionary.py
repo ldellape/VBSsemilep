@@ -1,7 +1,7 @@
 skim_dict = {
     "Wlep_V" : {
          "Muon" : {
-             "ptMin" : 1,
+             "ptMin" : 15,
              "nMin" : 1,
          },
          "Electron" : {
@@ -10,7 +10,7 @@ skim_dict = {
          },
          "Jet" : {
              "ptMin" : 1,
-             "nMin" : 1,
+             "nMin" : 2,
          },
          "triggers_forfakes" : [
              "PFJet40",
@@ -26,6 +26,15 @@ skim_dict = {
              "PFHT300",
              "PFHT350",
             ],
+         "triggers_muon" : [
+             "IsoMu24",
+             "IsoMu24_eta2p1",
+             "IsoMu24_TwoProngs35",
+             "IsoMu24_eta2p1_LooseDeepTauPFTauHPS180_eta2p1",
+             "IsoMu24_eta2p1_LooseDeepTauPFTauHPS30_eta2p1_CrossL1",
+             "IsoMu24_eta2p1_MediumDeepTauPFTauHPS35_L2NN_eta2p1_CrossL1"
+             
+         ]
          
     },
     "ZZ" : {

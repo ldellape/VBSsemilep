@@ -1,0 +1,23 @@
+{
+  "Muon1": {
+    "sample": "Muon1",
+    "json_output": "datasets/Muon1.json",
+    "files": [
+      {
+        "das_names": [
+          "/Muon1/Run2023C-22Sep2023_v4-v2/NANOAOD"
+        ],
+        "metadata": {
+          "year": "2023",
+          "isMC": false,
+          "primaryDataset": "Muon1",
+          "era": "C",
+          "das_names": [
+            "/Muon1/Run2023C-22Sep2023_v4-v2/NANOAOD"
+          ],
+          "sample": "Muon1"
+        }
+      }
+    ]
+  }
+}

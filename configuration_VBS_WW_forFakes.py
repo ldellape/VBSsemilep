@@ -30,32 +30,97 @@ cfg = Configurator(
     datasets = {
         "tag" : "VBS_ssWW",
         "jsons" : [
-                 #  f"{localdir}/datasets/VBS_mc_132X_Summer23wmLHEGS.json",
-                 #  f"{localdir}/datasets/TTbar/TTtoLNu2Q_HT-500_NJet-9_Hdamp-158_TuneCP5_13p6TeV_powheg-pythia8.json",
-                 #  f"{localdir}/datasets/TTbar/TTtoLNu2Q_HT-500_NJet-9_Hdamp-418_TuneCP5_13p6TeV_powheg-pythia8.json",
-                 #  f"{localdir}/datasets/TTbar/TTtoLNu2Q_HT-500_NJet-9_TuneCP5_13p6TeV_powheg-pythia8.json",
-              #     f"{localdir}/datasets/WJets/WtoLNu-2Jets_PTLNu-100to200_2J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8.json",
-              #     f"{localdir}/datasets/TbarWplus/TbarWplustoLNu2Q_TuneCP5Down_13p6TeV_powheg-pythia8.json",
+  # W->lv, 2 jets
+                 #  f"{localdir}/datasets/WJets/WtoLNu-2Jets_PTLNu-40to100_1J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8_redirector.json",
+                 #  f"{localdir}/datasets/WJets/WtoLNu-2Jets_PTLNu-100to200_1J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8_redirector.json",
+                 #  f"{localdir}/datasets/WJets/WtoLNu-2Jets_PTLNu-200to400_1J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8_redirector.json",
+                 #  f"{localdir}/datasets/WJets/WtoLNu-2Jets_PTLNu-400to600_1J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8_redirector.json",
+                   
+                 #  f"{localdir}/datasets/WJets/WtoLNu-2Jets_PTLNu-600_2J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8_redirector.json",
+                 #  f"{localdir}/datasets/WJets/WtoLNu-2Jets_PTLNu-40to100_2J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8_redirector.json",
+                 #  f"{localdir}/datasets/WJets/WtoLNu-2Jets_PTLNu-100to200_2J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8_redirector.json",
+                 #  f"{localdir}/datasets/WJets/WtoLNu-2Jets_PTLNu-200to400_2J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8_redirector.json",
+                 #  f"{localdir}/datasets/WJets/WtoLNu-2Jets_PTLNu-400to600_2J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8_redirector.json",
+                 #  f"{localdir}/datasets/WJets/WtoLNu-2Jets_PTLNu-600_2J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8_redirector.json",
+                   
+                   # ttbar 
+                 #  f"{localdir}/datasets/tW/TbarWplustoLNu2Q_TuneCP5Down_13p6TeV_powheg-pythia8_redirector.json",
+                 #  f"{localdir}/datasets/tW/TbarWplustoLNu2Q_TuneCP5_13p6TeV_powheg-pythia8_redirector.json",
+                 #  f"{localdir}/datasets/tW/TWminustoLNu2Q_TuneCP5_13p6TeV_powheg-pythia8_redirector.json",
+
+                   
+#                   f"{localdir}/datasets/TbarWplus/TbarWplustoLNu2Q_TuneCP5Down_13p6TeV_powheg-pythia8_redirector.json",
                  #  f"{localdir}/datasets/VVV/WZZ_TuneCP5_13p6TeV_amcatnlo-pythia8.json",
                  #  f"{localdir}/datasets/VVV/ZZZ_TuneCP5_13p6TeV_amcatnlo-pythia8.json",
-                #   f"{localdir}/datasets/DATA/Muon1_Run2023C_v12.json",
-               #    f"{localdir}/datasets/DATA/EGamma1.json",
-                f"{localdir}/datasets/JetMET0.json",
-               f"{localdir}/datasets/JetMET1.json",
+            
+            #      f"{localdir}/datasets/JetMET0.json",
+            #        f"{localdir}/datasets/JetMET1.json",
+                 #   f"{localdir}/datasets/DATA/Muon1_Run2023C_v12_redirector.json",
+              #      f"{localdir}/datasets/DATA/Muon1_Run2023C_2_v12_redirector.json",
+                 #   f"{localdir}/datasets/TTZ/TTZ-ZtoQQ-1Jets_TuneCP5_13p6TeV_amcatnloFXFX-pythia8_redirector.json",
+                 #   f"{localdir}/datasets/VVV/WWW_4F_TuneCP5_13p6TeV_amcatnlo-madspin-pythia8_redirector.json",
+                 #   f"{localdir}/datasets/VVV/WWZ_4F_TuneCP5_13p6TeV_amcatnlo-pythia8_redirector.json",
+                    
+                    f"{localdir}/datasets/DATA/MUON/2023/Muon1_2023C_v1.json",
+                    f"{localdir}/datasets/DATA/MUON/2023/Muon1_2023C_v2.json",
+                    f"{localdir}/datasets/DATA/MUON/2023/Muon1_2023C_v3.json",
+                    f"{localdir}/datasets/DATA/MUON/2023/Muon1_2023C_v4.json",
                    ],
         "filter" : {
             "samples" : [
-               "JetMET0", 
-               "JetMET1",
+               #"JetMET0", 
+               #"JetMET1",
+              # "Muon1",
+        #   "WtoLNu-2Jets_PTLNu-40to100_1J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8",
+        #      "WtoLNu-2Jets_PTLNu-100to200_1J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8",
+        #        "WtoLNu-2Jets_PTLNu-200to400_1J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8",
+        #     "WtoLNu-2Jets_PTLNu-400to600_1J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8",
+        #        "WtoLNu-2Jets_PTLNu-40to100_2J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8",
+        #        "WtoLNu-2Jets_PTLNu-100to200_1J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8",
+        #        "WtoLNu-2Jets_PTLNu-200to400_2J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8",
+        #        "WtoLNu-2Jets_PTLNu-400to600_2J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8", 
+        #       "WtoLNu-2Jets_PTLNu-600_2J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8",   
+        
+    #          "TTZ-ZtoQQ-1Jets_TuneCP5_13p6TeV_amcatnloFXFX-pythia8",
+        #      "TTtoLNu2Q_HT-500_NJet-9_Hdamp-158_TuneCP5_13p6TeV_powheg-pythia8",
+         #      "TTtoLNu2Q_HT-500_NJet-9_Hdamp-418_TuneCP5_13p6TeV_powheg-pythia8",
+     #        "TTtoLNu2Q_HT-500_NJet-9_TuneCP5_13p6TeV_powheg-pythia8",
+        
+        #"TTto4Q_Hdamp-158_TuneCP5_13p6TeV_powheg-pythia8",
+         #   "Muon0",
+            "Muon1",
+         #   "Muon1_forFake",
+            #  "EGamma1",
+            # "ssWWLL",
+            #  "ssWWTT",
+            #  "ssWWLL",
+            #  "ssWWTL",
+            #  "JetMET0",
+            #  "JetMET1",
+            #  "ssWWTT",
+            #  "ssWWTL",
+            #  "ssWW_unpolarized",
+            #  "TTtoLNu2Q_HT-500_NJet-9_Hdamp-158_TuneCP5_13p6TeV_powheg-pythia8", 
+              
+            #  "WtoLNu-2Jets_PTLNu-100to200_2J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8", 
+             # "TbarWplustoLNu2Q_TuneCP5Down_13p6TeV_powheg-pythia8", 
+            #
+          # "TbarWplustoLNu2Q_TuneCP5_13p6TeV_powheg-pythia8",
+           #   "TWminustoLNu2Q_TuneCP5_13p6TeV_powheg-pythia8",
+       #       
+          #      "WZZ_TuneCP5_13p6TeV_amcatnlo-pythia8", 
+          #    "ZZZ_TuneCP5_13p6TeV_amcatnlo-pythia8",
+          #      "WWW_4F_TuneCP5_13p6TeV_amcatnlo-madspin-pythia8",
+           #     "WWZ_4F_TuneCP5_13p6TeV_amcatnlo-pythia8",
             ],
-            "year" : ["2023_preBPix", "2023"],
+            "year" : ["2023_preBPix"],
         }
         }, 
     workflow=VBS_WV_Processor,
     skim = [
             get_nPVgood(1), 
             goldenJson,
-            get_HLTsel_custom(skim_dict["Wlep_V"]["triggers_forfakes"]),
+       #     get_HLTsel_custom(skim_dict["Wlep_V"]["triggers_forfakes"]),
             get_nObj_min_or(
                 [skim_dict["Wlep_V"]["Muon"]["nMin"],skim_dict["Wlep_V"]["Electron"]["nMin"]], 
                 [skim_dict["Wlep_V"]["Muon"]["ptMin"], skim_dict["Wlep_V"]["Electron"]["ptMin"]],
@@ -64,6 +129,8 @@ cfg = Configurator(
     #preselections=[SingleLepton, VBS_jets_presel, semileptonic_preselW],
     # for fakes 
     preselections=[passthrough],
+    
+    
     categories= {
         "baseline" : [passthrough],
         
@@ -75,9 +142,9 @@ cfg = Configurator(
         #"SingleLepton_AK4" : [get_nObj_eq(1, coll="LeptonGood"),get_nObj_eq(0, coll="CleanFatJet"), get_nObj_eq(0, coll="BJetGood"), Vjet_massW_resolved],
       #  "Fakes_loose_ele" : [FakeLoose,  get_nObj_eq(1, coll="ElectronLoose")],
         "Fakes_loose_muon" : [get_nObj_eq(0, coll="MuonGood"), get_nObj_eq(1, coll="MuonLoose")],
-        
-     #   "Fakes_tight_ele" : [FakeTight, get_nObj_eq(1, coll="ElectronGood")],
         "Fakes_tight_muon" : [get_nObj_eq(1, coll="MuonGood"), get_nObj_eq(1, coll="MuonLoose")],
+        
+        #closure test
 
 
         # ttbar/tbarWplus
@@ -109,30 +176,14 @@ cfg = Configurator(
     },    
     weights_classes = common_weights,
     weights = {
-        "common": {
-            "inclusive": ["genWeight","lumi","XS",
-                          "pileup",
-                          ],
+        "common": { "inclusive": ["genWeight","lumi","XS", "pileup","sf_mu_id", "sf_mu_iso",  "sf_btag"],
             "bycategory" : {
             }
         },
-        "bysample": {
-        }
     },
-    variations = {
-        "weights": {
-            "common": {
-                "inclusive": [ 
-                              ],
-                "bycategory" : {
-                }
-            },
-        "bysample": {
-        }    
-        },
-    },
+    variations={"weights": {"common": {"inclusive": ["pileup","sf_mu_id","sf_mu_iso", "sf_btag"]}}},
     workflow_options = {
-        "dump_columns_as_arrays_per_chunk": "root://eosuser.cern.ch//eos/user/l/ldellape/VBS/parquet_forfake_nocuts/"
+        "dump_columns_as_arrays_per_chunk": "root://eosuser.cern.ch//eos/user/l/ldellape/VBS/parquet_forfake_test/"
     },
     columns = {
         "common" : {
@@ -144,7 +195,9 @@ cfg = Configurator(
                            ColOut("JetForFakes_loose",["pt", "eta", "phi"] , flatten=False),
                            ColOut("JetForFakes_tight", ["pt", "eta", "phi"], flatten=False),
                            ColOut("MET", ["pt", "phi"], flatten=False),
-                           ColOut("events", ["MT_lep_miss"], flatten=False),
+                           ColOut("PuppiMET", ["pt"], flatten=False),
+                           ColOut("PuppiMET", ["pt"], flatten=False),
+                           ColOut("events", ["MT_lep_miss", "MT_lepLoose_miss", "deltaR_jetMuonLoose", "deltaR_jetMuonTight"], flatten=False),
                            ],
             "bycategory" : {},
             },            

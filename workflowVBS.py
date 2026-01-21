@@ -24,6 +24,17 @@ class VBS_WV_Processor(BaseProcessorABC):
         super().__init__(cfg)
         self.cfg = cfg
         self._tag = self.cfg.datasets_cfg["tag"]
+        self.params.systematic_variations.weight_variations["sf_btag"]["2023_preBPix"] = [
+            "hf", "lf", "hfstats1", "hfstats2",
+            "lfstats1", "lfstats2",
+            "cferr1", "cferr2",
+        ]
+        self.params.systematic_variations.weight_variations["sf_btag"]["2023_postBPix"] = [
+            "hf", "lf", "hfstats1", "hfstats2",
+            "lfstats1", "lfstats2",
+            "cferr1", "cferr2",
+        ]
+        
         
     def apply_object_preselection(self, variation):
         nEvents_total = self.nEvents_initial
@@ -32,7 +43,8 @@ class VBS_WV_Processor(BaseProcessorABC):
         print(f'{self.events.metadata["filename"]}')
         print(f" number of events: {self.nEvents_initial}")
      
-
+        
+        
         if self._isMC:
             self.out_log()
         
@@ -46,11 +58,12 @@ class VBS_WV_Processor(BaseProcessorABC):
         self.events["ElectronGood"] = lepton_selection(self.events, "Electron", self.params)
         self.events["LeptonGood"] = ak.concatenate((self.events.MuonGood, self.events.ElectronGood), axis=1)
         
+        
         ############################################
         # for fake estimation
         mu_loose = self.events.Muon[
             (self.events.Muon.looseId) &
-            (self.events.Muon.pt > self.params.object_preselection.Muon.pt)
+            (self.events.Muon.pt > self.params.object_preselection.Muon.pt) 
         ]
 
         el_loose = self.events.Electron[
@@ -64,20 +77,22 @@ class VBS_WV_Processor(BaseProcessorABC):
         jet_fakes = self.events["JetForFakes"]
         deltaR_jetsForFakes_ele_loose = jet_fakes.metric_table(self.events["ElectronLoose"])
         deltaR_jetsForFakes_muon_loose = jet_fakes.metric_table(self.events["MuonLoose"])
-        deltaR_jetsForFakes_lep_tight = jet_fakes.metric_table(self.events["LeptonGood"])
+        deltaR_jetsForFakes_lep_tight = jet_fakes.metric_table(self.events["MuonGood"])
         deltaR_jetsForFakes_muon = jet_fakes.metric_table(self.events["Muon"]) 
+        self.events["deltaR_jetMuon"] = deltaR_jetsForFakes_muon
+        self.events["deltaR_jetMuonLoose"] = deltaR_jetsForFakes_muon_loose
+        self.events["deltaR_jetMuonTight"] = deltaR_jetsForFakes_lep_tight
+        
         mask_ele_clean = ak.all(deltaR_jetsForFakes_ele_loose  > 1.0, axis=2)
         mask_mu_clean  = ak.all(deltaR_jetsForFakes_muon_loose > 1.0, axis=2)
         mask_jet_forfakes_all = ak.all(deltaR_jetsForFakes_muon > 1.0, axis=2)
-        print(f" mask1 : {mask_ele_clean}")
-        print(f" mask2: {mask_mu_clean}")
         mask_jet_forfakes_loose = mask_ele_clean & mask_mu_clean
         mask_jet_forfakes_tight = ak.all(deltaR_jetsForFakes_lep_tight > 1.0, axis=-1)
-        print(f" mask3: {mask_jet_forfakes_tight}")
         self.events["JetForFakes_loose"] = jet_fakes[mask_jet_forfakes_loose]
         self.events["JetForFakes_tight"] = jet_fakes[mask_jet_forfakes_tight]
         self.events["JetForFakes_all"] = jet_fakes[mask_jet_forfakes_all]
         print(ak.num(self.events.JetForFakes_loose))
+        self.events["LeptonLoose"] = ak.concatenate((self.events.MuonLoose, self.events.ElectronLoose), axis=1)
         
         
         
@@ -96,22 +111,35 @@ class VBS_WV_Processor(BaseProcessorABC):
             self.events.CleanFatJet.tau3/self.events.CleanFatJet.tau2,
             "tau32"
         )
-        if self._year in ["2022", "2023"]:
-            self.fix_jetID()
         
-        self.events["CleanJet"], self.CleanJetMask = jet_selection(
+        # fixed in the central repo
+        #if self._year in ["2022", "2023"]:
+        #    self.fix_jetID()
+        
+        #####################################
+        # sf b tag solo per jet fino a eta=2.4 --> due collezioni diverse
+        # JetGood sottoinsieme di CleanJet
+        self.events["CleanJet"], self.JetGoodMask = jet_selection(
             self.events, "Jet", self.params, self._year,  leptons_collection="LeptonGood"
-        )
+        )        
+        self.events["JetGood"] = self.events.CleanJet[abs(self.events.CleanJet.eta) <= 2.4]
         bjets_tagged = btagging(
-            self.events["CleanJet"],
+            self.events["JetGood"],
             self.params.btagging.working_point[self._year], 
             wp = self.params.object_preselection.Jet["btag"]["wp"],
         )
-        self.events["BJetGood"] = bjets_tagged[abs(bjets_tagged.eta) < 2.5]
+        bjets_tagged_loose = btagging(
+            self.events["JetGood"],
+            self.params.btagging.working_point[self._year],
+            wp = "L",
+        )
+        self.events["BJetGood"] = bjets_tagged[abs(bjets_tagged.eta) <= 2.4]
+        self.events["BJetGoodLoose"] = bjets_tagged_loose[abs(bjets_tagged.eta) <= 2.4]
         
         
         self.VBS_pair_candidate()
         self.V_pair_candidate()
+        self.Vlep_transverse()
         if "WW" in self._tag:
             self.Vlep_transverse()
         else: 
@@ -134,9 +162,10 @@ class VBS_WV_Processor(BaseProcessorABC):
         
     # make the pairs with the ak4 jets collection, take the pair with the greates m_jj as VBS dijet candidate
     def VBS_pair_candidate(self):
-        ak4_cleanjets = self.events["CleanJet"]
-        ak4_pairs = ak.combinations(ak4_cleanjets, 2, fields=["jet1", "jet2"])
-        idx_pairs = ak.combinations(ak.local_index(ak4_cleanjets, axis=1), 2, fields=["idx1", "idx2"])
+        print("***********************************************")
+        ak4_JetGoods = self.events["CleanJet"]
+        ak4_pairs = ak.combinations(ak4_JetGoods, 2, fields=["jet1", "jet2"])
+        idx_pairs = ak.combinations(ak.local_index(ak4_JetGoods, axis=1), 2, fields=["idx1", "idx2"])
         dijet_mass = (ak4_pairs["jet1"] + ak4_pairs["jet2"]).mass
         sort_by_mass = ak.argsort(dijet_mass, axis=1, ascending=False)
         sorted_ak4_pair = ak4_pairs[sort_by_mass]
@@ -175,17 +204,17 @@ class VBS_WV_Processor(BaseProcessorABC):
     # create the pair of jets candidate from W/Z boson, removing the 2 jets already in the "VBS_dijet_system".
     # if more than two ak4 jets remains, take the pair with the sd mass closer to that of W
     def V_pair_candidate(self):
-        ak4_cleanjets = self.events["CleanJet"]
+        ak4_JetGoods = self.events["CleanJet"]
         mask = ~(
-            (ak.local_index(ak4_cleanjets, axis=1) == self.events["VBS_dijet_system"].idx1) |
-            (ak.local_index(ak4_cleanjets, axis=1) == self.events["VBS_dijet_system"].idx2)
+            (ak.local_index(ak4_JetGoods, axis=1) == self.events["VBS_dijet_system"].idx1) |
+            (ak.local_index(ak4_JetGoods, axis=1) == self.events["VBS_dijet_system"].idx2)
         )
-        self.events["CleanJet_noVBS"] = self.events["CleanJet"][mask]
-        clean_jets_no_vbs = self.events["CleanJet_noVBS"]
+        self.events["JetGood_noVBS"] = self.events["CleanJet"][mask]
+        clean_jets_no_vbs = self.events["JetGood_noVBS"]
 
         # Count jets per event
         njets_remaining = ak.num(clean_jets_no_vbs)
-        print(f" n cleanjet : {njets_remaining}")
+        print(f" n JetGood : {njets_remaining}")
 
         mask_eq2 = njets_remaining == 2
         mask_gt2 = njets_remaining > 2
@@ -233,6 +262,7 @@ class VBS_WV_Processor(BaseProcessorABC):
             if val.mass is not None:
                 full_result[i] = val
         self.events["V_dijet_candidate"] = ak.Array(full_result)
+        print(self.events.V_dijet_candidate)
         
         
     # prepare the transverse mass of electron/muon + MET
@@ -249,6 +279,19 @@ class VBS_WV_Processor(BaseProcessorABC):
             2 * self.events.MuonGood.pt * self.events.MET.pt *
             (1 - np.cos(self.events.MuonGood.phi - self.events.MET.phi))
         ))
+        self.events["MT_eleLoose_miss"] =ak.firsts(np.sqrt(
+            2 * self.events.ElectronLoose.pt * self.events.MET.pt *
+            (1 - np.cos(self.events.ElectronLoose.phi - self.events.MET.phi))
+        ))
+        self.events["MT_lepLoose_miss"] = ak.firsts(np.sqrt(
+            2 * self.events.LeptonLoose.pt * self.events.MET.pt * 
+            (1 - np.cos(self.events.LeptonLoose.phi - self.events.MET.phi))
+        ))
+        self.events["MT_muLoose_miss"] = ak.firsts(np.sqrt(
+            2 * self.events.MuonLoose.pt * self.events.MET.pt *
+            (1 - np.cos(self.events.MuonLoose.phi - self.events.MET.phi))
+        ))   
+        
         
     def zepp_variable(self):
         if "VBS_dijet_system" in self.events.fields:
@@ -263,7 +306,9 @@ class VBS_WV_Processor(BaseProcessorABC):
         self.events["nLeptonGood"] = ak.num(self.events.LeptonGood)
         self.events["nMuonLoose"] = ak.num(self.events.MuonLoose)
         self.events["nCleanFatJets"] = ak.num(self.events.CleanFatJet)
-        self.events["nCleanJets"] = ak.num(self.events.CleanJet)
+        self.events["nJetGood"] = ak.num(self.events.JetGood)
+        self.events["nCleanJet"] = ak.num(self.events.CleanJet)
+
         self.events["nBJetGood"] = ak.num(self.events.BJetGood)
         self.events["nJet"] = ak.num(self.events.Jet)
         self.events["nFatJet"] = ak.num(self.events.FatJet)

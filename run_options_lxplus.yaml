@@ -1,8 +1,10 @@
 worker-image: "/cvmfs/unpacked.cern.ch/gitlab-registry.cern.ch/cms-analysis/general/pocketcoffea:lxplus-el9-stable"
 local-virtualenv: true
-scaleout: 100
-mem-per-worker: 6GB
-disk-per-worker: 6GB
+scaleout: 80
+mem-per-worker: 10GB
+disk-per-worker: 10GB
+death-timeout: 6000
+adaptive: true
 
 group-samples:
   signal:

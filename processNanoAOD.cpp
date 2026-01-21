@@ -11,7 +11,7 @@
 #include <vector>
 
 #include "samples.h"
-
+#include "/afs/cern.ch/user/l/ldellape/public/sara/samples_nonPol.h"
 
 
 std::string tag_cutflow = "diffMassAK4_AK8_loose_";
@@ -107,16 +107,17 @@ double invariantMass(double pt1, double eta1, double phi1,
 }
 
 void processNanoAOD() {
-    std::string tag[2] = {"ssWW_LL_mg5+ms", "ssWW_TT_mg5+ms"};
+    std::string tag[2] = {"ssWW_LL_mg5+ms", "ssWW_mg5+ms"};
     float xsec[2] = {0.02143, 0.1789};
 
 
-    for(int isample=0; isample<2; isample++){
+    for(int isample=1; isample<2; isample++){
 
         std::vector<std::string> files;
 
     if(isample==0){ for (auto &f : samples_ssWWLL) files.push_back(f);}
-    else{ for (auto &f : samples_ssWWTT) files.push_back(f);}
+    else{ for (auto &f : samples_ssWW) files.push_back(f);}
+
 
     TH1F *h_nJet = new TH1F(("h_nJet_" + tag[isample]).c_str(), "Number of clean jets;N_{jet};Events", 15, 0, 15);
 TH1F *h_nFatJet = new TH1F(("h_nFatJet_" + tag[isample]).c_str(), "Number of clean fatjets;N_{fatjet};Events", 10, 0, 10);
@@ -150,6 +151,9 @@ TH1F *h_subjet_zg_ak8_custom2 = new TH1F(("h_subjet_zg_ak8_custom2_" + tag[isamp
 TH1F *h_rho_central = new TH1F(("rho_central" + tag[isample]).c_str(), "rho_central", 60, 0, 80); 
 TH1F *h_rho_all = new TH1F(("rho_all" + tag[isample]).c_str(), "rho_all", 60, 0, 80); 
 TH1F *h_rho_diff = new TH1F(("rho_diff" + tag[isample]).c_str(), "rho_diff", 60, 0, 80); 
+TH1F *h_jet_eta = new TH1F("h_jet_eta", "h_jet_eta", 30, -5, 5);
+TH1F *h_fatjet_eta = new TH1F("h_fatjet_eta", "h_fatjet_eta", 30, -5, 5);
+
 
 
     // --- Cutflow histograms ---
@@ -258,7 +262,7 @@ int nentries=0;
     for(Long64_t i=0; i<events_tree; ++i){
         t->GetEntry(i);
 
-    
+        if(i==10000) break;
         bool singleLepton = false;
         if((nElectron >= 1  ||  nMuon>=1)){
             singleLepton = true;
@@ -316,6 +320,7 @@ int nentries=0;
             if(count_muon==1 && deltaR(Muon_eta[idx_muon], Muon_phi[idx_muon], FatJet_eta[fj], FatJet_phi[fj]) < 0.8) continue;
             ++cleanfatjet;
             ++total_cleanfat_jets;
+            h_fatjet_eta->Fill(FatJet_eta[fj]);
             cleanFatJet_idx.emplace_back(fj);
         }
 
@@ -329,6 +334,7 @@ int nentries=0;
             ++cleanjet;
             ++total_clean_jet;
             cleanjet_idx.push_back(j);
+            h_jet_eta->Fill(Jet_eta[j]);
         }
 
         h_nJet->Fill(cleanjet);
@@ -545,8 +551,10 @@ int nentries=0;
     h_deltaR_ak8->Write();
     h_vbs_mass->Write();
     h_rho_central->Write();
+    h_jet_eta->Write();
     h_mass_ak4->Write();
     h_mass_ak8->Write();
+    h_fatjet_eta->Write();
 h_subjet_zg_ak8_custom1->Write();
 h_subjet_zg_ak8_custom2->Write();
     h_rho_all->Write();

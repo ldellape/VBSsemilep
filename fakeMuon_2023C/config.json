@@ -1,0 +1,818 @@
+{
+  "datasets": {
+    "names": [
+      "Muon1_2023_EraC"
+    ],
+    "samples": [
+      "Muon1_forFake"
+    ],
+    "filesets": {
+      "Muon1_2023_EraC": {
+        "metadata": {
+          "das_names": "['/Muon1/Run2023C-22Sep2023_v1-v1/NANOAOD']",
+          "sample": "Muon1_forFake",
+          "year": "2023_preBPix",
+          "isMC": "False",
+          "primaryDataset": "Muon1",
+          "era": "Cv1",
+          "nevents": "54698315",
+          "size": "44258448094"
+        },
+        "files": [
+          "root://xrootd-cms.infn.it///store/data/Run2023C/Muon1/NANOAOD/22Sep2023_v1-v1/30000/d93b0737-8e8a-4276-aae3-338423b4d3d9.root",
+          "root://xrootd-cms.infn.it///store/data/Run2023C/Muon1/NANOAOD/22Sep2023_v1-v1/50000/7c3d0f78-6a26-4ff2-96cb-ec73c2adca1e.root",
+          "root://xrootd-cms.infn.it///store/data/Run2023C/Muon1/NANOAOD/22Sep2023_v1-v1/50000/8f738ac8-460e-4a64-92c8-4f1c647e5a16.root",
+          "root://xrootd-cms.infn.it///store/data/Run2023C/Muon1/NANOAOD/22Sep2023_v1-v1/50000/156ba127-e6a6-45dc-a3b6-d88216fdca33.root",
+          "root://xrootd-cms.infn.it///store/data/Run2023C/Muon1/NANOAOD/22Sep2023_v1-v1/50000/09b3c6cc-9098-42f8-96cc-e94febff39f9.root",
+          "root://xrootd-cms.infn.it///store/data/Run2023C/Muon1/NANOAOD/22Sep2023_v1-v1/50000/c2d90514-4e1b-4c00-a89f-32e280c2af03.root",
+          "root://xrootd-cms.infn.it///store/data/Run2023C/Muon1/NANOAOD/22Sep2023_v1-v1/30000/5d560b39-bfee-4863-a193-7864b9097446.root",
+          "root://xrootd-cms.infn.it///store/data/Run2023C/Muon1/NANOAOD/22Sep2023_v1-v1/30000/e518528e-dad9-45c0-adc6-e9a1e5caecc9.root",
+          "root://xrootd-cms.infn.it///store/data/Run2023C/Muon1/NANOAOD/22Sep2023_v1-v1/30000/cef342d2-3411-4910-a575-6a097ee120e4.root",
+          "root://xrootd-cms.infn.it///store/data/Run2023C/Muon1/NANOAOD/22Sep2023_v1-v1/30000/a34bb076-64b9-4cfd-aebe-2482604f70cc.root",
+          "root://xrootd-cms.infn.it///store/data/Run2023C/Muon1/NANOAOD/22Sep2023_v1-v1/50000/7bb23d61-4389-406f-86bb-4fe731b67a7f.root",
+          "root://xrootd-cms.infn.it///store/data/Run2023C/Muon1/NANOAOD/22Sep2023_v1-v1/50000/f432ce26-a923-452c-af27-8d8ba4741532.root",
+          "root://xrootd-cms.infn.it///store/data/Run2023C/Muon1/NANOAOD/22Sep2023_v1-v1/50000/075e415a-8b3a-4bde-93d3-8daafa5a4d47.root",
+          "root://xrootd-cms.infn.it///store/data/Run2023C/Muon1/NANOAOD/22Sep2023_v1-v1/50000/b8443ec9-3123-4c11-852b-d99a712f982a.root",
+          "root://xrootd-cms.infn.it///store/data/Run2023C/Muon1/NANOAOD/22Sep2023_v1-v1/50000/44a10206-f301-4eab-b31a-cc68446c2b39.root",
+          "root://xrootd-cms.infn.it///store/data/Run2023C/Muon1/NANOAOD/22Sep2023_v1-v1/50000/4bce68c8-0eba-4b6b-980e-5d01bb6a10c2.root",
+          "root://xrootd-cms.infn.it///store/data/Run2023C/Muon1/NANOAOD/22Sep2023_v1-v1/50000/2dc61545-81f8-4b23-b4e1-41b98f3e8f3e.root",
+          "root://xrootd-cms.infn.it///store/data/Run2023C/Muon1/NANOAOD/22Sep2023_v1-v1/50000/59104d61-232e-432a-b3af-2937537131ec.root",
+          "root://xrootd-cms.infn.it///store/data/Run2023C/Muon1/NANOAOD/22Sep2023_v1-v1/50000/fb44f6dc-0c9e-488c-85ad-d4a80db1e5d9.root",
+          "root://xrootd-cms.infn.it///store/data/Run2023C/Muon1/NANOAOD/22Sep2023_v1-v1/50000/a788c425-cd39-4145-aaf6-6dea4009abe8.root",
+          "root://xrootd-cms.infn.it///store/data/Run2023C/Muon1/NANOAOD/22Sep2023_v1-v1/50000/ecf31946-607b-4223-9230-e40d05ef1c10.root",
+          "root://xrootd-cms.infn.it///store/data/Run2023C/Muon1/NANOAOD/22Sep2023_v1-v1/50000/3e34b435-9c2c-436d-a4ef-ed4bb95051e8.root",
+          "root://xrootd-cms.infn.it///store/data/Run2023C/Muon1/NANOAOD/22Sep2023_v1-v1/30000/b4febeae-349e-48d5-ac3e-89bc49522ab0.root",
+          "root://xrootd-cms.infn.it///store/data/Run2023C/Muon1/NANOAOD/22Sep2023_v1-v1/50000/f3881859-7a44-4c75-b11f-8db9e91f8b76.root",
+          "root://xrootd-cms.infn.it///store/data/Run2023C/Muon1/NANOAOD/22Sep2023_v1-v1/50000/0fdfa445-25c5-43fe-9c34-188956093f33.root",
+          "root://xrootd-cms.infn.it///store/data/Run2023C/Muon1/NANOAOD/22Sep2023_v1-v1/50000/cfa32865-8ce3-46a6-ac3b-902a6579030d.root",
+          "root://xrootd-cms.infn.it///store/data/Run2023C/Muon1/NANOAOD/22Sep2023_v1-v1/30000/599356db-8e73-4b51-bd84-c912733a5cf2.root",
+          "root://xrootd-cms.infn.it///store/data/Run2023C/Muon1/NANOAOD/22Sep2023_v1-v1/30000/8ae3e56a-9939-40d1-a35b-ef3a7ca21f64.root",
+          "root://xrootd-cms.infn.it///store/data/Run2023C/Muon1/NANOAOD/22Sep2023_v1-v1/40000/082e3859-0271-4d27-accf-36109a8d0b80.root",
+          "root://xrootd-cms.infn.it///store/data/Run2023C/Muon1/NANOAOD/22Sep2023_v1-v1/40000/354e7d27-23b7-4af3-8a04-f88593f05a16.root",
+          "root://xrootd-cms.infn.it///store/data/Run2023C/Muon1/NANOAOD/22Sep2023_v1-v1/40000/cbe36329-12cb-420b-b83c-054910d4c900.root",
+          "root://xrootd-cms.infn.it///store/data/Run2023C/Muon1/NANOAOD/22Sep2023_v1-v1/40000/812a9203-592b-450a-8943-d00145d8a083.root",
+          "root://xrootd-cms.infn.it///store/data/Run2023C/Muon1/NANOAOD/22Sep2023_v1-v1/40000/c03bffd0-182b-4dc1-ada3-89b46d692707.root",
+          "root://xrootd-cms.infn.it///store/data/Run2023C/Muon1/NANOAOD/22Sep2023_v1-v1/50000/82bb0dbb-592a-4ee1-8100-b63c684e31fd.root",
+          "root://xrootd-cms.infn.it///store/data/Run2023C/Muon1/NANOAOD/22Sep2023_v1-v1/50000/577205b1-a05e-435e-af03-4589580b7b28.root",
+          "root://xrootd-cms.infn.it///store/data/Run2023C/Muon1/NANOAOD/22Sep2023_v1-v1/50000/5e54801f-41ba-4c81-bfd1-f7225ecde4ca.root",
+          "root://xrootd-cms.infn.it///store/data/Run2023C/Muon1/NANOAOD/22Sep2023_v1-v1/50000/8f8c255c-d809-4021-9104-9bc526cc67a6.root",
+          "root://xrootd-cms.infn.it///store/data/Run2023C/Muon1/NANOAOD/22Sep2023_v1-v1/50000/ff63be89-f071-4f6d-989c-76d1d99695a8.root",
+          "root://xrootd-cms.infn.it///store/data/Run2023C/Muon1/NANOAOD/22Sep2023_v1-v1/50000/278c70f4-dd84-4991-9532-8eb32821e2f5.root",
+          "root://xrootd-cms.infn.it///store/data/Run2023C/Muon1/NANOAOD/22Sep2023_v1-v1/50000/a927c73e-4a29-4630-8814-7151d5d98cb9.root",
+          "root://xrootd-cms.infn.it///store/data/Run2023C/Muon1/NANOAOD/22Sep2023_v1-v1/30000/d1961495-1532-4135-ae0c-c4df44aaf584.root",
+          "root://xrootd-cms.infn.it///store/data/Run2023C/Muon1/NANOAOD/22Sep2023_v1-v1/30000/47738e36-5ed4-4b35-a079-68dd1d181e6c.root",
+          "root://xrootd-cms.infn.it///store/data/Run2023C/Muon1/NANOAOD/22Sep2023_v1-v1/50000/6742ba97-8c78-4fe0-8bdf-c1d28dba5191.root",
+          "root://xrootd-cms.infn.it///store/data/Run2023C/Muon1/NANOAOD/22Sep2023_v1-v1/50000/fbf12efc-1f1a-40a1-8052-698bd4bbaf4b.root",
+          "root://xrootd-cms.infn.it///store/data/Run2023C/Muon1/NANOAOD/22Sep2023_v1-v1/50000/cfab573e-12fe-4fc6-932f-664cf94afb18.root",
+          "root://xrootd-cms.infn.it///store/data/Run2023C/Muon1/NANOAOD/22Sep2023_v1-v1/50000/a6481f7c-0f1f-44c1-bf5e-143897eb229b.root",
+          "root://xrootd-cms.infn.it///store/data/Run2023C/Muon1/NANOAOD/22Sep2023_v1-v1/50000/faaa3b6f-0ef8-45d2-9bb3-4cbcd308db1a.root",
+          "root://xrootd-cms.infn.it///store/data/Run2023C/Muon1/NANOAOD/22Sep2023_v1-v1/50000/b24ac74f-d870-4e1b-bdaf-3235303034ba.root",
+          "root://xrootd-cms.infn.it///store/data/Run2023C/Muon1/NANOAOD/22Sep2023_v1-v1/50000/784e020a-5fab-44b3-90e4-25a6d4c5bbea.root",
+          "root://xrootd-cms.infn.it///store/data/Run2023C/Muon1/NANOAOD/22Sep2023_v1-v1/50000/18be0918-af82-4289-a46e-c5aec3f2d96c.root",
+          "root://xrootd-cms.infn.it///store/data/Run2023C/Muon1/NANOAOD/22Sep2023_v1-v1/50000/b37f221e-cbd9-40d0-8ff1-b9ffb98bb56c.root",
+          "root://xrootd-cms.infn.it///store/data/Run2023C/Muon1/NANOAOD/22Sep2023_v1-v1/50000/a288f240-51f2-4481-a2bf-22fe53ed3bae.root",
+          "root://xrootd-cms.infn.it///store/data/Run2023C/Muon1/NANOAOD/22Sep2023_v1-v1/50000/1a8ba1e1-ff94-4600-8634-ff11abd81bd8.root",
+          "root://xrootd-cms.infn.it///store/data/Run2023C/Muon1/NANOAOD/22Sep2023_v1-v1/50000/8e822339-c645-4907-9c1c-3567680827f9.root",
+          "root://xrootd-cms.infn.it///store/data/Run2023C/Muon1/NANOAOD/22Sep2023_v1-v1/50000/72c5596e-1ef4-4df0-a464-4b8ef969ce5e.root",
+          "root://xrootd-cms.infn.it///store/data/Run2023C/Muon1/NANOAOD/22Sep2023_v1-v1/50000/5bb0eadf-2e43-4c5e-a808-0ef9ae93d9a2.root",
+          "root://xrootd-cms.infn.it///store/data/Run2023C/Muon1/NANOAOD/22Sep2023_v1-v1/50000/672f355d-bf88-4246-bf79-1d16dcdc5d89.root",
+          "root://xrootd-cms.infn.it///store/data/Run2023C/Muon1/NANOAOD/22Sep2023_v1-v1/50000/74da26ac-8443-4a41-a0fc-2390091b0a55.root",
+          "root://xrootd-cms.infn.it///store/data/Run2023C/Muon1/NANOAOD/22Sep2023_v1-v1/50000/0d793616-2b95-49c6-a4f3-87682bed3d06.root",
+          "root://xrootd-cms.infn.it///store/data/Run2023C/Muon1/NANOAOD/22Sep2023_v1-v1/50000/106dbdc1-8e3c-4a43-842a-afabf28eff72.root",
+          "root://xrootd-cms.infn.it///store/data/Run2023C/Muon1/NANOAOD/22Sep2023_v1-v1/50000/1bda1d6f-816d-4b66-b4b8-3b7ba09e189e.root",
+          "root://xrootd-cms.infn.it///store/data/Run2023C/Muon1/NANOAOD/22Sep2023_v1-v1/50000/b5273292-7a08-404e-ad26-87f4180d6894.root",
+          "root://xrootd-cms.infn.it///store/data/Run2023C/Muon1/NANOAOD/22Sep2023_v1-v1/50000/7eee31ef-9e11-4c17-884e-2975ad52c9b5.root",
+          "root://xrootd-cms.infn.it///store/data/Run2023C/Muon1/NANOAOD/22Sep2023_v1-v1/50000/a67f39e3-1f44-475a-85ce-f19f2d030eb8.root",
+          "root://xrootd-cms.infn.it///store/data/Run2023C/Muon1/NANOAOD/22Sep2023_v1-v1/50000/bf5e793a-8a6c-426f-955a-bf231ec3d54c.root",
+          "root://xrootd-cms.infn.it///store/data/Run2023C/Muon1/NANOAOD/22Sep2023_v1-v1/50000/2ecc4f72-a83a-4f24-ad3c-5b3ae338dbd5.root",
+          "root://xrootd-cms.infn.it///store/data/Run2023C/Muon1/NANOAOD/22Sep2023_v1-v1/50000/fff258c9-9769-414c-9ebe-719915e492aa.root",
+          "root://xrootd-cms.infn.it///store/data/Run2023C/Muon1/NANOAOD/22Sep2023_v1-v1/50000/6690c9e6-ecab-4906-921c-bb5316731bd2.root",
+          "root://xrootd-cms.infn.it///store/data/Run2023C/Muon1/NANOAOD/22Sep2023_v1-v1/50000/28783f98-85a7-4a3b-9694-fe58b6ea5eab.root",
+          "root://xrootd-cms.infn.it///store/data/Run2023C/Muon1/NANOAOD/22Sep2023_v1-v1/50000/7ed8b5e5-866b-4e82-b396-134ef9023369.root",
+          "root://xrootd-cms.infn.it///store/data/Run2023C/Muon1/NANOAOD/22Sep2023_v1-v1/50000/0ed2e0b6-4076-4c41-a74d-431d92fb6858.root",
+          "root://xrootd-cms.infn.it///store/data/Run2023C/Muon1/NANOAOD/22Sep2023_v1-v1/50000/e8cc711f-e6ac-4b2b-ba5d-4a417a501019.root",
+          "root://xrootd-cms.infn.it///store/data/Run2023C/Muon1/NANOAOD/22Sep2023_v1-v1/2520000/85dd4541-0811-41d0-9b0d-44232947a6aa.root"
+        ]
+      }
+    },
+    "subsamples": {
+      "Muon1_forFake": {
+        "type": "StandardSelection",
+        "categories": {
+          "Muon1_forFake": [
+            {
+              "name": "passthrough",
+              "params": {},
+              "collection": "events",
+              "function": {
+                "name": "passthrough_f",
+                "module": "pocket_coffea.lib.cut_functions",
+                "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
+                "f_hash": 8752086320602
+              },
+              "id": "passthrough__-3553578951235699219"
+            }
+          ]
+        },
+        "is_multidim": false,
+        "multidim_collection": null
+      }
+    }
+  },
+  "skim": [
+    {
+      "name": "nPVgood_1",
+      "params": {
+        "N": 1
+      },
+      "collection": "events",
+      "function": {
+        "name": "<lambda>",
+        "module": "pocket_coffea.lib.cut_functions",
+        "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
+        "f_hash": 8751920121236
+      },
+      "id": "nPVgood_1__-432488686653106208"
+    },
+    {
+      "name": "event_flags",
+      "params": {},
+      "collection": "events",
+      "function": {
+        "name": "apply_event_flags",
+        "module": "pocket_coffea.lib.cut_functions",
+        "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
+        "f_hash": 8752086321112
+      },
+      "id": "event_flags__5670403895970559199"
+    },
+    {
+      "name": "golden_json_lumi",
+      "params": {},
+      "collection": "events",
+      "function": {
+        "name": "apply_golden_json",
+        "module": "pocket_coffea.lib.cut_functions",
+        "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
+        "f_hash": 8752086233972
+      },
+      "id": "golden_json_lumi__-7182255006929188055"
+    },
+    {
+      "name": "HLT_trigger_IsoMu27",
+      "params": {
+        "triggers_to_apply": [
+          "IsoMu27"
+        ],
+        "invert": false
+      },
+      "collection": "events",
+      "function": {
+        "name": "<lambda>",
+        "module": "pocket_coffea.lib.cut_functions",
+        "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
+        "f_hash": 8751920121246
+      },
+      "id": "HLT_trigger_IsoMu27__-7720868575091596219"
+    },
+    {
+      "name": "JetVetoMaps",
+      "params": {},
+      "collection": "events",
+      "function": {
+        "name": "get_JetVetoMap_Mask",
+        "module": "pocket_coffea.lib.cut_functions",
+        "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
+        "f_hash": 8752086320762
+      },
+      "id": "JetVetoMaps__1108492629391587029"
+    },
+    {
+      "name": "cut_Muon_min1_pt15_or_Electron_min1_pt1",
+      "params": {
+        "coll": [
+          "Muon",
+          "Electron"
+        ],
+        "nMin": [
+          1,
+          1
+        ],
+        "minpt": [
+          15,
+          1
+        ]
+      },
+      "collection": "events",
+      "function": {
+        "name": "cut_function",
+        "module": "custom_cut_functions",
+        "src_file": "/afs/cern.ch/user/l/ldellape/vbs_semilep/VBSsemilep/custom_cut_functions.py",
+        "f_hash": 8751921514246
+      },
+      "id": "cut_Muon_min1_pt15_or_Electron_min1_pt1__165127443079770935"
+    }
+  ],
+  "preselections": [
+    {
+      "name": "SingleGoodLeptons",
+      "params": {},
+      "collection": "events",
+      "function": {
+        "name": "single_good_lepton",
+        "module": "custom_cut_functions",
+        "src_file": "/afs/cern.ch/user/l/ldellape/vbs_semilep/VBSsemilep/custom_cut_functions.py",
+        "f_hash": 8751921514116
+      },
+      "id": "SingleGoodLeptons__3439060618606240198"
+    },
+    {
+      "name": "VBS_jets_presel",
+      "params": {
+        "mass": 500,
+        "deltaEta": 2.5,
+        "pt_leadingJet": 50,
+        "nJet": 4,
+        "nJet_with_FatJet": 2
+      },
+      "collection": "events",
+      "function": {
+        "name": "VBS_topology",
+        "module": "custom_cut_functions",
+        "src_file": "/afs/cern.ch/user/l/ldellape/vbs_semilep/VBSsemilep/custom_cut_functions.py",
+        "f_hash": 8751921514126
+      },
+      "id": "VBS_jets_presel__8893535722786642479"
+    },
+    {
+      "name": "Wtransverse_mass_presel",
+      "params": {
+        "transverse_max": 185
+      },
+      "collection": "events",
+      "function": {
+        "name": "Wtransverse_mass",
+        "module": "custom_cut_functions",
+        "src_file": "/afs/cern.ch/user/l/ldellape/vbs_semilep/VBSsemilep/custom_cut_functions.py",
+        "f_hash": 8751921514216
+      },
+      "id": "Wtransverse_mass_presel__533840722136665760"
+    }
+  ],
+  "categories": {
+    "type": "StandardSelection",
+    "categories": {
+      "baseline": [
+        {
+          "name": "passthrough",
+          "params": {},
+          "collection": "events",
+          "function": {
+            "name": "passthrough_f",
+            "module": "pocket_coffea.lib.cut_functions",
+            "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
+            "f_hash": 8752086320602
+          },
+          "id": "passthrough__-3553578951235699219"
+        }
+      ],
+      "SingleLepton_AK8_bjets_mediumWP_ttbar": [
+        {
+          "name": "nCleanFatJet_eq1",
+          "params": {
+            "N": 1,
+            "coll": "CleanFatJet"
+          },
+          "collection": "events",
+          "function": {
+            "name": "eq_nObj",
+            "module": "pocket_coffea.lib.cut_functions",
+            "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
+            "f_hash": 8752086234042
+          },
+          "id": "nCleanFatJet_eq1__-695357003419002868"
+        },
+        {
+          "name": "nCleanJet_min2",
+          "params": {
+            "N": 2,
+            "coll": "CleanJet"
+          },
+          "collection": "events",
+          "function": {
+            "name": "min_nObj",
+            "module": "pocket_coffea.lib.cut_functions",
+            "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
+            "f_hash": 8752086234012
+          },
+          "id": "nCleanJet_min2__2944902033287100238"
+        },
+        {
+          "name": "nMuonGood_eq0",
+          "params": {
+            "N": 0,
+            "coll": "MuonGood"
+          },
+          "collection": "events",
+          "function": {
+            "name": "eq_nObj",
+            "module": "pocket_coffea.lib.cut_functions",
+            "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
+            "f_hash": 8752086234042
+          },
+          "id": "nMuonGood_eq0__-22112278138497687"
+        },
+        {
+          "name": "nMuonLoose_eq1",
+          "params": {
+            "N": 1,
+            "coll": "MuonLoose"
+          },
+          "collection": "events",
+          "function": {
+            "name": "eq_nObj",
+            "module": "pocket_coffea.lib.cut_functions",
+            "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
+            "f_hash": 8752086234042
+          },
+          "id": "nMuonLoose_eq1__-5066122054797137662"
+        },
+        {
+          "name": "semileptonic_preselW",
+          "params": {
+            "W": true,
+            "pt_leading_electron": 30,
+            "pt_leading_muon": 30,
+            "eta_max_lep": 2.5,
+            "nJet": 4,
+            "nFatJets": 1,
+            "nJet_with_FatJet": 2,
+            "met_electron": 30,
+            "met_muon": 30,
+            "max_mt": 185
+          },
+          "collection": "events",
+          "function": {
+            "name": "semileptonic",
+            "module": "custom_cut_functions",
+            "src_file": "/afs/cern.ch/user/l/ldellape/vbs_semilep/VBSsemilep/custom_cut_functions.py",
+            "f_hash": 8751921514136
+          },
+          "id": "semileptonic_preselW__-6549142080630400470"
+        },
+        {
+          "name": "nBJetGood_min1",
+          "params": {
+            "N": 1,
+            "coll": "BJetGood"
+          },
+          "collection": "events",
+          "function": {
+            "name": "min_nObj",
+            "module": "pocket_coffea.lib.cut_functions",
+            "src_file": "/usr/local/lib/python3.11/site-packages/pocket_coffea/lib/cut_functions.py",
+            "f_hash": 8752086234012
+          },
+          "id": "nBJetGood_min1__-1712359828128741260"
+        },
+        {
+          "name": "Vjet_massW",
+          "params": {
+            "VV": true,
+            "mass_min": 70,
+            "mass_max": 115,
+            "pt_min": 200
+          },
+          "collection": "events",
+          "function": {
+            "name": "Vjet_mass_AK8",
+            "module": "custom_cut_functions",
+            "src_file": "/afs/cern.ch/user/l/ldellape/vbs_semilep/VBSsemilep/custom_cut_functions.py",
+            "f_hash": 8751921514166
+          },
+          "id": "Vjet_massW__-736224602275432069"
+        }
+      ]
+    },
+    "is_multidim": false,
+    "multidim_collection": null
+  },
+  "workflow": {
+    "name": "VBS_WV_Processor",
+    "workflow_options": {
+      "dump_columns_as_arrays_per_chunk": "root://eosuser.cern.ch//eos/user/l/ldellape/VBS/parquet_forfake/"
+    },
+    "srcfile": "/afs/cern.ch/user/l/ldellape/vbs_semilep/VBSsemilep/workflowVBS.py"
+  },
+  "weights": {
+    "Muon1_forFake": {
+      "bycategory": {
+        "baseline": [],
+        "SingleLepton_AK8_bjets_mediumWP_ttbar": []
+      },
+      "inclusive": [
+        "fakesMU",
+        "fakesEle"
+      ]
+    }
+  },
+  "variations": {},
+  "variables": {
+    "ElectronGood_pt": {
+      "axes": [],
+      "storage": "weight",
+      "autofill": true,
+      "variations": true,
+      "only_variations": null,
+      "exclude_samples": null,
+      "only_samples": null,
+      "exclude_categories": null,
+      "only_categories": null,
+      "no_weights": false,
+      "metadata_hist": false
+    },
+    "ElectronGood_eta": {
+      "axes": [],
+      "storage": "weight",
+      "autofill": true,
+      "variations": true,
+      "only_variations": null,
+      "exclude_samples": null,
+      "only_samples": null,
+      "exclude_categories": null,
+      "only_categories": null,
+      "no_weights": false,
+      "metadata_hist": false
+    },
+    "ElectronGood_phi": {
+      "axes": [],
+      "storage": "weight",
+      "autofill": true,
+      "variations": true,
+      "only_variations": null,
+      "exclude_samples": null,
+      "only_samples": null,
+      "exclude_categories": null,
+      "only_categories": null,
+      "no_weights": false,
+      "metadata_hist": false
+    },
+    "MuonGood_pt": {
+      "axes": [],
+      "storage": "weight",
+      "autofill": true,
+      "variations": true,
+      "only_variations": null,
+      "exclude_samples": null,
+      "only_samples": null,
+      "exclude_categories": null,
+      "only_categories": null,
+      "no_weights": false,
+      "metadata_hist": false
+    },
+    "MuonGood_eta": {
+      "axes": [],
+      "storage": "weight",
+      "autofill": true,
+      "variations": true,
+      "only_variations": null,
+      "exclude_samples": null,
+      "only_samples": null,
+      "exclude_categories": null,
+      "only_categories": null,
+      "no_weights": false,
+      "metadata_hist": false
+    },
+    "MuonGood_phi": {
+      "axes": [],
+      "storage": "weight",
+      "autofill": true,
+      "variations": true,
+      "only_variations": null,
+      "exclude_samples": null,
+      "only_samples": null,
+      "exclude_categories": null,
+      "only_categories": null,
+      "no_weights": false,
+      "metadata_hist": false
+    },
+    "ElectronLoose_pt": {
+      "axes": [],
+      "storage": "weight",
+      "autofill": true,
+      "variations": true,
+      "only_variations": null,
+      "exclude_samples": null,
+      "only_samples": null,
+      "exclude_categories": null,
+      "only_categories": null,
+      "no_weights": false,
+      "metadata_hist": false
+    },
+    "ElectronLoose_eta": {
+      "axes": [],
+      "storage": "weight",
+      "autofill": true,
+      "variations": true,
+      "only_variations": null,
+      "exclude_samples": null,
+      "only_samples": null,
+      "exclude_categories": null,
+      "only_categories": null,
+      "no_weights": false,
+      "metadata_hist": false
+    },
+    "ElectronLoose_phi": {
+      "axes": [],
+      "storage": "weight",
+      "autofill": true,
+      "variations": true,
+      "only_variations": null,
+      "exclude_samples": null,
+      "only_samples": null,
+      "exclude_categories": null,
+      "only_categories": null,
+      "no_weights": false,
+      "metadata_hist": false
+    },
+    "MuonLoose_pt": {
+      "axes": [],
+      "storage": "weight",
+      "autofill": true,
+      "variations": true,
+      "only_variations": null,
+      "exclude_samples": null,
+      "only_samples": null,
+      "exclude_categories": null,
+      "only_categories": null,
+      "no_weights": false,
+      "metadata_hist": false
+    },
+    "MuonLoose_eta": {
+      "axes": [],
+      "storage": "weight",
+      "autofill": true,
+      "variations": true,
+      "only_variations": null,
+      "exclude_samples": null,
+      "only_samples": null,
+      "exclude_categories": null,
+      "only_categories": null,
+      "no_weights": false,
+      "metadata_hist": false
+    },
+    "MuonLoose_phi": {
+      "axes": [],
+      "storage": "weight",
+      "autofill": true,
+      "variations": true,
+      "only_variations": null,
+      "exclude_samples": null,
+      "only_samples": null,
+      "exclude_categories": null,
+      "only_categories": null,
+      "no_weights": false,
+      "metadata_hist": false
+    },
+    "LeptonGood_pt": {
+      "axes": [],
+      "storage": "weight",
+      "autofill": true,
+      "variations": true,
+      "only_variations": null,
+      "exclude_samples": null,
+      "only_samples": null,
+      "exclude_categories": null,
+      "only_categories": null,
+      "no_weights": false,
+      "metadata_hist": false
+    },
+    "LeptonGood_eta": {
+      "axes": [],
+      "storage": "weight",
+      "autofill": true,
+      "variations": true,
+      "only_variations": null,
+      "exclude_samples": null,
+      "only_samples": null,
+      "exclude_categories": null,
+      "only_categories": null,
+      "no_weights": false,
+      "metadata_hist": false
+    },
+    "LeptonGood_phi": {
+      "axes": [],
+      "storage": "weight",
+      "autofill": true,
+      "variations": true,
+      "only_variations": null,
+      "exclude_samples": null,
+      "only_samples": null,
+      "exclude_categories": null,
+      "only_categories": null,
+      "no_weights": false,
+      "metadata_hist": false
+    },
+    "CleanFatJet_pt": {
+      "axes": [],
+      "storage": "weight",
+      "autofill": true,
+      "variations": true,
+      "only_variations": null,
+      "exclude_samples": null,
+      "only_samples": null,
+      "exclude_categories": null,
+      "only_categories": null,
+      "no_weights": false,
+      "metadata_hist": false
+    },
+    "CleanFatJet_eta": {
+      "axes": [],
+      "storage": "weight",
+      "autofill": true,
+      "variations": true,
+      "only_variations": null,
+      "exclude_samples": null,
+      "only_samples": null,
+      "exclude_categories": null,
+      "only_categories": null,
+      "no_weights": false,
+      "metadata_hist": false
+    },
+    "CleanFatJet_phi": {
+      "axes": [],
+      "storage": "weight",
+      "autofill": true,
+      "variations": true,
+      "only_variations": null,
+      "exclude_samples": null,
+      "only_samples": null,
+      "exclude_categories": null,
+      "only_categories": null,
+      "no_weights": false,
+      "metadata_hist": false
+    },
+    "CleanFatJet_tau1": {
+      "axes": [],
+      "storage": "weight",
+      "autofill": true,
+      "variations": true,
+      "only_variations": null,
+      "exclude_samples": null,
+      "only_samples": null,
+      "exclude_categories": null,
+      "only_categories": null,
+      "no_weights": false,
+      "metadata_hist": false
+    },
+    "CleanFatJet_tau2": {
+      "axes": [],
+      "storage": "weight",
+      "autofill": true,
+      "variations": true,
+      "only_variations": null,
+      "exclude_samples": null,
+      "only_samples": null,
+      "exclude_categories": null,
+      "only_categories": null,
+      "no_weights": false,
+      "metadata_hist": false
+    },
+    "CleanFatJet_tau21": {
+      "axes": [],
+      "storage": "weight",
+      "autofill": true,
+      "variations": true,
+      "only_variations": null,
+      "exclude_samples": null,
+      "only_samples": null,
+      "exclude_categories": null,
+      "only_categories": null,
+      "no_weights": false,
+      "metadata_hist": false
+    },
+    "CleanFatJet_msoftdrop": {
+      "axes": [],
+      "storage": "weight",
+      "autofill": true,
+      "variations": true,
+      "only_variations": null,
+      "exclude_samples": null,
+      "only_samples": null,
+      "exclude_categories": null,
+      "only_categories": null,
+      "no_weights": false,
+      "metadata_hist": false
+    },
+    "CleanFatJet_mass": {
+      "axes": [],
+      "storage": "weight",
+      "autofill": true,
+      "variations": true,
+      "only_variations": null,
+      "exclude_samples": null,
+      "only_samples": null,
+      "exclude_categories": null,
+      "only_categories": null,
+      "no_weights": false,
+      "metadata_hist": false
+    },
+    "MET_pt": {
+      "axes": [],
+      "storage": "weight",
+      "autofill": true,
+      "variations": true,
+      "only_variations": null,
+      "exclude_samples": null,
+      "only_samples": null,
+      "exclude_categories": null,
+      "only_categories": null,
+      "no_weights": false,
+      "metadata_hist": false
+    },
+    "JetGood_pt": {
+      "axes": [],
+      "storage": "weight",
+      "autofill": true,
+      "variations": true,
+      "only_variations": null,
+      "exclude_samples": null,
+      "only_samples": null,
+      "exclude_categories": null,
+      "only_categories": null,
+      "no_weights": false,
+      "metadata_hist": false
+    },
+    "JetGood_eta": {
+      "axes": [],
+      "storage": "weight",
+      "autofill": true,
+      "variations": true,
+      "only_variations": null,
+      "exclude_samples": null,
+      "only_samples": null,
+      "exclude_categories": null,
+      "only_categories": null,
+      "no_weights": false,
+      "metadata_hist": false
+    },
+    "JetGood_phi": {
+      "axes": [],
+      "storage": "weight",
+      "autofill": true,
+      "variations": true,
+      "only_variations": null,
+      "exclude_samples": null,
+      "only_samples": null,
+      "exclude_categories": null,
+      "only_categories": null,
+      "no_weights": false,
+      "metadata_hist": false
+    },
+    "VBSjet_pt": {
+      "axes": [],
+      "storage": "weight",
+      "autofill": true,
+      "variations": true,
+      "only_variations": null,
+      "exclude_samples": null,
+      "only_samples": null,
+      "exclude_categories": null,
+      "only_categories": null,
+      "no_weights": false,
+      "metadata_hist": false
+    },
+    "VBSjet_deltaEta": {
+      "axes": [],
+      "storage": "weight",
+      "autofill": true,
+      "variations": true,
+      "only_variations": null,
+      "exclude_samples": null,
+      "only_samples": null,
+      "exclude_categories": null,
+      "only_categories": null,
+      "no_weights": false,
+      "metadata_hist": false
+    },
+    "VBSjet_mass": {
+      "axes": [],
+      "storage": "weight",
+      "autofill": true,
+      "variations": true,
+      "only_variations": null,
+      "exclude_samples": null,
+      "only_samples": null,
+      "exclude_categories": null,
+      "only_categories": null,
+      "no_weights": false,
+      "metadata_hist": false
+    }
+  },
+  "columns": {
+    "Muon1_forFake": {
+      "baseline": [],
+      "SingleLepton_AK8_bjets_mediumWP_ttbar": []
+    }
+  }
+}
