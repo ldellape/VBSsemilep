@@ -1,13 +1,90 @@
 import awkward as ak
 import math
 from pocket_coffea.lib.cut_definition import Cut
-from pocket_coffea.lib.cut_functions import get_nObj_min, get_HLTsel, get_nPVgood, goldenJson, eventFlags, get_nElectron, get_nMuon, get_nObj_eq, apply_golden_json
+from pocket_coffea.lib.cut_functions import get_nObj_min, get_HLTsel, get_nPVgood, goldenJson, eventFlags, get_nElectron, get_nMuon, get_nObj_eq, apply_golden_json,get_JetVetoMap
 from pocket_coffea.lib.objects import get_dilepton
+
+
+
 
 
 #############################################################
 # cut functions for fakes                                   #
 #############################################################
+def closure_test_non_prompt_deepMETresponse(events, params, year, sample, **kwargs):
+    events.CleanJet_forNonPrompt = events.CleanJet[events.CleanJet.pt > 30]
+    print(f"closure: {events.CleanJet_forNonPrompt.pt}")
+    events.nCleanJet_forNonPrompt = ak.num(events.CleanJet_forNonPrompt)
+    print(f"cleanjets: {events.CleanJet}")
+    print(f"puppiMET: {events.PuppiMET.pt}")
+    print(f"muon pt: {events.MuonGood.pt}")
+    mask=( 
+          (events.nCleanJet_forNonPrompt >= params["nJet"]) &
+          (events.MET.pt < params["met"]) & 
+          (ak.firsts(events.MuonGood.pt) > params["pt"])
+        )
+    print(f"mask closure: {mask}")
+    return ak.where(ak.is_none(mask), False, mask)
+closure_test_deepMETresponse = Cut(
+    name="closure_test_1",
+    params={
+        "nJet" : 4,
+        "met": 30,
+        "pt" : 30,
+    },
+    function=closure_test_non_prompt_deepMETresponse,
+)
+def closure_test_non_prompt_deepMETresolution(events, params, year, sample, **kwargs):
+    events.CleanJet_forNonPrompt = events.CleanJet[events.CleanJet.pt > 30]
+    print(f"closure: {events.CleanJet_forNonPrompt.pt}")
+    events.nCleanJet_forNonPrompt = ak.num(events.CleanJet_forNonPrompt)
+    print(f"cleanjets: {events.CleanJet}")
+    print(f"puppiMET: {events.PuppiMET.pt}")
+    print(f"muon pt: {events.MuonGood.pt}")
+    mask=( 
+          (events.nCleanJet_forNonPrompt >= params["nJet"]) &
+          (events.MET.pt < params["met"]) & 
+          (ak.firsts(events.MuonGood.pt) > params["pt"])
+        )
+    print(f"mask closure: {mask}")
+    return ak.where(ak.is_none(mask), False, mask)
+closure_test_deepMETres = Cut(
+    name="closure_test_1",
+    params={
+        "nJet" : 4,
+        "met": 30,
+        "pt" : 30,
+    },
+    function=closure_test_non_prompt_deepMETresolution,
+)
+
+def closure_test_non_prompt_puppiMET(events, params, year, sample, **kwargs):
+    events.CleanJet_forNonPrompt = events.CleanJet[events.CleanJet.pt > 30]
+    print(f"closure: {events.CleanJet_forNonPrompt.pt}")
+    events.nCleanJet_forNonPrompt = ak.num(events.CleanJet_forNonPrompt)
+    print(f"cleanjets: {events.CleanJet}")
+    print(f"puppiMET: {events.PuppiMET.pt}")
+    print(f"muon pt: {events.MuonGood.pt}")
+    mask=( 
+          (events.nCleanJet_forNonPrompt >= params["nJet"]) &
+          (events.MET.pt < params["met"]) & 
+          (ak.firsts(events.MuonGood.pt) > params["pt"])
+        )
+    print(f"mask closure: {mask}")
+    return ak.where(ak.is_none(mask), False, mask)
+closure_test_1 = Cut(
+    name="closure_test_1",
+    params={
+        "nJet" : 4,
+        "met": 30,
+        "pt" : 30,
+    },
+    function=closure_test_non_prompt_puppiMET,
+)
+
+
+
+
 def met_for_fakes_loose(events, params, year, sample, **kwargs):
     mask = (
         (events.PuppiMET.pt < params["met"]) & 
@@ -124,7 +201,7 @@ VBS_jets_presel = Cut(
 #############################################################
 # semileptonic, requirements on leptons and/or MET          #
 #############################################################
-def semileptonic(events, params, year, sample, **kwargs):
+def semileptonic_deepMETresponse(events, params, year, sample, **kwargs):
     single_electron = events.nElectronGood == 1
     single_muon = events.nMuonGood == 1
     single_lepton = events.nLeptonGood == 1
@@ -136,12 +213,12 @@ def semileptonic(events, params, year, sample, **kwargs):
         mask = (
                 ( single_electron
                   & (ak.firsts(events.LeptonGood.pt) > params["pt_leading_electron"])
-                  & (events.PuppiMET.pt > params["met_electron"]) 
+                  & (events.DeepMETResponseTune.pt > params["met_electron"]) 
                 )
                 | 
                 (  single_muon
                    & (ak.firsts(events.MuonGood.pt) > params["pt_leading_muon"])
-                   & (events.PuppiMET.pt > params["met_muon"])
+                   & (events.DeepMETResponseTune.pt > params["met_muon"])
                 )
         )
     elif params["Z"] is True:
@@ -163,7 +240,85 @@ def semileptonic(events, params, year, sample, **kwargs):
         el_mask = ak.fill_none(el_mask, False)
         mask = mu_mask | el_mask
     return ak.where(ak.is_none(mask), False, mask)
-semileptonic_preselW = Cut(
+def semileptonic_deepMETresolution(events, params, year, sample, **kwargs):
+    single_electron = events.nElectronGood == 1
+    single_muon = events.nMuonGood == 1
+    single_lepton = events.nLeptonGood == 1
+    double_electron = events.nElectronGood == 2
+    double_muon = events.nMuonGood == 2
+    print(f" lepton good: {events.LeptonGood.pt}")
+    print(f" electron good: {events.ElectronGood.pt}")
+    if params["W"] is True:
+        mask = (
+                ( single_electron
+                  & (ak.firsts(events.LeptonGood.pt) > params["pt_leading_electron"])
+                  & (events.DeepMETResolutionTune.pt > params["met_electron"]) 
+                )
+                | 
+                (  single_muon
+                   & (ak.firsts(events.MuonGood.pt) > params["pt_leading_muon"])
+                   & (events.DeepMETResolutionTune.pt > params["met_muon"])
+                )
+        )
+    elif params["Z"] is True:
+        muon_pt = ak.pad_none(events.MuonGood.pt, 2)
+        muon_charge = ak.pad_none(events.MuonGood.charge, 2)
+        electron_pt = ak.pad_none(events.ElectronGood.pt, 2)
+        electron_charge = ak.pad_none(events.ElectronGood.charge, 2)
+        mu_mask = (
+                    (muon_pt[:, 0] > params["pt_leading_muon"]) &
+                    (muon_pt[:, 1] > params["pt_subleading_muon"]) &
+                    (muon_charge[:,0] != muon_charge[:, 1])
+        )
+        mu_mask = ak.fill_none(mu_mask, False)
+        el_mask = (
+            (electron_pt[:, 0] > params["pt_leading_electron"]) &
+            (electron_pt[:, 1] > params["pt_subleading_electron"]) &
+            (electron_charge[:,0] != electron_charge[:,1])
+        )
+        el_mask = ak.fill_none(el_mask, False)
+        mask = mu_mask | el_mask
+    return ak.where(ak.is_none(mask), False, mask)
+def semileptonic(events, params, year, sample, **kwargs):
+    single_electron = events.nElectronGood == 1
+    single_muon = events.nMuonGood == 1
+    single_lepton = events.nLeptonGood == 1
+    double_electron = events.nElectronGood == 2
+    double_muon = events.nMuonGood == 2
+    print(f" lepton good: {events.LeptonGood.pt}")
+    print(f" electron good: {events.ElectronGood.pt}")
+    if params["W"] is True:
+        mask = (
+                ( single_electron
+                  & (ak.firsts(events.LeptonGood.pt) > params["pt_leading_electron"])
+                  & (events.MET.pt > params["met_electron"]) 
+                )
+                | 
+                (  single_muon
+                   & (ak.firsts(events.MuonLoose.pt) > params["pt_leading_muon"])
+                   & (events.MET.pt > params["met_muon"])
+                )
+        )
+    elif params["Z"] is True:
+        muon_pt = ak.pad_none(events.MuonGood.pt, 2)
+        muon_charge = ak.pad_none(events.MuonGood.charge, 2)
+        electron_pt = ak.pad_none(events.ElectronGood.pt, 2)
+        electron_charge = ak.pad_none(events.ElectronGood.charge, 2)
+        mu_mask = (
+                    (muon_pt[:, 0] > params["pt_leading_muon"]) &
+                    (muon_pt[:, 1] > params["pt_subleading_muon"]) &
+                    (muon_charge[:,0] != muon_charge[:, 1])
+        )
+        mu_mask = ak.fill_none(mu_mask, False)
+        el_mask = (
+            (electron_pt[:, 0] > params["pt_leading_electron"]) &
+            (electron_pt[:, 1] > params["pt_subleading_electron"]) &
+            (electron_charge[:,0] != electron_charge[:,1])
+        )
+        el_mask = ak.fill_none(el_mask, False)
+        mask = mu_mask | el_mask
+    return ak.where(ak.is_none(mask), False, mask)
+semileptonic_preselW_puppiMET = Cut(
     name="semileptonic_preselW", 
     params = {
         "W" : True,
@@ -179,7 +334,39 @@ semileptonic_preselW = Cut(
     },
     function = semileptonic,
 ) 
-semileptonic_preselW_2 = Cut(
+semileptonic_preselW_deepMETresolution= Cut(
+    name="semileptonic_preselW_deepMETresolution", 
+    params = {
+        "W" : True,
+        "pt_leading_electron" : 30,
+        "pt_leading_muon" : 30,
+        "eta_max_lep" : 2.5, 
+        "nJet" : 4, 
+        "nFatJets" : 1,
+        "nJet_with_FatJet" : 2,
+        "met_electron" : 30,
+        "met_muon" : 30,
+        "max_mt":185,
+    },
+    function = semileptonic_deepMETresolution,
+) 
+semileptonic_preselW_deepMETresponse = Cut(
+    name="semileptonic_preselW_deepMETresponse", 
+    params = {
+        "W" : True,
+        "pt_leading_electron" : 30,
+        "pt_leading_muon" : 30,
+        "eta_max_lep" : 2.5, 
+        "nJet" : 4, 
+        "nFatJets" : 1,
+        "nJet_with_FatJet" : 2,
+        "met_electron" : 30,
+        "met_muon" : 30,
+        "max_mt":185,
+    },
+    function = semileptonic_deepMETresponse,    
+)
+semileptonic_preselW = Cut(
     name="semileptonic_preselW", 
     params = {
         "W" : True,
@@ -190,8 +377,8 @@ semileptonic_preselW_2 = Cut(
         "nFatJets" : 1,
         "nJet_with_FatJet" : 2,
         "met_electron" : 30,
-        "met_muon" : 35,
-        "max_mt":185,
+        "met_muon" : 30,
+        "max_mt": 185,
     },
     function = semileptonic,
 ) 
@@ -348,6 +535,26 @@ def Vjet_massSide_resolved(events, params, year, sample, **kwargs):
             (events.V_dijet_candidate.mass > params["mass_max"])
         )
     return ak.where(ak.is_none(mask), False, mask)
+
+
+def Vjet_massSide_boosted_ALL(events, params, year, sample, **kwargs):
+    mask = (
+        events.CleanFatJet.msoftdrop < params["mass_min"] & 
+        events.CleanFatJet.msoftdrop > params["mass_max"]
+    )
+    return ak.where(ak.is_none(mask), False, mask)
+Wjet_side_ALL = Cut(
+    name="Wjet_side_ALL",
+    params={
+        "mass_min" : 65,
+        "mass_max" : 105,
+    },
+    function=Vjet_massSide_boosted_ALL,
+)
+    
+
+
+
 def Vjet_massSide_boosted(events, params, year, sample, **kwargs):
     if params["L"] is True:
         mask1 = (

@@ -23,6 +23,7 @@ class VBS_WV_Processor(BaseProcessorABC):
     def __init__(self, cfg: Configurator):
         super().__init__(cfg)
         self.cfg = cfg
+        self.isForFakes = True
         self._tag = self.cfg.datasets_cfg["tag"]
         self.params.systematic_variations.weight_variations["sf_btag"]["2023_preBPix"] = [
             "hf", "lf", "hfstats1", "hfstats2",
@@ -37,6 +38,7 @@ class VBS_WV_Processor(BaseProcessorABC):
         
         
     def apply_object_preselection(self, variation):
+        print(f"{len(self.events)}")
         nEvents_total = self.nEvents_initial
         print("*****************************************************************************************")
         print(f" processing file from {self._dataset}")
@@ -44,7 +46,7 @@ class VBS_WV_Processor(BaseProcessorABC):
         print(f" number of events: {self.nEvents_initial}")
      
         
-        
+        self.events["nEvents_initial"] = self.nEvents_initial   
         if self._isMC:
             self.out_log()
         
@@ -58,6 +60,10 @@ class VBS_WV_Processor(BaseProcessorABC):
         self.events["ElectronGood"] = lepton_selection(self.events, "Electron", self.params)
         self.events["LeptonGood"] = ak.concatenate((self.events.MuonGood, self.events.ElectronGood), axis=1)
         
+        
+        
+        print(f"resolution deepMET: {self.events.DeepMETResolutionTune.pt}")
+        print(f"resolution deepMET: {self.events.DeepMETResponseTune.pt}")
         
         ############################################
         # for fake estimation
@@ -291,7 +297,7 @@ class VBS_WV_Processor(BaseProcessorABC):
             2 * self.events.MuonLoose.pt * self.events.MET.pt *
             (1 - np.cos(self.events.MuonLoose.phi - self.events.MET.phi))
         ))   
-        
+         
         
     def zepp_variable(self):
         if "VBS_dijet_system" in self.events.fields:
@@ -368,18 +374,7 @@ class VBS_WV_Processor(BaseProcessorABC):
         nEvents_total = self.nEvents_initial
         xsection = self._xsec
         lumi = nEvents_total / float(xsection)
-        if "WtoLNu" in self._dataset:
-            log_path = f"log_WtoLNu-XJets.txt"
-        elif "TTtoLNu" in self._dataset:
-            log_path = f"log_TTtoLNu2Q.txt"
-        elif "TbarWplus" in self._dataset:
-            log_path = "log_TbarWplus.txt"
-        elif "TTto2L2Nu" in self._dataset:
-            log_path = "log_TTto2L2Nu.txt"
-        elif "DY" in self._dataset:
-            log_path = "log_DY.txt"
-        else:
-            log_path = f"log_{self._dataset}.txt"
+        log_path = f"log_{self._dataset}.txt"
         with open(log_path, "a") as f:
             f.write(
                 f'file={self.events.metadata["filename"]}, '
@@ -389,6 +384,13 @@ class VBS_WV_Processor(BaseProcessorABC):
                 f"lumi={lumi}, "
                 f"nEvents_afterSkim={self.nEvents_after_skim}\n"
             )
-    
+    def writeWeights(self):
+        nEvents_total = self.nEvents_initial
+        xsection = self._xsec 
+        lumi = nEvents_total/float(xsection)
+        log_path = f"{self._dataset}_forFakes.txt"
+        with open(log_path, "a") as f: 
+            f.write(
+                f"{lumi} {xsection} {nEvents_total}\n"
+            )
 
-    

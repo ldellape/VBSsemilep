@@ -52,12 +52,12 @@ def apply_fakes(events, year, sample, particle):
         lo, hi, val = b["min"], b["max"], b["value"]
         fr_eta = ak.where((lep_eta >= lo) & (lep_eta < hi), val, fr_eta)
 
-    fr = fr_pt * fr_eta
+    fr = 0.40
     fr = ak.where(fr > 0, fr, 0)
     print(fr)
     fake_lep = fr / (1.0 - fr)
     fake_lep_up   = fake_lep* 1.30
-    fake_lep_down = fake_lep* 0.70
+    fake_lep_down = fake_lep*0.70
 
     n_lep = ak.num(fake_lep)
 
@@ -119,5 +119,4 @@ def get_sf_top_pt(events, sample):
             return weight
     else: 
         return np.ones(len(events), dtype=np.float64)
-        
         
